@@ -77,11 +77,12 @@ outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none; ba
 
  <div class="topbar" id="top2"><center style="font-size:20px;position: absolute;left:50%;top:50%;transform:translate(-50%,-50%); font-family: 'M PLUS Rounded 1c', sans-serif;">密碼產生器</center></div>
   <div class="loadbg">
-<span class="img-dd"><img src="icon/icon_64x64.png" style="position: fixed;left:50%;top:50%;transform:translate(-50%,-50%);" class="icon"></span>
-<span class="img-hd"><img src="icon/icon_open.png" style="position: fixed;left:50%;top:50%;transform:translate(-50%,-50%);" class="icon"></span>
+<span class="img-dd"><img src="icon/icon_64x64.png" style="position: fixed;left:50%;top:50%;transform:translate(-50%,-50%);" class="icon" id="ddimg"></span>
+<span class="img-hd"><img src="icon/icon_open.png" style="position: fixed;left:50%;top:50%;transform:translate(-50%,-50%);" class="icon" id="hdimg"></span>
 </div>
 </body>
 <script>
+$('#ddimg').delay(888).fadeOut(111);
 $('.loadbg').delay(3800).fadeOut(888);
 f = 0 ;
 var passwordLength = 16 ;
