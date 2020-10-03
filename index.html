@@ -1,0 +1,108 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>密碼產生器</title>
+<style>
+  
+:root {
+  --bar-color-a: rgba(242,242,242,1);
+  --bar-color-b: rgba(250, 250, 250, 1);
+  --pd-color:#888;
+}
+  
+  
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+.btn {height:calc(60px - 10px); position: relative;top:5px;right:5px; transform: translate(8px,-0px) scale(0.8);}
+.btnbox {height:calc(60px - 10px); position: relative;top:0px;right:0px; transform: translate(8px,-0px); -webkit-appearance:none;
+outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none;}
+
+.box {width:85vw;height:60px;border:1px #e3e3e3 solid;padding:0px; border-radius:12px; background: linear-gradient(90deg, rgba(227,227,227,1) 0%, rgba(227,227,227,1) 100%, rgba(252, 252, 252, 1) 100%); transform: translate(-50%,-50%);position:fixed;left:50%;top:50%;}
+
+body {font-family: 'Nunito', sans-serif; background:#fcfcfc; caret-color: rgba(0, 0, 0, 0);}
+
+#password {-webkit-appearance:none;
+outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none; background:rgba(0, 0, 0, 0);border:none;border-radius:12px;height:60px; width:calc(85vw - 60px);font-size:35px;padding:5px; border:none;transform: translate(-0px,-8px); text-overflow : ellipsis; color:var(--pd-color); caret-color: rgba(0, 0, 0, 0);}
+
+.msg {z-index:99999999999998;background:rgba(51, 51, 51, 0.8);width:auto;height:auto;padding:5px 15px;position:fixed;top:-80px;left:50%;transform:translate(-50%,-0%);border-radius:25px;color:#ffffff;}  
+
+  
+  .boxmsg {width:85vw;height:60px;border:1px rgba(0, 0, 0, 0) solid;padding:0px; border-radius:12px; background: rgba(0, 0, 0, 0.1); transform: translate(-50%,-50%);position:fixed;left:50%;top:50%;display:none;color:#fff;}
+@media (prefers-color-scheme: dark) {
+  body {font-family: 'Nunito', sans-serif; background:#333; caret-color: rgba(0, 0, 0, 0);}
+  :root {
+  --bar-color-a: rgba(40,40,40,1);
+  --bar-color-b: rgba(51, 51, 51, 1);
+  --pd-color:#fff;
+}
+  .boxmsg {width:85vw;height:60px;border:1px rgba(0, 0, 0, 0) solid;padding:0px; border-radius:12px; background: rgba(255, 255, 255, 0.45); transform: translate(-50%,-50%);position:fixed;left:50%;top:50%;display:none;color:#333;}
+  }
+</style>
+<body>
+
+<div class="box">
+<input type="text" id="password" readonly="readonly">
+<a href="javascript:copy('password')" class="btnbox"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iLTQwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMjcxIDUxMmgtMTkxYy00NC4xMTMyODEgMC04MC0zNS44ODY3MTktODAtODB2LTI3MWMwLTQ0LjExMzI4MSAzNS44ODY3MTktODAgODAtODBoMTkxYzQ0LjExMzI4MSAwIDgwIDM1Ljg4NjcxOSA4MCA4MHYyNzFjMCA0NC4xMTMyODEtMzUuODg2NzE5IDgwLTgwIDgwem0tMTkxLTM5MWMtMjIuMDU0Njg4IDAtNDAgMTcuOTQ1MzEyLTQwIDQwdjI3MWMwIDIyLjA1NDY4OCAxNy45NDUzMTIgNDAgNDAgNDBoMTkxYzIyLjA1NDY4OCAwIDQwLTE3Ljk0NTMxMiA0MC00MHYtMjcxYzAtMjIuMDU0Njg4LTE3Ljk0NTMxMi00MC00MC00MHptMzUxIDI2MXYtMzAyYzAtNDQuMTEzMjgxLTM1Ljg4NjcxOS04MC04MC04MGgtMjIyYy0xMS4wNDY4NzUgMC0yMCA4Ljk1MzEyNS0yMCAyMHM4Ljk1MzEyNSAyMCAyMCAyMGgyMjJjMjIuMDU0Njg4IDAgNDAgMTcuOTQ1MzEyIDQwIDQwdjMwMmMwIDExLjA0Njg3NSA4Ljk1MzEyNSAyMCAyMCAyMHMyMC04Ljk1MzEyNSAyMC0yMHptMCAwIiBmaWxsPSIjODA4MDgwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PC9nPjwvc3ZnPg==" class="btn"></a>
+</div>
+<div id="msg" class="msg"></div>
+<div class="boxmsg"><span style="position: absolute;top:50%;left:50%; transform: translate(-50%,-50%); text-shadow: rgba(0, 0, 0, 0.3) 1px 0 10px;font-size:1.1rem;" id="boxmsg">已複製密碼！</span></div>
+</body>
+<script>
+f = 0 ;
+var passwordLength = 16 ;
+var char = ["0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+?><:{}[]","45678abcdefghijklmnopqrstuvwxyzABCDEFG90123HIJKLMNOPQR()_+?STUVWXYZ!@#$%^&*><:{}[]","!@#$%^&*()_+?><:{}[]0123456789abcdefghijklmnopqrstHIJKLMNOPQRSTUVWXYuvwxyzABCDEFGZ","6789abcdefghijklmnopqrstHIJKLMNOPQRSTUVWXYuvwxyzABCDEFGZ012345!@#$%^&*()_+?><:{}[]","KLMNOPQRSTUVWXYuvwxyz6789abcdefghijklmnopqrstHIJEFGZ012345!@#$%^&*()_+?><:{ABCD}[]","ABCDhijklmnopqrstuvwxyzEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefg!@#$%^&*()_+?><:{}[]"];
+function getPassword() {
+var chars = char[Math.floor(Math.random() * 5)] ;
+var password = "" ;
+for (var i=0; i<passwordLength; i++){
+var randomNumber = Math.floor(Math.random() * chars.length);
+password += chars.substring(randomNumber, randomNumber+1);
+}
+document.getElementById("password").value = password ;
+if (f > 0.5) {
+$('#boxmsg').html('已產生新密碼！');
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+}
+if (f > 10) {
+f = 1 ;
+}
+f += 1 ;
+}
+
+function copy(id) {
+var copys = document.getElementById(id);
+copys.select();
+document.execCommand("Copy");
+$('#boxmsg').html('已複製密碼！');
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+}
+getPassword();
+var o = 100 ;
+function pp() {
+o -= 0.111 ;
+$('.box').css({"background": "linear-gradient(90deg, var(--bar-color-a) 0%, var(--bar-color-a) " + o + "%, var(--bar-color-b) " + o + "%)"});
+if (o < 0.111) {
+clearInterval(id);
+o = 100 ;
+getPassword();
+id = setInterval(pp, 10);
+}
+}
+id = setInterval(pp, 10);
+
+var g = 2 ;
+$('#password').click(function() {
+o = 0 ;
+f = 0 ;
+if (passwordLength > 63) {
+passwordLength = 8 ;
+}
+else {
+passwordLength= passwordLength * 2 ;
+}
+
+$('#boxmsg').html('密碼長度為' + passwordLength + '！');
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+
+});
+</script>
