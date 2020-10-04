@@ -21,6 +21,7 @@ padding:0px;
 transform:translate(-50%,+50%);
 border-radius:25px;
 font-size:20px;
+ color:#333;
 }
 
 .passwordgenintdivtopbar {height:55px;width:100%;position:fixed;left:0px;top:0px;background:#fff; box-shadow:0 0 8px 1px rgba(0,0,0,0.2);display:none;}
@@ -118,6 +119,7 @@ padding:0px;
 transform:translate(-50%,+50%);
 border-radius:25px;
 font-size:20px;
+ color:#fff;
 }
 
 .morebtn {
