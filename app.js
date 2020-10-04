@@ -58,3 +58,32 @@ $('#boxmsg').html('密碼長度為' + passwordLength + '！');
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
 
 });
+
+
+
+
+var niees = 2 ;
+function moredivopen() {
+if(niees > "1") {
+$('.morediv').fadeIn(1).animate({'height': 300 + 'px',width: 230 + 'px' ,opacity:1}, 555 );
+   niees -=2 ;
+   } 
+else {
+$('.morediv').animate({'height': 200 + 'px',width: 130 + 'px' ,opacity:0}, 555 ).fadeOut(1);
+niees +=2 ;
+}
+}
+
+
+function passwordgenint() {
+$('.fixedbg').fadeIn(555);
+$('.passwordgenintdiv').animate({'bottom':50 + '%'}, 555 );
+
+moredivopen();
+}
+
+function passwordgenintclose() {
+$('.fixedbg').fadeOut(555);
+$('.passwordgenintdiv').animate({'bottom':-100 + '%'}, 555 );
+
+}
