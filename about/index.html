@@ -1,1 +1,112 @@
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script><link href="app.png" rel="apple-touch-icon" /><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><meta charset="UTF-8"><title>Developers - 每日一學</title><style>@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');body {padding:0px;margin:0px;}.index-image {background:url(index_1.png);width:100%;height:auto;background-size: cover;padding:0px;overflow:hidden;position: relative;top:0px;left:0px;}.topbarvideo {width:100%;height:48px;position: fixed;left:0px;top:0px;background:rgba(0, 0, 0, 0.7);-webkit-backdrop-filter: blur(9px);backdrop-filter: blur(9px);}.logo {height:48px;margin:0px;margin-left:-25px;transform:scale(0.8);}.tabdiv {min-width:25vw;height:60px;background:#fafafa;padding:12px;font-size:25px;color:#333;float: left;font-family: 'Secular One', sans-serif;}a {text-decoration:none;color:#333;}.light {display:block;}.dark {display:none;}#page {background:#fff;}@media (prefers-color-scheme: dark) {.light {display:none;}.dark {display:block;}#page {background:#292929;}}</style><body><div class="index-image"><video autoplay="autoplay" src="password-gen-video.mov" loop="loop" style="width:calc(100% + 10px);" id="video"></video><span style="position: absolute;top:50%;left:50%; transform:translate(-50%,-50%); font-size:10vmin;color:#fff; font-family: 'Secular One', sans-serif;"></span></div><div style="height:60px;width:100%;background:#fafafa; position: relative;top:auto; overflow:scroll;" id="pagebar"><div style="overflow:hidden; height:60px;width:100vw;background:#fafafa; position: absolute;top:0px;left:0px;"><div class="tabdiv"><center><a href="#">首頁</a></center></div><div class="tabdiv"><center> <a href="">Facebook</a></center></div></div></div><div style="height:auto;width:100%;min-height:100vh; position: relative;top:auto;" id="page"><img src="i01.png" style="width:100vw;"><!-- <input type="checkbox" value="1" id="isdark"> --><!-- <img src="i02_light.png" style="width:100vw;" class="light"><img src="i02_dark.png" style="width:100vw;" class="dark">--></div><script>//$("#isdark").click(function(){  var checkis =if (checkis = 'true') {$('.dark').fadeIn(333);$('.light').fadeOut(333);}if (checkis = 'false') {$('.dark').fadeOut(333);$('.light').fadeIn(333);}});</script><div class="topbarvideo"><img src="passwordgen.png" class="logo"></div></body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link href="app.png" rel="apple-touch-icon" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>密碼產生器 - 關於</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+body {
+padding:0px;
+margin:0px;
+
+}
+.index-image {
+background:url(index_1.png);
+width:100%;
+height:auto;
+background-size: cover;
+padding:0px;
+overflow:hidden;
+position: relative;
+top:0px;
+left:0px;
+}
+.topbarvideo {
+width:100%;
+height:48px;
+position: fixed;
+left:0px;
+top:0px;
+background:rgba(0, 0, 0, 0.7);
+-webkit-backdrop-filter: blur(9px);
+backdrop-filter: blur(9px);
+}
+.logo {
+height:48px;
+margin:0px;
+margin-left:-25px;
+transform:scale(0.8);
+}
+
+.tabdiv {
+min-width:25vw;
+height:60px;
+background:#fafafa;
+padding:12px;
+font-size:25px;
+color:#333;
+float: left;
+
+font-family: 'Secular One', sans-serif;
+
+}
+a {text-decoration:none;color:#333;}
+
+
+.light {display:block;}
+.dark {display:none;}
+#page {background:#fff;}
+@media (prefers-color-scheme: dark) {
+.light {display:none;}
+.dark {display:block;}
+#page {background:#292929;}
+}
+</style>
+<body>
+<div class="index-image">
+<video autoplay="autoplay" src="password-gen-video.mov" loop="loop" style="width:calc(100% + 10px);" id="video">
+</video>
+
+<span style="position: absolute;top:50%;left:50%; transform:translate(-50%,-50%); font-size:10vmin;color:#fff; font-family: 'Secular One', sans-serif;"></span>
+</div>
+
+<div style="height:60px;width:100%;background:#fafafa; position: relative;top:auto; overflow:scroll;" id="pagebar">
+<div style="overflow:hidden; height:60px;width:100vw;background:#fafafa; position: absolute;top:0px;left:0px;">
+<div class="tabdiv"><center><a href="#">首頁</a></center></div>
+<div class="tabdiv"><center> <a href="">Facebook</a></center></div>
+</div>
+</div>
+
+<div style="height:auto;width:100%;min-height:100vh; position: relative;top:auto;" id="page">
+<img src="i01.png" style="width:100vw;">
+
+<!-- <input type="checkbox" value="1" id="isdark"> -->
+
+<!-- <img src="i02_light.png" style="width:100vw;" class="light">
+
+<img src="i02_dark.png" style="width:100vw;" class="dark">
+
+-->
+</div>
+<script>
+//$("#isdark").click(function(){
+  var checkis =
+if (checkis = 'true') {
+$('.dark').fadeIn(333);
+$('.light').fadeOut(333);
+}
+if (checkis = 'false') {
+$('.dark').fadeOut(333);
+$('.light').fadeIn(333);
+}
+
+});
+
+</script>
+<div class="topbarvideo"><img src="passwordgen.png" class="logo"></div>
+
+</body>
