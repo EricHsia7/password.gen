@@ -63,10 +63,12 @@ a {text-decoration:none;color:#333;}
 .light {display:block;}
 .dark {display:none;}
 #page {background:#fff;}
+  #pagebar {background:#fafafa;}
 @media (prefers-color-scheme: dark) {
 .light {display:none;}
 .dark {display:block;}
 #page {background:#292929;}
+  #pagebar {background:#333;}
 }
 </style>
 <body>
@@ -78,7 +80,7 @@ a {text-decoration:none;color:#333;}
 </div>
 
 <div style="height:60px;width:100%;background:#fafafa; position: relative;top:auto; overflow:scroll;" id="pagebar">
-<div style="overflow:hidden; height:60px;width:100vw;background:#fafafa; position: absolute;top:0px;left:0px;">
+<div style="overflow:hidden; height:60px;width:100vw; position: absolute;top:0px;left:0px;" id="pagebar">
 <div class="tabdiv"><center><a href="#">首頁</a></center></div>
 <div class="tabdiv"><center> <a href="https://www.facebook.com/password.gen" target="_blank">Facebook</a></center></div>
 </div>
