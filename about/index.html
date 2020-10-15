@@ -142,5 +142,16 @@ backdrop-filter: blur(9px);
   
   <script>
     $('.menudiv').animate({height: 0 + '%'},1);
+    var open = 2 ;
+function menu() {
+if (open >"1") {
+  $('.menudiv').animate({height: 100 + '%'},888);
+   open -=2 ;
+   } 
+else {
+   $('.menudiv').animate({height: 0 + '%'},888);
+ open +=2 ;
+}
+}
   </script>
 </body>
