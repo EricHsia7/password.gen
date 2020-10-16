@@ -180,9 +180,16 @@
     <script>
         $(".menudiv").animate({ height: 0 + "%" }, 1);
         var open = 2;
+        var menuheight = 0 ;
         function menu() {
+           if (document.getElementById('list').getElementsByTagName('li').length*60 > window.innerHeight*0.5) {
+              menuheight = window.innerHeight*0.5 ;
+           }
+           else {
+              menuheight = document.getElementById('list').getElementsByTagName('li').length*60 ;
+           }
             if (open > "1") {
-                $(".menudiv").animate({ height: document.getElementById('list').getElementsByTagName('li').length*60 + "px" }, 888);
+                $(".menudiv").animate({ height: menuheight + "px" }, 888);
                 $(".menudivblur").fadeIn(888);
                 open -= 2;
             } else {
