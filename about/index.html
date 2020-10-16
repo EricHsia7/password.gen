@@ -90,7 +90,7 @@
         top: 48px;
         left: 0px;
         background: rgba(0, 0, 0, 0.7);
-        border-radius:0px 0px 25px 25px;
+        border-radius:0px 0px 15px 15px;
         overflow: hidden;
     }
     .menudivblur {
@@ -188,7 +188,7 @@
               menuheight = window.innerHeight*0.5 ;
            }
            else {
-              menuheight = document.getElementById('list').getElementsByTagName('li').length*73 ;
+              menuheight = (document.getElementById('list').getElementsByTagName('li').length*73)-5 ;
            }
             if (open > "1") {
                 $(".menudiv").animate({ height: menuheight + "px" }, 888);
