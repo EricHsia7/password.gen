@@ -104,7 +104,7 @@
     }
     .menudivinner {
         width: 100%;
-        height: calc(100% - 48px);
+        height: calc(100% - 0px);
         position: absolute;
         top: 0px;
         left: 0px;
@@ -168,7 +168,7 @@
     </div>
     <div class="menudiv">
         <div class="menudivinner">
-            <ul>
+            <ul id="list">
                 <center>
                     <a href="https://www.facebook.com/password.gen" target="_blank"><li>Facebook</li></a>
                     <a href="https://erichsia7.github.io/password.gen/" target="_blank"><li>密碼產生器</li></a>
@@ -182,11 +182,11 @@
         var open = 2;
         function menu() {
             if (open > "1") {
-                $(".menudiv").animate({ height: 100 + "%" }, 888);
+                $(".menudiv").animate({ height: document.getElementById('mycarousel').getElementsByTagName('li').length*60 + "px" }, 888);
                 $(".menudivblur").fadeIn(888);
                 open -= 2;
             } else {
-                $(".menudiv").animate({ height: 0 + "%" }, 888);
+                $(".menudiv").animate({ height: 0 + "px" }, 888);
                 $(".menudivblur").fadeOut(888);
                 open += 2;
             }
