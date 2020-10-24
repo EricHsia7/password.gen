@@ -1,0 +1,1 @@
+<script>const liffId = 'my-liff-id'liff.init({ liffId })function save() {liff.sendMessages([  {    type: 'text',    text: 'Hello, World!'  }])  .then(() => {    console.log('message sent');  })  .catch((err) => {    console.log('error', err);  });}</script>
