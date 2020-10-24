@@ -1,1 +1,26 @@
-<script>const liffId = 'my-liff-id'liff.init({ liffId })function save() {liff.sendMessages([  {    type: 'text',    text: 'Hello, World!'  }])  .then(() => {    console.log('message sent');  })  .catch((err) => {    console.log('error', err);  });}</script>
+<meta charset="UTF-8">
+<title>儲存</title>
+<a href="javascript:save()">儲存</a>
+<script>
+
+
+const liffId = 'my-liff-id'
+liff.init({ liffId })
+
+function save() {
+
+liff.sendMessages([
+  {
+    type: 'text',
+    text: '已儲存'
+  }
+])
+  .then(() => {
+    console.log('message sent');
+  })
+  .catch((err) => {
+    console.log('error', err);
+  });
+
+}
+</script>
