@@ -4,11 +4,11 @@
 <script>
 
 
-const liffId = 'my-liff-id'
-liff.init({ liffId })
-
-function save() {
-
+const liffId = 'my-liff-id' ;
+liff.init({ liffId });
+  
+  
+  
 liff.sendMessages([
   {
     type: 'text',
@@ -21,6 +21,9 @@ liff.sendMessages([
   .catch((err) => {
     console.log('error', err);
   });
+function save() {
+liff.sendMessages(messages)
+
 
 }
 </script>
