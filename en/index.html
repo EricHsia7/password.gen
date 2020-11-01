@@ -1,0 +1,83 @@
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-864PXSN4RV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-864PXSN4RV");
+    </script>
+</head>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" /><link rel="stylesheet" href="https://erichsia7.github.io/password.gen/app.min.css?f232500e-72b7-0281-df37-0536a14174f3" />
+<link href="https://erichsia7.github.io/password.gen/icon/icon_512x512.png" rel="apple-touch-icon" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="icon" />
+<link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="bookmark" />
+<link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="shortcut icon" />
+<title>Password generator</title>
+<body>
+    <div class="box">
+        <input type="text" id="password" readonly="readonly" />
+        <a href="javascript:copy('password')" class="btnbox">
+            <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iLTQwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMjcxIDUxMmgtMTkxYy00NC4xMTMyODEgMC04MC0zNS44ODY3MTktODAtODB2LTI3MWMwLTQ0LjExMzI4MSAzNS44ODY3MTktODAgODAtODBoMTkxYzQ0LjExMzI4MSAwIDgwIDM1Ljg4NjcxOSA4MCA4MHYyNzFjMCA0NC4xMTMyODEtMzUuODg2NzE5IDgwLTgwIDgwem0tMTkxLTM5MWMtMjIuMDU0Njg4IDAtNDAgMTcuOTQ1MzEyLTQwIDQwdjI3MWMwIDIyLjA1NDY4OCAxNy45NDUzMTIgNDAgNDAgNDBoMTkxYzIyLjA1NDY4OCAwIDQwLTE3Ljk0NTMxMiA0MC00MHYtMjcxYzAtMjIuMDU0Njg4LTE3Ljk0NTMxMi00MC00MC00MHptMzUxIDI2MXYtMzAyYzAtNDQuMTEzMjgxLTM1Ljg4NjcxOS04MC04MC04MGgtMjIyYy0xMS4wNDY4NzUgMC0yMCA4Ljk1MzEyNS0yMCAyMHM4Ljk1MzEyNSAyMCAyMCAyMGgyMjJjMjIuMDU0Njg4IDAgNDAgMTcuOTQ1MzEyIDQwIDQwdjMwMmMwIDExLjA0Njg3NSA4Ljk1MzEyNSAyMCAyMCAyMHMyMC04Ljk1MzEyNSAyMC0yMHptMCAwIiBmaWxsPSIjODA4MDgwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PC9nPjwvc3ZnPg=="
+                class="btn"
+            />
+        </a>
+    </div>
+    <div id="msg" class="msg"></div>
+    <div class="boxmsg"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-shadow: rgba(0, 0, 0, 0.3) 1px 0 10px; font-size: 1.1rem;" id="boxmsg">Password copied!</span></div>
+    <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span>
+    <div class="topbar" id="top2"><center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">Password generator</center></div>
+    <a href="javascript: moredivopen()" class="morebtn"><img src="https://erichsia7.github.io/password.gen/icon/more.svg" style="width: 48px; transform: scale(0.5); position: absolute; top: 0px; right: 0px;" /></a>
+    <div class="morediv">
+        <ul>
+            <a href="javascript: passwordgenint()">
+                <li><center>What's this?</center></li>
+            </a>
+            <a href="javascript:window.location.reload()">
+                <li><center>Reload</center></li>
+            </a>
+            <a href="https://erichsia7.github.io/password.gen/about/">
+                <li><center>About</center></li>
+            </a>
+        </ul>
+    </div>
+    <div class="fixedbg"></div>
+    <div class="passwordgenintdiv">
+        <span style="margin: 10px; width: calc(100% - 20px); height: calc(100% - 72px); position: absolute; top: 0px; left: 0px;" class="ppgenintext">This is a password generator that can generate 8-64-bit security passwords, click the frame to switch the length! </span>
+        <a href="javascript: passwordgenintclose()" class="ppgeningclosebtn">
+            <center style="font-size: 25px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">Got it</center>
+        </a>
+    </div>
+    <div class="loadbg">
+        <span class="img-dd"><img src="https://erichsia7.github.io/password.gen/icon/icon_64x64.png" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); filter: blur(3px);" class="icon" id="ddimg" /></span>
+        <span class="img-hd"><img src="https://erichsia7.github.io/password.gen/icon/icon_open.png" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);" class="icon" id="hdimg" /></span>
+    </div>
+</body>
+<script src="app.en.min.js"></script>
+<script>
+    window.onload = function () {
+        var e = 0;
+        document.addEventListener("touchstart", function (e) {
+            e.touches.length > 1 && e.preventDefault();
+        }),
+            document.addEventListener(
+                "touchend",
+                function (t) {
+                    var n = new Date().getTime();
+                    n - e <= 300 && t.preventDefault(), (e = n);
+                },
+                !1
+            ),
+            document.addEventListener("gesturestart", function (e) {
+                e.preventDefault();
+            });
+    };
+</script>
