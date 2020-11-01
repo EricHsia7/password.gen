@@ -1,5 +1,3 @@
-$('#ddimg').delay(888).fadeOut(111);
-$('#hdimg').delay(750).fadeIn(111);
 $('.loadbg').delay(3800).fadeOut(888);
 f = 0 ;
 var passwordLength = 16 ;
