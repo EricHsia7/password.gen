@@ -8,3 +8,5 @@ password generator
 <code>This is a main page
 <a href="https://erichsia7.github.io/password.gen/">Open</a>
 </code>
+# Images
+![image](https://erichsia7.github.io/password.gen/image/25e0bdc8-f4ed-14cb-e90a-30a8098bb43a.png)
