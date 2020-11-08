@@ -185,8 +185,32 @@
 </style>
 <body>
     <div class="index-image">
-        <video autoplay="autoplay" src="password-gen-video.mov" loop="loop" style="width: calc(100%);" id="video"></video>
-
+        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/v_jF8kqBj6Y?playlist=v_jF8kqBj6Y&loop=1&autoplay=1&mute=1" frameborder="0"  id="indexvvvvvvvvvvvvvvvvvv"></iframe>
+      <script>
+$(function() {
+  if(typeof YOUTUBE_VIDEO_MARGIN == 'undefined') {
+    YOUTUBE_VIDEO_MARGIN=0;
+  }
+  $('iframe').each(function(index,item) {
+    if($(item).attr('src').match(/http(s)?:\/\/www\.youtube\.com/)) {
+      var w=$(item).attr('width');
+      var h=$(item).attr('height');
+      var ar = h/w*100;
+      ar=ar.toFixed(2);
+      //Style iframe   
+      $(item).css('position','absolute');
+      $(item).css('top','0');
+      $(item).css('left','0');   
+      $(item).css('width','100%');
+      $(item).css('height','100%');
+      $(item).css('max-width',w+'px');
+      $(item).css('max-height', h+'px');       
+      $(item).wrap('<div style="max-width:'+w+'px;margin:0 auto; padding:'+YOUTUBE_VIDEO_MARGIN+'px;" />');
+      $(item).wrap('<div style="position: relative;padding-bottom: '+ar+'%; height: 0; overflow: hidden;" />');
+    }
+  });
+});
+</script>
         <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 10vmin; color: #fff; font-family: 'Secular One', sans-serif;"></span>
     </div>
 
