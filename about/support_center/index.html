@@ -224,7 +224,7 @@ right:0px;
 <body>
     <div class="index-image">
       
-<canvas id="canvas" style="background:#000; position: fixed; top:0px;left:-5px;opacity:1;"></canvas>
+<canvas id="canvas" style="background:#000; position: absolute; top:0px;left:-5px;opacity:1;"></canvas>
 
         <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 10vmin; color: #fff; font-family: 'Secular One', sans-serif;">
 <center>
@@ -290,7 +290,7 @@ window.onload = function () {
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 var W = document.body.clientWidth*1.8;
-var H = 600;
+var H = document.body.clienHeight*1.8;
 canvas.height = H;
 canvas.width = W;
 var fontSize = 25;
