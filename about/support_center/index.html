@@ -235,7 +235,7 @@ right:0px;
 <h1 style="font-size:30px;">請問您有什麼需求？</h1>
 <div id="searchbox">
 <input class="input" placeholder="搜尋問題" id="searchinput">
-<a href="javascript:searchq()"><div class="search"></div></a>
+<a href="javascript:searchq2()"><div class="search"></div></a>
 </div>
 </center>
 </span>
@@ -292,6 +292,10 @@ right:0px;
 	    function searchq() {
 		    var searchur = '<iframe src="https://password-gen-support.blogspot.com/search?q=' + document.getElementById('searchinput').value + '" id="searchoutput" style="border:none;width:100%;height:100%;position:absolute;top:0px;left:0px;">' ;
 		    $('.intxt').html(searchur);
+	    }
+	    function searchq2() {
+		    var searchurl = 'https://password-gen-support.blogspot.com/search?q=' + document.getElementById('searchinput').value ;
+		    $('.intxt').load(searchurl);
 	    }
     </script>
     <script>
