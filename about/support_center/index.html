@@ -298,6 +298,18 @@ right:0px;
 	    }
     </script>
     <script>
+	    function SetCwinHeight() {
+    var iframeid = document.getElementById("searchoutput"); //iframe id  
+    if (document.getElementById) {
+        if (iframeid && !window.opera) {
+            if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
+                iframeid.height = iframeid.contentDocument.body.offsetHeight;
+            } else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
+                iframeid.height = iframeid.Document.body.scrollHeight;
+            }
+        }
+    }
+}
 window.onload = function () {
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
@@ -314,7 +326,7 @@ coordinate.push(0);
 }
 var str = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+?><:{}[]/\ The background by password.gen";
 function draw() {
-$('#searchoutput').css({'height': document.body.clientHeight*1.1 });
+SetCwinHeight();
 $('#canvas').css({'top': $( window ).scrollTop()/450*100 , '-webkit-filter' : 'blur(' + ($( window ).scrollTop()/450*3.8) + 'px)' , 'filter' : 'blur(' + ($( window ).scrollTop()/450*3.8) + 'px)'});
 // bcolor
 context.fillStyle = "rgba(0,0,0,0.05)";
@@ -344,5 +356,8 @@ return "rgb(" + r + "," + g + "," + b + ")";
 draw();
 setInterval(draw, 30);
 };
+	    
+	    
+	    
 </script>
 </body>
