@@ -290,8 +290,8 @@ right:0px;
             }
         }
 	    function searchq() {
-		    var searchur = 'https://password-gen-support.blogspot.com/search?q=' + document.getElementById('searchinput').value ;
-		    location.href = searchur ;
+		    var searchur = '<iframe src="https://password-gen-support.blogspot.com/search?q=' + document.getElementById('searchinput').value + '" id="searchoutput" style="border:none;width:100%;height:100%;position:absolute;top:0px;left:0px;">' ;
+		    $('.intxt').html(searchur);
 	    }
     </script>
     <script>
