@@ -234,8 +234,8 @@ right:0px;
 <img src="https://erichsia7.github.io/password.gen/icon/icon_512x512.png" style="width:120px;border-radius:99em;">
 <h1 style="font-size:30px;">請問您有什麼需求？</h1>
 <div id="searchbox">
-<input class="input" placeholder="搜尋問題">
-<a href="#search"><div class="search"></div></a>
+<input class="input" placeholder="搜尋問題" id="searchinput">
+<a href="javascript:searchq()"><div class="search"></div></a>
 </div>
 </center>
 </span>
@@ -245,7 +245,7 @@ right:0px;
        
        <span class="intxt">
         <center>
-       由於Google Search目前無法收錄本站新頁面，因此搜尋功能無法使用。
+       本站支援文章將在Blogger發布，您也可以在上方欄位搜尋！
         </center>
        </span>
        
@@ -289,6 +289,10 @@ right:0px;
                 open += 2;
             }
         }
+	    function searchq() {
+		    var searchur = 'https://password-gen-support.blogspot.com/search?q=' + document.getElementById('searchinput').value ;
+		    window.open(searchur);
+	    }
     </script>
     <script>
 window.onload = function () {
