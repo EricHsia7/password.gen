@@ -244,9 +244,13 @@ right:0px;
    
        
        <span class="intxt">
-        <center>
-       本站支援文章將在Blogger發布，您也可以在上方欄位搜尋！
-        </center>
+     <style>
+* {
+outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+</style>
+<script async src="https://cse.google.com/cse.js?cx=a6de35cc0f33a968d"></script>
+<div class="gcse-searchresults-only"></div>
        </span>
        
     <div class="menudivblur"></div>
@@ -290,7 +294,7 @@ right:0px;
         }
 	    function searchq() {
 		    var searchur = '<iframe src="https://password-gen-support.blogspot.com/search?q=' + document.getElementById('searchinput').value + '" id="searchoutput" style="border:none;width:100%;position: relative; top: auto;height:100%;">' ;
-		    $('.intxt').html(searchur);
+		    location.href = '?q=' + document.getElementById('searchinput').value ;
 	    }
 	    function searchq2() {
 		    var searchurl = 'https://password-gen-support.blogspot.com/search?q=' + document.getElementById('searchinput').value ;
