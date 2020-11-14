@@ -314,7 +314,7 @@ coordinate.push(0);
 }
 var str = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+?><:{}[]/\ The background by password.gen";
 function draw() {
-$('#searchoutput').css({'height': document.body.clientHeight });
+$('#searchoutput').css({'height': document.body.clientHeight*1.1 });
 $('#canvas').css({'top': $( window ).scrollTop()/450*100 , '-webkit-filter' : 'blur(' + ($( window ).scrollTop()/450*3.8) + 'px)' , 'filter' : 'blur(' + ($( window ).scrollTop()/450*3.8) + 'px)'});
 // bcolor
 context.fillStyle = "rgba(0,0,0,0.05)";
