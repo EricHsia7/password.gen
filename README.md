@@ -15,7 +15,7 @@ This is a about page
 <a href="https://erichsia7.github.io/password.gen/about/">Open</a>
 </code>
 # Support
-![image] (https://erichsia7.github.io/password.gen/image/Yz0JyUZj1k2oxJTEmfWrGw8HpBms1fFCoBpgKeVEZUrcyd8mzNoDNLNinSU4Os9Y.jpeg)
+![image](https://erichsia7.github.io/password.gen/image/Yz0JyUZj1k2oxJTEmfWrGw8HpBms1fFCoBpgKeVEZUrcyd8mzNoDNLNinSU4Os9Y.jpeg)
 <code>
 This is a support page
 <a href="https://erichsia7.github.io/password.gen/about/support_center/">Open</a>
