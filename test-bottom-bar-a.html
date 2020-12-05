@@ -56,21 +56,21 @@
   <script>
     function home() {
       $('.supportiframe').fadeOut(1);
-      $('.hico').css({'opacity':'1'});
-      $('.sico,.mico').css({'opacity':'0.5'});
+      $('#hico').css({'opacity':'1'});
+      $('#sico,#mico').css({'opacity':'0.5'});
       $('.moreiframe').fadeOut(1);
     }
     function support() {
       $('.supportiframe').fadeIn(1);
       $('.moreiframe').fadeOut(1);
-      $('.sico').css({'opacity':'1'});
-      $('.hico,.mico').css({'opacity':'0.5'});
+      $('#sico').css({'opacity':'1'});
+      $('#hico,#mico').css({'opacity':'0.5'});
     }
     function more() {
       $('.supportiframe').fadeOut(1);
       $('.moreiframe').fadeIn(1);
-      $('.mico').css({'opacity':'1'});
-      $('.sico,.hico').css({'opacity':'0.5'});
+      $('#mico').css({'opacity':'1'});
+      $('#sico,#hico').css({'opacity':'0.5'});
     }
   </script>
 <!--pagescript end-->
