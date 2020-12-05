@@ -46,25 +46,31 @@
   }
 </style>
 <div class="topbar" style="top:auto;bottom:0px;" id="bottom">
-  <div class="bottom-btn-b" style="left:0%;"><a href="javascript:home()"><img src="icon/home.svg" class="btn-cen"></a></div>
-  <div class="bottom-btn-b" style="left:50%;transform:translate(-50%,0%);"><a href="javascript:support()"><img src="icon/support.svg" class="btn-cen"></a></div>
-  <div class="bottom-btn-b" style="right:0%;"><a href="javascript:more()"><img src="icon/more2.svg" class="btn-cen"></a></div>
+  <div class="bottom-btn-b" style="left:0%;"><a href="javascript:home()"><img src="icon/home.svg" class="btn-cen" id="hico"></a></div>
+  <div class="bottom-btn-b" style="left:50%;transform:translate(-50%,0%);"><a href="javascript:support()"><img src="icon/support.svg" class="btn-cen" id="sico"></a></div>
+  <div class="bottom-btn-b" style="right:0%;"><a href="javascript:more()"><img src="icon/more2.svg" class="btn-cen" id="mico"></a></div>
 </div>
 
 <!--bottom end-->
 <!--pagescript-->
   <script>
     function home() {
-      $('.supportiframe').fadeOut(55);
-      $('.moreiframe').fadeOut(55);
+      $('.supportiframe').fadeOut(1);
+      $('.hico').css({'opacity':'1'});
+      $('.sico,.mico').css({'opacity':'0.5'});
+      $('.moreiframe').fadeOut(1);
     }
     function support() {
-      $('.supportiframe').fadeIn(55);
-      $('.moreiframe').fadeOut(55);
+      $('.supportiframe').fadeIn(1);
+      $('.moreiframe').fadeOut(1);
+      $('.sico').css({'opacity':'1'});
+      $('.hico,.mico').css({'opacity':'0.5'});
     }
     function more() {
-      $('.supportiframe').fadeOut(55);
-      $('.moreiframe').fadeIn(55);
+      $('.supportiframe').fadeOut(1);
+      $('.moreiframe').fadeIn(1);
+      $('.mico').css({'opacity':'1'});
+      $('.sico,.hico').css({'opacity':'0.5'});
     }
   </script>
 <!--pagescript end-->
