@@ -29,16 +29,16 @@
   
   <!--more-->
  <style>
-   .supportiframe {
+   .moreiframe {
      width:100%;
      height:calc(100% - 50px);
      position:fixed;
-     top:0px;
+     top:55px;
      left:0px;
      border:none;
    }
  </style>
-  <iframe src="" class="supportiframe"></iframe>
+  <iframe src="" class="moreiframe"></iframe>
   
 <!--more end-->
   
@@ -70,6 +70,7 @@
 <!--pagescript-->
   <script>
     $('.supportiframe').attr('src','https://erichsia7.github.io/password.gen/about/support_center/').fadeOut(1);
+    $('.moreiframe').attr('src','https://erichsia7.github.io/password.gen/about/').fadeOut(1);
     function home() {
       $('.supportiframe').fadeOut(1);
       $('#hico').css({'opacity':'1'});
