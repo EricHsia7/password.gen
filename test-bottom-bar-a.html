@@ -24,7 +24,7 @@
      display:none;
    }
  </style>
-  <iframe src="https://erichsia7.github.io/password.gen/about/support_center/" class="supportiframe"></iframe>
+  <iframe src="" class="supportiframe"></iframe>
   
 <!--support end-->
 <div class="topbar" id="top2"><center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">密碼產生器</center></div>
@@ -54,6 +54,7 @@
 <!--bottom end-->
 <!--pagescript-->
   <script>
+    $('.supportiframe').attr('src','https://erichsia7.github.io/password.gen/about/support_center/');
     function home() {
       $('.supportiframe').fadeOut(1);
       $('#hico').css({'opacity':'1'});
