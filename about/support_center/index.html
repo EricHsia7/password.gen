@@ -243,6 +243,13 @@ outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
         </div>
     </div>
     <script>
+	    var getUrlString = location.href;
+	    var url = new URL(getUrlString);
+	    if (url.searchParams.get('top') = "t") {
+		    $('.topbarvideo').fadeOut(1);
+	    }
+	    else {    
+	    }
         $(".menudiv").animate({ height: 0 + "%" }, 1);
         var open = 2;
         var menuheight = 0 ;
@@ -264,8 +271,12 @@ outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
             }
         }
 	    function searchq() {
-		    var searchur = '<iframe src="https://password-gen-support.blogspot.com/search?q=' + document.getElementById('searchinput').value + '" id="searchoutput" style="border:none;width:100%;position: relative; top: auto;height:100%;">' ;
+		    if (url.searchParams.get('top') = "t") {
+			    location.href = '?top=t&q=' + document.getElementById('searchinput').value ;
+		    }
+		    else {
 		    location.href = '?q=' + document.getElementById('searchinput').value ;
+		    }
 	    }
 	    function searchq2() {
 		    var searchurl = 'https://password-gen-support.blogspot.com/search?q=' + document.getElementById('searchinput').value ;
