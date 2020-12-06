@@ -4,7 +4,7 @@ password generator
 產生安全的密碼
 
 # Home
-![image](https://erichsia7.github.io/password.gen/image/3208cef3-2cc1-6a42-ba4a-4c0758f10da8.jpeg)
+![image](https://camo.githubusercontent.com/5dc20db79c92d22c2c1964050301a8cb2535e36ce1ce6b6f8614fab48c985b70/68747470733a2f2f6572696368736961372e6769746875622e696f2f70617373776f72642e67656e2f696d6167652f33323038636566332d326363312d366134322d626134612d3463303735386631306461382e6a706567)
 <code>This is a home page
 <a href="https://erichsia7.github.io/password.gen/">Open</a>
 </code>
