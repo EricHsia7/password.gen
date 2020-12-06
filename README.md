@@ -9,7 +9,7 @@ password generator
 <a href="https://erichsia7.github.io/password.gen/">Open</a>
 </code>
 # About
-![image](https://erichsia7.github.io/password.gen/image/25e0bdc8-f4ed-14cb-e90a-30a8098bb43a.png)
+![image](https://camo.githubusercontent.com/5eee01cc8b317cccf98a08dff232df95669d72ba6c3151a0fbd65bf7444934bb/68747470733a2f2f6572696368736961372e6769746875622e696f2f70617373776f72642e67656e2f696d6167652f32356530626463382d663465642d313463622d653930612d3330613830393862623433612e706e67)
 <code>
 This is a about page
 <a href="https://erichsia7.github.io/password.gen/about/">Open</a>
