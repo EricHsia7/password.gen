@@ -267,14 +267,14 @@ outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
             }
         }
 	    function searchq() {
-		    if (url.searchParams.get('top') = "t") {
+		    if (url.searchParams.get('top') === "t") {
 			    location.href = '?top=t&q=' + document.getElementById('searchinput').value ;
 		    }
 		    else {
 		    location.href = '?q=' + document.getElementById('searchinput').value ;
 		    }
 	    }
-	if (url.searchParams.get('top') = "t") {
+	if (url.searchParams.get('top') === "t") {
 		    $('.topbarvideo').fadeOut(1);
 	    }
     </script>
