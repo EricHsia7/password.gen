@@ -76,8 +76,6 @@ niees +=2 ;
 function passwordgenint() {
 $('.fixedbg').fadeIn(555);
 $('.passwordgenintdiv').animate({'bottom':50 + '%'}, 555 );
-
-moredivopen();
 }
 
 function passwordgenintclose() {
