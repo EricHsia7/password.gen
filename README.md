@@ -21,5 +21,4 @@ This is a support page
 <a href="https://erichsia7.github.io/password.gen/about/support_center/">Open</a>
 </code>
 # Labs
-## bottom bar
-<a href="https://erichsia7.github.io/password.gen/labs/bottom-bar/">Open</a>
+No experiment
