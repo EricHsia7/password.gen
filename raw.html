@@ -1,69 +1,21 @@
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="UTF-8" /><link rel="stylesheet" href="app.min.css?f232500e-72b7-0281-df37-0536a14174f3" />
-<link href="https://erichsia7.github.io/password.gen/icon/icon_512x512.png?e06bb97e-06f1-1efa-1c8a-7a45121c64f3" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="icon" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="bookmark" />
-<link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="shortcut icon" /><title>密碼產生器</title>
-<style>
-    /*/*/
-    .supportiframe {
-        width: 100%;
-        height: calc(100% - 100px);
-        position: fixed;
-        top: 50px;
-        left: 0;
-        border: none;
-    }
-    .moreiframe {
-        width: 100%;
-        height: calc(100% - 100px);
-        position: fixed;
-        top: 50px;
-        left: 0;
-        background: #fff;
-        overflow: scroll;
-    }
-    li {
-        list-style: none;
-        width: 100vw;
-        height: 50px;
-        font-size: 40px;
-        margin-top: 5px;
-        margin-left: 0;
-        border-bottom: 1px grey solid;
-        padding-bottom: 8px;
-        font-family: "Secular One", sans-serif;
-    }
-    ujj a {
-        color: grey;
-        text-decoration: none;
-        font-family: "Secular One", sans-serif;
-    }
-    @media (prefers-color-scheme: dark) {
-        .moreiframe {
-            width: 100%;
-            height: calc(100% - 43px);
-            position: fixed;
-            top: 50px;
-            left: 0;
-            background: #333;
-            overflow: scroll;
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-864PXSN4RV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
         }
-    }
-    .bottom-btn-b {
-        position: absolute;
-        top: 0;
-        width: calc(100% / 3);
-        height: 100%;
-        background: rgba(0, 0, 0, 0);
-    }
-    .btn-cen {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 30px;
-    }
-</style>
+        gtag("js", new Date());
+
+        gtag("config", "G-864PXSN4RV");
+    </script>
+</head>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="UTF-8" /><link rel="stylesheet" href="app.min.css?f232500e-72b7-0281-df37-0536a14174f3" /><link rel="stylesheet" href="app_2.min.css?f232500e" />
+<link href="icon/icon_512x512.png" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="icon" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="bookmark" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="shortcut icon" />
+<title>密碼產生器</title>
 <body>
     <div class="box">
         <input type="text" id="password" readonly="readonly" />
@@ -101,15 +53,21 @@
         </ujj>
     </div>
     <div id="bottom" class="topbar" style="top: auto; bottom: 0px;">
+    <a href="javascript:home()">
         <div class="bottom-btn-b" style="left: 0%;">
-            <a href="javascript:home()"><img src="https://erichsia7.github.io/password.gen/icon/home.svg" class="btn-cen" id="hico" /></a>
+            <img src="https://erichsia7.github.io/password.gen/icon/home.svg" class="btn-cen" id="hico" />
         </div>
+        </a>
+        <a href="javascript:support()">
         <div class="bottom-btn-b" style="left: 50%; transform: translate(-50%, 0%);">
-            <a href="javascript:support()"><img src="https://erichsia7.github.io/password.gen/icon/support.svg" class="btn-cen" id="sico" /></a>
+            <img src="https://erichsia7.github.io/password.gen/icon/support.svg" class="btn-cen" id="sico" />
         </div>
+        </a>
+        <a href="javascript:more()">
         <div class="bottom-btn-b" style="right: 0%;">
-            <a href="javascript:more()"><img src="https://erichsia7.github.io/password.gen/icon/more2.svg" class="btn-cen" id="mico" /></a>
+            <img src="https://erichsia7.github.io/password.gen/icon/more2.svg" class="btn-cen" id="mico" />
         </div>
+        </a>
     </div>
     <div class="topbar" id="top2"><center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">密碼產生器</center></div>
     <div class="fixedbg"></div>
@@ -123,7 +81,7 @@
         <span class="img-dd"><img src="icon/ic_256.png" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); filter: blur(0px);" class="icon" id="ddimg" /></span>
         <span class="img-hd"><img src="icon/ic_2048.png" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);" class="icon" id="hdimg" /></span>
     </div>
-    <script src="app.min.js?c9e19b3d-a954-8509-efad-c762ebcb4106"></script>
+    <script src="app.min.js?bf614bf9-78ae-3da3-96b4-d319ffbeb7f8"></script>
     <script>
         function home() {
             $(".supportiframe").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#sico,#mico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("密碼產生器");
@@ -134,7 +92,8 @@
         function more() {
             $(".supportiframe").fadeOut(1), $(".moreiframe").fadeIn(1), $("#mico").css({ opacity: "1" }), $("#sico,#hico").css({ opacity: "0.5" }), $("#top2 center").html("更多");
         }
-        $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1), $(".moreiframe").attr("src", "https://erichsia7.github.io/password.gen/about/").fadeOut(1);
+        $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1);
+        home();
     </script>
     <script>
         window.onload = function () {
