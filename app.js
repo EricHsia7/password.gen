@@ -1,7 +1,7 @@
 $('.loadbg').delay(3800).fadeOut(888);
 f = 0 ;
 var passwordLength = 16 ;
-var char = ["0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+?><:-{}[]","cdefghijklmnopqrstuvwxy45678abzABCDEFG90123HIJKL-MNOPQR()_+?STUVWXYZ!@#$%^&*><:{}[]","!@#$%^&*()_+?><:{}[]0123456789abc-defghijklmnopqrstHIJKLMNOPQRSTUVWXYuvwxyzABCDEFGZ","6789abcdefghijklmnopqrs-tHIJKLMNOPQRSTUVWXYuvwxyzABCDEFGZ012345!@#$%^&*()_+?><:{}[]","KLMNOPQRSTUVWXYuvwxyz6789a-bcdefghijklmnopqrstHIJEFGZ012345!@#$%^&*()_+?><:{ABCD}[]","ABCDhijklmnopqrstuvw-xyzEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefg!@#$%^&*()_+?><:{}[]"];
+var char = ["0123456789abcdefghijklmnopqrstuvw,xyzABCDE.FGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+?><:-{}[]","cdefghijklmnopqrstuvwxy45678ab,.zABCDEFG90123HIJKL-MNOPQR()_+?STUVWXYZ!@#$%^&*><:{}[]","!@#$%^&*()_+?><:{}[]0123456789abc-defghijklmno,.pqrstHIJKLMNOPQRSTUVWXYuvwxyzABCDEFGZ","6789abcdefghijklmnopqrs-tHIJKLM,.NOPQRSTUVWXYuvwxyzABCDEFGZ012345!@#$%^&*()_+?><:{}[]","KLMNOPQRSTUVWXYuvwxyz6789a-bcdefghijklmnopqrstH,.IJEFGZ012345!@#$%^&*()_+?><:{ABCD}[]","ABCDhijklmnopqrstuvw-xyzEFGHIJKLM,.NOPQRSTUVWXYZ0123456789abcdefg!@#$%^&*()_+?><:{}[]"] ;
 function getPassword() {
 var chars = char[Math.floor(Math.random() * 5)] ;
 var password = "" ;
