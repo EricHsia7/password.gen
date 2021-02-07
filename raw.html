@@ -52,17 +52,81 @@
             </center>
         </ujj>
     </div>
-    <div id="bottom" class="topbar" style="top: auto; bottom: 0px;">
-        <a href="javascript:home()">
-            <div class="bottom-btn-b" style="left: 0%;"><img src="https://erichsia7.github.io/password.gen/icon/home.svg" class="btn-cen" id="hico" /></div>
-        </a>
-        <a href="javascript:support()">
-            <div class="bottom-btn-b" style="left: 50%; transform: translate(-50%, 0%);"><img src="https://erichsia7.github.io/password.gen/icon/support.svg" class="btn-cen" id="sico" /></div>
-        </a>
-        <a href="javascript:more()">
-            <div class="bottom-btn-b" style="right: 0%;"><img src="https://erichsia7.github.io/password.gen/icon/more2.svg" class="btn-cen" id="mico" /></div>
-        </a>
+    <style>  .bottombar {
+    width: 100%;
+    height: 52px;
+    color: #212121;
+    font-size: 25px;
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background: #fff;
+    box-shadow:0 0 15px 1px rgba(0,0,0,0.05);
+}
+  .bottom-btn-b {
+        position: absolute;
+        top: 0;
+        width: calc(100% / 3);
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        overflow: hidden;
+    }
+    .btn-cen {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 30px;
+  }
+   .bottom-btn-b a {
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:rgba(0, 0, 0, 0);
+  }
+    .bottom-btn-b a::before {
+    content:'';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 99em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(2.1);
+    opacity: 0;
+    transition: transform .8s, opacity 1s;
+    width:50%;
+    height:50%;
+    padding:50%;
+    
+overflow: hidden;
+}
+
+.bottom-btn-b a:active::before {
+    border-radius:99em;
+    transition: 0s;
+    opacity: .6;
+    transform: translate(-50%, -50%) scale(0);
+    overflow: hidden;
+}</style>
+    <div id="bottom" class="bottombar">
+        <div class="bottom-btn-b" style="left: 0%;">
+            <a href="javascript:home()"><img src="https://erichsia7.github.io/password.gen/icon/home.svg" class="btn-cen" id="hico" /></a>
+        </div>
+        <div class="bottom-btn-b" style="left: 50%; transform: translate(-50%, 0%);">
+            <a href="javascript:support()"><img src="https://erichsia7.github.io/password.gen/icon/support.svg" class="btn-cen" id="sico" /></a>
+        </div>
+        <div class="bottom-btn-b" style="right: 0%;">
+            <a href="javascript:more()"><img src="https://erichsia7.github.io/password.gen/icon/more2.svg" class="btn-cen" id="mico" /></a>
+        </div>
     </div>
+    
+    
     <div class="topbar" id="top2"><center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">密碼產生器</center></div>
     <div class="fixedbg"></div>
     <div class="passwordgenintdiv">
