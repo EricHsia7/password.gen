@@ -45,7 +45,7 @@ var g = 2 ;
 $('#password').click(function() {
 o = 0 ;
 f = 0 ;
-if (passwordLength > 63) {
+if (passwordLength > 127) {
 passwordLength = 8 ;
 }
 else {
