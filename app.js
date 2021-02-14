@@ -1,4 +1,4 @@
-$('.loadbg').delay(3800).fadeOut(888);
+$('.loadbg').delay(1200).fadeOut(888);
 f = 0 ;
 var passwordLength = 16 ;
 var char = ["0123456789abcdefghijklmnopqrstuvw,xyzABCDE.FGHIJKLMN/\OPQRSTUVWXYZ!@#$%^&*()_+?><:-{}[]","cdefghijklmnopqrstuvwxy45678ab,.zABCDEFG9012/\3HIJKL-MNOPQR()_+?STUVWXYZ!@#$%^&*><:{}[]","!@#$%^&*()_+?><:{}[]0123456789abc-defghijklmno,.pqrstHIJKLMNO/\PQRSTUVWXYuvwxyzABCDEFGZ","6789abcdefghijklmnopqrs-tHIJKLM,.NOPQRSTUVWXYuvwxyzABCDEFGZ012345!/\@#$%^&*()_+?><:{}[]","KLMNOPQRSTUVWXYuvwxyz6789a-bcdefghijklmnopqr/\stH,.IJEFGZ012345!@#$%^&*()_+?><:{ABCD}[]","ABCDhijklmnopqrstuvw-xyzEFGHIJKLM,.NOPQRSTUV/\WXYZ0123456789abcdefg!@#$%^&*()_+?><:{}[]"] ;
