@@ -130,7 +130,7 @@
 }
 </style>
 <span id="ss" style="position:absolute;left:50%;top:85%;padding-bottom:90px;transform:translateX(-50%);">
-    <center><a href="javascript:webpwdlength()" style="border:1px #888 solid;font-size:15px;padding:10px;border-radius:99em;color:#888;">查看建議的密碼長度</a></center>
+    <center><a href="javascript:webpwdlength()" id="webpwdlength" style="border:1px #888 solid;font-size:15px;padding:10px;border-radius:99em;color:#888;">查看建議的密碼長度</a></center>
     <center><h1 style="margin-top:30px;font-family: 'Noto Sans TC', sans-serif;font-weight:700;">建議密碼長度</h1></center>
     </span>
 <script>
@@ -149,7 +149,8 @@ $(this).parent().children(".description").val("yyy");
 });
 
     function webpwdlength() {
-        $('body').animate({scrollTop:$('#ss').offset().top }, 500);
+        $('body').animate({scrollTop:$('#ss').offset().top }, 888);
+        $('#webpwdlength').css({'opacity':'0',transition:'0.8s'});
     }
 
 </script>
