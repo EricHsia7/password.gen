@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="icon" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="bookmark" />
 <link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="shortcut icon" /><title>密碼產生器</title>
 <body>
-    <div class="box">
+    <div class="box" style="position:absolute;">
         <input type="text" id="password" readonly="readonly" />
         <a href="javascript:copy('password')" class="btnbox">
             <img
@@ -28,6 +28,134 @@
     </div>
     <div id="msg" class="msg"></div>
     <div class="boxmsg"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-shadow: rgba(0, 0, 0, 0.3) 1px 0 10px; font-size: 1.1rem;" id="boxmsg">已複製密碼！</span></div>
+    
+    
+    
+    <style>
+@font-face {font-family: entitle;src: url(https://erichsia7.github.io/password.gen/font/Product%20Sans%20Bold.ttf); font-display：swap;}
+
+.pwwstbox {
+  width: 320px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 12px;
+  overflow: hidden;
+  border:1px #e3e3e3 solid;
+  margin-top:25px;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  color:#000;
+}
+
+.pwwstbox .content {
+  padding: 2rem 1.8rem;
+  color:#000;
+}
+
+.pwwstbox h4 {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+  line-height: 1.5rem;
+  font-family: entitle;
+  color:#000;
+}
+
+.pwwstbox h4 img {
+  height:1.4rem;
+  width:1.4rem;
+  object-fit:cover;
+  border-radius:6px;
+  transform:scale(1.2);
+  margin-right:3px;
+  color:#000;
+}
+
+.pwwstbox .description {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  height:2.5rem;
+  width:100%;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:400;
+  color:#000;
+}
+
+@media (prefers-color-scheme: dark) {
+
+.pwwstbox {
+  width: 320px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  border:1px #fff solid;
+  margin-top:25px;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  color:#fff;
+}
+
+.pwwstbox .content {
+  padding: 2rem 1.8rem;
+  color:#fff;
+}
+
+.pwwstbox h4 {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+  line-height: 1.5rem;
+  font-family: entitle;
+  color:#fff;
+
+}
+
+.pwwstbox h4 img {
+  height:1.4rem;
+  width:1.4rem;
+  object-fit:cover;
+  border-radius:6px;
+  transform:scale(1.2);
+  margin-right:3px;
+  color:#fff;
+}
+
+.pwwstbox .description {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  height:2.5rem;
+  width:100%;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:400;
+  color:#fff;
+}
+
+}
+</style>
+<center><h1 style="font-family: 'Noto Sans TC', sans-serif;font-weight:700;">建議密碼長度</h1></center>
+<span id="ss"></span>
+
+<script>
+
+htmlobj=$.ajax({url:"https://erichsia7.github.io/password.gen/websitepasswordlength.json",async:false});
+
+for (var i=0; i<JSON.parse(htmlobj.responseText).d.length; i++) {
+$('#ss').append('<div class="pwwstbox" id="f' + JSON.parse(htmlobj.responseText).d[i].name + '"><div class="content"><h4><img src="' + JSON.parse(htmlobj.responseText).d[i].icon + '">' + JSON.parse(htmlobj.responseText).d[i].name + '</h4><div class="description">' + JSON.parse(htmlobj.responseText).d[i].min + ' - ' + JSON.parse(htmlobj.responseText).d[i].max + '位</div></div></div>');
+}
+
+$('.addbtns').click(function() {
+$(this).parent().children(".description").val("ppp");
+});
+$('.rebtns').click(function() {
+$(this).parent().children(".description").val("yyy");
+});
+
+//JSON.parse(htmlobj.responseText).d[i].name
+//JSON.parse(htmlobj.responseText).d[i].url
+//JSON.parse(htmlobj.responseText).d[i].min
+//JSON.parse(htmlobj.responseText).d[i].max
+//JSON.parse(htmlobj.responseText).d[i].icon
+
+</script>
     <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span> <iframe src="" class="supportiframe"></iframe>
     <div class="moreiframe">
         <ujj>
