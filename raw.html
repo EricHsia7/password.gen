@@ -42,13 +42,6 @@ for (var i=0; i<JSON.parse(htmlobj.responseText).d.length; i++) {
 $('#ss').append('<div class="pwwstbox" id="f' + JSON.parse(htmlobj.responseText).d[i].name + '"><div class="content"><h4><img src="' + JSON.parse(htmlobj.responseText).d[i].icon + '">' + JSON.parse(htmlobj.responseText).d[i].name + '</h4><div class="description">' + JSON.parse(htmlobj.responseText).d[i].min + ' - ' + JSON.parse(htmlobj.responseText).d[i].max + '位</div></div></div>');
 }
 
-$('.addbtns').click(function() {
-$(this).parent().children(".description").val("ppp");
-});
-$('.rebtns').click(function() {
-$(this).parent().children(".description").val("yyy");
-});
-
     function webpwdlength() {
         $('body').animate({scrollTop:$('#ss').offset().top-20 }, 888);
         $('#webpwdlength').css({'opacity':'0',transition:'0.8s'}).attr('href','javascript:webpwdlengths()');
