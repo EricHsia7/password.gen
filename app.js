@@ -32,11 +32,11 @@ password2 = chars2[Math.floor(Math.random() * chars2.length)] + "-" + Math.floor
 function changemode() {
             if(pwdmode = 0) {
                pwdmode = 1 ;
-               $('#modeicondd').attr('src','simple.svg');
+               $('#modeicondd').attr('src','icon/simple.svg');
             }
             else {
               pwdmode = 0 ;
-               $('#modeicondd').attr('src','random.svg');
+               $('#modeicondd').attr('src','icon/random.svg');
             }
         }
 
