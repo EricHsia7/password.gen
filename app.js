@@ -39,7 +39,7 @@ f += 1 ;
 }
 function changemode() {
    f = 0 ;
-   o = 0 ;
+   o = 99 ;
             if(pwdmode < 0.5) {
                pwdmode = 1 ;
                $('#modeicondd').attr('src','icon/random.svg');
