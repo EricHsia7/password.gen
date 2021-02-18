@@ -26,7 +26,15 @@ if(pwdmode = 1) {
    var chars2 = char[1].split(",") ;
 var password2 = "" ;
 password2 = chars2[Math.floor(Math.random() * chars2.length)] + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) ;
-
+document.getElementById("password").value = password2 ;
+if (f > 0.5) {
+$('#boxmsg').html('已產生新密碼！');
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+}
+if (f > 10) {
+f = 1 ;
+}
+f += 1 ;
 }
 }
 function changemode() {
