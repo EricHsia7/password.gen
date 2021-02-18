@@ -53,8 +53,8 @@ $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
                               $('#boxmsg').html('已切換為隨機模式！');
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
                getPassword();
-
             }
+   f = 0 ;
         }
 
 function copy(id) {
