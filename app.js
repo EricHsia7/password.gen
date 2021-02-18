@@ -38,7 +38,7 @@ f += 1 ;
 }
 }
 function changemode() {
-            if(pwdmode = 0) {
+            if(pwdmode < 0.5) {
                pwdmode = 1 ;
                $('#modeicondd').attr('src','icon/simple.svg');
             }
