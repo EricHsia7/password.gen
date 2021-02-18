@@ -25,7 +25,7 @@ f += 1 ;
 if(pwdmode > 0.5) {
    var chars2 = engwordobj.responseText.split(",") ;
 var password2 = "" ;
-password2 = chars2[Math.floor(Math.random() * chars2.length)] + "-" + chars2[Math.floor(Math.random() * chars2.length)] + "-" + chars2[Math.floor(Math.random() * chars2.length)] + "-" + chars2[Math.floor(Math.random() * chars2.length)] ;
+password2 = chars2[Math.floor(Math.random() * chars2.length)] + Math.floor(Math.random() * chars2.length) + "-" + chars2[Math.floor(Math.random() * chars2.length)] + Math.floor(Math.random() * chars2.length) + "-" + chars2[Math.floor(Math.random() * chars2.length)] + Math.floor(Math.random() * chars2.length) ;
 document.getElementById("password").value = password2 ;
 if (f > 0.5) {
 $('#boxmsg').html('已產生新密碼！');
