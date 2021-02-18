@@ -40,11 +40,18 @@ f += 1 ;
 function changemode() {
             if(pwdmode < 0.5) {
                pwdmode = 1 ;
-               $('#modeicondd').attr('src','icon/simple.svg');
+               $('#modeicondd').attr('src','icon/random.svg');
+               getPassword();
+               $('#boxmsg').html('已切換為好記模式！');
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+}
             }
             else {
               pwdmode = 0 ;
-               $('#modeicondd').attr('src','icon/random.svg');
+               $('#modeicondd').attr('src','icon/simple.svg');
+               getPassword();
+               $('#boxmsg').html('已切換為隨機模式！');
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
             }
         }
 
