@@ -3,10 +3,10 @@ f = 0 ;
 pwdmode = 0 ;
 var passwordLength = 16 ;
 engwordobj=$.ajax({url:"https://erichsia7.github.io/password.gen/engword.txt",async:false});
-var char = ["0123456789abcdefghijklmnopqrstuvw,xyzABCDE.FGHIJKLMN/\OPQRSTUVWXYZ!@#$%^&*()_+?><:-{}[]",engwordobj.responseText] ;
+var char = "0123456789abcdefghijklmnopqrstuvw,xyzABCDE.FGHIJKLMN/\OPQRSTUVWXYZ!@#$%^&*()_+?><:-{}[]";
 function getPassword() {
 if(pwdmode = 0) {
-var chars = char[0] ;
+var chars = char ;
 var password = "" ;
 for (var i=0; i<passwordLength; i++){
 var randomNumber = Math.floor(Math.random() * chars.length);
@@ -23,7 +23,7 @@ f = 1 ;
 f += 1 ;
 }
 if(pwdmode = 1) {
-   var chars2 = char[1].split(",") ;
+   var chars2 = engwordobj.responseText.split(",") ;
 var password2 = "" ;
 password2 = chars2[Math.floor(Math.random() * chars2.length)] + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) ;
 document.getElementById("password").value = password2 ;
