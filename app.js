@@ -29,12 +29,16 @@ password2 = chars2[Math.floor(Math.random() * chars2.length)] + "-" + Math.floor
 
 }
 }
-function getPasswordeng() {
-   var chars2 = char[1].split(",") ;
-var password2 = "" ;
-password2 = chars2[Math.floor(Math.random() * chars2.length)] + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) ;
-
-}
+function changemode() {
+            if(pwdmode = 0) {
+               pwdmode = 1 ;
+               $('#modeicondd').attr('src','simple.svg');
+            }
+            else {
+              pwdmode = 0 ;
+               $('#modeicondd').attr('src','random.svg');
+            }
+        }
 
 function copy(id) {
 var copys = document.getElementById(id);
