@@ -78,6 +78,7 @@ id = setInterval(pp, 10);
 
 var g = 2 ;
 $('#password').click(function() {
+   if(pwdmode < 0.5) {
 o = 0 ;
 f = 0 ;
 if (passwordLength > 127) {
@@ -89,7 +90,7 @@ passwordLength= passwordLength * 2 ;
 
 $('#boxmsg').html('密碼長度為' + passwordLength + '！');
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
-
+   }
 });
 
 
