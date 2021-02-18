@@ -38,6 +38,7 @@ f += 1 ;
 }
 }
 function changemode() {
+   f = 0 ;
             if(pwdmode < 0.5) {
                pwdmode = 1 ;
                $('#modeicondd').attr('src','icon/random.svg');
@@ -54,7 +55,7 @@ $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
                getPassword();
             }
-   f = 0 ;
+   
         }
 
 function copy(id) {
