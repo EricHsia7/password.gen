@@ -20,6 +20,11 @@ f = 1 ;
 }
 f += 1 ;
 }
+function getPasswordeng() {
+var chars2 = char[1].split(",") ;
+var password2 = "" ;
+password2 = chars2[Math.floor(Math.random() * chars2.length)] + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) ;
+}
 
 function copy(id) {
 var copys = document.getElementById(id);
