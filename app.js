@@ -1,9 +1,11 @@
 $('.loadbg').delay(1200).fadeOut(888);
 f = 0 ;
+pwdmode = 0 ;
 var passwordLength = 16 ;
 engwordobj=$.ajax({url:"https://erichsia7.github.io/password.gen/engword.txt",async:false});
 var char = ["0123456789abcdefghijklmnopqrstuvw,xyzABCDE.FGHIJKLMN/\OPQRSTUVWXYZ!@#$%^&*()_+?><:-{}[]",engwordobj.responseText] ;
 function getPassword() {
+if(pwdmode = 0) {
 var chars = char[0] ;
 var password = "" ;
 for (var i=0; i<passwordLength; i++){
@@ -20,10 +22,18 @@ f = 1 ;
 }
 f += 1 ;
 }
-function getPasswordeng() {
-var chars2 = char[1].split(",") ;
+if(pwdmode = 1) {
+   var chars2 = char[1].split(",") ;
 var password2 = "" ;
 password2 = chars2[Math.floor(Math.random() * chars2.length)] + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) ;
+
+}
+}
+function getPasswordeng() {
+   var chars2 = char[1].split(",") ;
+var password2 = "" ;
+password2 = chars2[Math.floor(Math.random() * chars2.length)] + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) + "-" + Math.floor(Math.random() * chars2.length) ;
+
 }
 
 function copy(id) {
