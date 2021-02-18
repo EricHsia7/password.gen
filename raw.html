@@ -30,29 +30,25 @@
     <div class="boxmsg" style="position: absolute;">
         <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-shadow: rgba(0, 0, 0, 0.3) 1px 0 10px; font-size: 1.1rem;" id="boxmsg">已複製密碼！</span>
     </div>
-    
-    <a href="javascript:changemode()" style="box-shadow:0 0 15px 1px rgba(0,0,0,.05);position:fixed;bottom:65px;right:10px;width:50px;height:50px;border-radius:99em;" id="modeiconddbtn" class="modeiconddbtn">
-    <img src="icon/simple.svg" style="height:50px;transform:scale(0.5)" id="modeicondd" class="modeicondd">
+    <a href="javascript:changemode()" style="box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05); position: fixed; bottom: 65px; right: 10px; width: 50px; height: 50px; border-radius: 99em;" id="modeiconddbtn" class="modeiconddbtn">
+        <img src="icon/simple.svg" style="height: 50px; transform: scale(0.5);" id="modeicondd" class="modeicondd" />
     </a>
     <style>
         .modeiconddbtn {
-            background:#fff;
+            background: #fff;
         }
         .modeicondd {
-            filter: invert(0)
+            filter: invert(0);
         }
         @media (prefers-color-scheme: dark) {
             .modeiconddbtn {
-            background:#333;
-        }
+                background: #333;
+            }
             .modeicondd {
-            filter: invert(1)
-        }
+                filter: invert(1);
+            }
         }
     </style>
-    
-    
-    
     <span id="ss" style="position: absolute; left: 50%; top: 85%; padding-bottom: 90px; transform: translateX(-50%);">
         <center><a href="javascript:webpwdlength()" id="webpwdlength" style="border: 1px #888 solid; font-size: 15px; padding: 10px; border-radius: 99em; color: #888;">查看建議的密碼長度</a></center>
         <center><h1 style="margin-top: 30px; font-family: 'Noto Sans TC', sans-serif; font-weight: 700;">建議密碼長度</h1></center>
@@ -129,7 +125,7 @@
         <span class="img-dd"><img src="icon/ic_256.png" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); filter: blur(0px);" class="icon" id="ddimg" /></span>
         <span class="img-hd"><img src="icon/ic_2048.png" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);" class="icon" id="hdimg" /></span>
     </div>
-    <script src="app.min.js?7af48eeef36"></script>
+    <script src="app.min.js?f84fd1b3-17ee-8c6b-5c35-2fb3642de62d"></script>
     <script>
         function home() {
             $(".supportiframe").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#sico,#mico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("密碼產生器");
@@ -236,7 +232,6 @@
         }
     }
     @media (prefers-color-scheme: dark) {
- 
         .bottombar {
             bottom: 0;
         }
