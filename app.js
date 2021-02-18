@@ -46,7 +46,7 @@ $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
                getPassword();
                
 }
-            }
+            
             else {
               pwdmode = 0 ;
                $('#modeicondd').attr('src','icon/simple.svg');
