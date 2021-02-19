@@ -30,25 +30,7 @@
     <div class="boxmsg" style="position: absolute;">
         <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-shadow: rgba(0, 0, 0, 0.3) 1px 0 10px; font-size: 1.1rem;" id="boxmsg">已複製密碼！</span>
     </div>
-    <a href="javascript:changemode()" style="box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05); position: fixed; bottom: 65px; right: 10px; width: 50px; height: 50px; border-radius: 99em;" id="modeiconddbtn" class="modeiconddbtn">
-        <img src="icon/simple.svg" style="height: 50px; transform: scale(0.5);" id="modeicondd" class="modeicondd" />
-    </a>
-    <style>
-        .modeiconddbtn {
-            background: #fff;
-        }
-        .modeicondd {
-            filter: invert(0);
-        }
-        @media (prefers-color-scheme: dark) {
-            .modeiconddbtn {
-                background: #333;
-            }
-            .modeicondd {
-                filter: invert(1);
-            }
-        }
-    </style>
+    
     <span id="ss" style="position: absolute; left: 50%; top: 85%; padding-bottom: 90px; transform: translateX(-50%);">
         <center><a href="javascript:webpwdlength()" id="webpwdlength" style="border: 1px #888 solid; font-size: 15px; padding: 10px; border-radius: 99em; color: #888;">查看建議的密碼長度</a></center>
         <center><h1 style="margin-top: 30px; font-family: 'Noto Sans TC', sans-serif; font-weight: 700;">建議密碼長度</h1></center>
@@ -78,6 +60,29 @@
             '<center><br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8wSxoubeZTSWlpX0RjHwloIxxKXV9dYsSsJUXND2lqTYTBA/viewform?usp=sf_link" id="webpwdlength" target="_blank" style="border:1px #888 solid;font-size:15px;padding:10px;border-radius:99em;color:#888;">提供其他建議</a></center>'
         );
     </script>
+    
+    <a href="javascript:changemode()" style="box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05); position: fixed; bottom: 75px; right: 15px; width: 50px; height: 50px; border-radius: 99em;" id="modeiconddbtn" class="modeiconddbtn">
+        <img src="icon/simple.svg" style="height: 50px; transform: scale(0.5);" id="modeicondd" class="modeicondd" />
+    </a>
+    <style>
+        .modeiconddbtn {
+            background: #fff;
+        }
+        .modeicondd {
+            filter: invert(0);
+        }
+        @media (prefers-color-scheme: dark) {
+            .modeiconddbtn {
+                background: #333;
+            }
+            .modeicondd {
+                filter: invert(1);
+            }
+        }
+    </style>
+    
+    
+    
     <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span> <iframe src="" class="supportiframe"></iframe>
     <div class="moreiframe">
         <ujj>
