@@ -90,7 +90,7 @@ ul a {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     background: #fff;
-    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+    box-shadow:0 0 15px 1px rgba(0,0,0,.05);
 }
 :root {
     --font-color: #ccc;
@@ -285,7 +285,7 @@ body {
         -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
         background: #333;
-        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+        box-shadow:0 0 15px 1px rgba(0,0,0,.05);
     }
     .loadbg {
         width: 100%;
