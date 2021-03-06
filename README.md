@@ -20,5 +20,3 @@ This is a about page
 This is a support page
 <a href="https://erichsia7.github.io/password.gen/about/support_center/">Open</a>
 </code>
-# Labs
-No experiment
