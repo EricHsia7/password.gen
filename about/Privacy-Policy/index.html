@@ -1,5 +1,6 @@
 <meta charset="UTF-8">
 <title>隱私政策</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
 
@@ -42,7 +43,7 @@ background:#333;
     box-shadow:0 0 15px 1px rgba(0,0,0,.05);
 }
     .txtdiv {
-color:#000;
+color:#fff;
     }
     }
 </style>
@@ -50,7 +51,7 @@ color:#000;
 <body>
 
 <div class="topbar" id="top2"><center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">隱私政策</center></div>
-<div style="margin-top:55px;font-size:40px;" class="txtdiv">
+<div style="margin-top:55px;font-size:40px;" class="txtdiv" id="txtdiv">
 
 <br>
 
@@ -114,4 +115,10 @@ color:#000;
 八、接受隱私政策<br>
 若你繼續使用本服務、網站，即表示您已詳閱並接受我們的隱私政策。
 </div>
+    
+    
+    <script>
+var textsize = '{"default":100,"scale": 40,"max":300,"min":50,"containerid":"body","textcontainerid":"txtdiv"}' ;
+</script>
+<script src="https://erichsia7.github.io/text_size_controller/textsizecontroller.min.js"></script>
 </body>
