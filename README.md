@@ -21,8 +21,8 @@ This is a support page
 <a href="https://erichsia7.github.io/password.gen/about/support_center/">Open</a>
 </code>
 # Web View
-![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-1.png)
-![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-2.png)
-![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-3.png)
-![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-4.png)
-![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-5.png)
+![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-1-min.png)
+![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-2-min.png)
+![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-3-min.png)
+![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-4-min.png)
+![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-5-min.png)
