@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-TW" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;900&display=swap');
+.co {
+  height:5000px;
+}
+body {
+  margin:0px;
+  padding:0px
+}
+.title {
+  margin:0px;
+  width:100%;
+  height:60px;
+  background:#fff;
+  z-index:1000;
+}
+.title h1 {
+  margin:0px;
+  font-size:2rem;
+  color:#333;
+  line-height:50px;
+  margin-left:10px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:900;
+  z-index:1000;
+}
+.titlemenu {
+  margin:0px;
+  width:100%;
+  box-shadow:0 0 15px 1px rgba(0,0,0,0.0);
+  height:60px;
+  background:#fff;
+  position:sticky;
+  top:0px;
+  left:0px;
+  transition:0.3s;
+  padding:0px;
+  display:flex;
+  flex-direction:row;
+  overflow: scroll;
+  -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+  z-index:1000;
+}
+.titletab {
+margin:10px;
+padding:9px;
+background:#f5f5f5;
+border-radius:30px;
+font-size:15px;
+font-family: 'Noto Sans TC', sans-serif;
+font-weight:500;
+transition:0.3s;
+  z-index:1000;
+}
+
+
+.imagebox {
+width:100%;
+height:250px;
+background:#f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagebox img.fill {
+width:100%;
+height:100%;
+object-fit:cover;
+}
+.imagebox img.auto {
+max-width:100%;
+max-height:100%;
+width:auto;
+height:auto;
+}
+.message {
+width:100%;
+height:60px;
+border-radius:12px;
+background:#fff;
+box-shadow:0 0 15px 1px rgba(0,0,0,0.05);
+transform:scale(0.9);
+margin-top:20px;
+margin-bottom:20px;
+color:#333;
+font-size:30px;
+line-height:60px;
+position:relative;
+}
+  #video {
+  transform:scale(0.95);
+  border-radius:8px;
+  }
+</style>
+
+</head>
+<body id="body">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div class="title"><h1>Website name</h1></div>
+<div class="titlemenu">
+  <a class="titletab">首頁</a>
+  <a class="titletab">關於</a>
+  <a class="titletab">公告</a>
+</div>
+  <div class="imagebox">
+    <img src="" class="auto">
+</div>
+  <div class="message" link="https://google.com">公告</div>
+  <iframe width="1920" height="1080" src="https://www.youtube.com/embed/v_jF8kqBj6Y" frameborder="0"  id="video"></iframe>
+  <div id="txtcc"></div>
+  This is text.
+<div class="co"></div>
+
+  
+<script>
+var textsize = '{"default":100,"scale": 30,"max":300,"min":50,"containerid":"txtcc","textcontainerid":"body"}' ;
+</script>
+<script src="https://erichsia7.github.io/text_size_controller/textsizecontroller.min.js"></script>
+
+<script>
+$(window).scroll(function(){
+  if($(window).scrollTop() > 60) {
+$('.titlemenu').css({'box-shadow':'0 0 15px 1px rgba(0,0,0,0.05)','height':'45px','background':'rgba(255, 255, 255, 0.5)'});
+    $('.titletab').css({'font-size':'15px','padding':'10px','margin':'3px 10px'});
+}
+  else {
+$('.titlemenu').css({'box-shadow':'0 0 15px 1px rgba(0,0,0,0.0)','height':'60px','background':'rgba(255, 255, 255, 1)'});
+    $('.titletab').css({'font-size':'15px','padding':'10px','margin':'10px'});
+}
+});
+$('.message').click(function() {
+  window.open( $(this).attr('link'));
+});
+
+</script>
+      <script>
+$(function() {
+  if(typeof YOUTUBE_VIDEO_MARGIN == 'undefined') {
+    YOUTUBE_VIDEO_MARGIN=0;
+  }
+  $('iframe').each(function(index,item) {
+    if($(item).attr('src').match(/http(s)?:\/\/www\.youtube\.com/)) {
+      var w=$(item).attr('width');
+      var h=$(item).attr('height');
+      var ar = h/w*100;
+      ar=ar.toFixed(2);
+      //Style iframe   
+      $(item).css('position','absolute');
+      $(item).css('top','0');
+      $(item).css('left','0');   
+      $(item).css('width','100%');
+      $(item).css('height','100%');
+      $(item).css('max-width',w+'px');
+      $(item).css('max-height', h+'px');       
+      $(item).wrap('<div style="max-width:'+w+'px;margin:0 auto; padding:'+YOUTUBE_VIDEO_MARGIN+'px;" />');
+      $(item).wrap('<div style="position: relative;padding-bottom: '+ar+'%; height: 0; overflow: hidden;" />');
+    }
+  });
+});
+</script>
+</body>
+  <style>
+    .sharebg ,.sharebox,.shareboxtitle,.shareboxbtnfr,.sharesf,.sharesff,.sharesfspace,.sharebtn{
+      z-index:2000;
+    }
+  </style>
+<script src="https://erichsia7.github.io/share/share.js"></script>
+
+</html>
