@@ -276,10 +276,12 @@ $(function() {
             if (open > "1") {
                 $(".menudiv").animate({ height: menuheight + "px" }, 888);
                 $(".menudivblur").fadeIn(888);
+                $(".msg").animate({top:(menuheight+48)*1 + "px"});
                 open -= 2;
             } else {
                 $(".menudiv").animate({ height: 0 + "px" }, 888);
                 $(".menudivblur").fadeOut(888);
+                $(".msg").animate({top:48 + "px"});
                 open += 2;
             }
         }
