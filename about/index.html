@@ -19,173 +19,401 @@
 <link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="shortcut icon" />
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 <meta charset="UTF-8" />
-<title>密碼產生器 - 關於</title>
+  <title>關於 - 密碼產生器</title>
 <style>
-   .btn {
-      background:#e3e3e3;
-      color:#333;
-      padding:6px 18px;
-      border-radius:99em;
-      fomt-soze:35px;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;900&display=swap');
+.co {
+  height:5000px;
+}
+body {
+  margin:0px;
+  padding:0px
+}
+.title {
+  margin:0px;
+  width:100%;
+  height:60px;
+  background:#fff;
+  z-index:1000;
+}
+.title h1 {
+  margin:0px;
+  font-size:2rem;
+  color:#333;
+  line-height:50px;
+  margin-left:10px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:900;
+  z-index:1000;
+}
+.titlemenu {
+  margin:0px;
+  width:100%;
+  box-shadow:0 0 15px 1px rgba(0,0,0,0.0);
+  height:60px;
+  background:#fff;
+  position:sticky;
+  top:0px;
+  left:0px;
+  transition:0.3s;
+  padding:0px;
+  display:flex;
+  flex-direction:row;
+  -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+  z-index:1000;
+  overflow: scroll;
+}
+.titletab {
+margin:10px;
+padding:9px;
+background:#f5f5f5;
+border-radius:30px;
+font-size:15px;
+font-family: 'Noto Sans TC', sans-serif;
+font-weight:500;
+transition:0.3s;
+  z-index:1000;
+  display:inline-block;
+  white-space:nowrap;
+}
+
+
+.imagebox {
+width:100%;
+height:250px;
+background:#f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagebox img.fill {
+width:100%;
+height:100%;
+object-fit:cover;
+}
+.imagebox img.auto {
+max-width:100%;
+max-height:100%;
+width:auto;
+height:auto;
+}
+.message {
+width:100%;
+height:60px;
+border-radius:12px;
+background:#fff;
+box-shadow:0 0 15px 1px rgba(0,0,0,0.05);
+transform:scale(0.9);
+margin-top:20px;
+margin-bottom:20px;
+color:#333;
+font-size:30px;
+line-height:60px;
+position:relative;
+}
+  #video {
+  transform:scale(0.95);
+  border-radius:8px;
+  }
+  .btn {
+    padding:9px;
+background:#f5f5f5;
+border-radius:30px;
+font-size:15px;
+font-family: 'Noto Sans TC', sans-serif;
+font-weight:500;
       text-decoration: none;
       margin-top:60px;
       margin-bottom:60px;
-   }
-    * {
-        outline: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-    @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
-    body {
-        padding: 0px;
-        margin: 0px;
-    }
-    .index-image {
-        background: url(index_1.png);
-        width: 100%;
-        height: auto;
-        background-size: cover;
-        padding: 0px;
-        overflow: hidden;
-        position: relative;
-        top: 0px;
-        left: 0px;
-    }
-    .topbarvideo {
-        width: 100%;
-        height: 48px;
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        background: rgba(0, 0, 0, 0.7);
-        -webkit-backdrop-filter: blur(9px);
-        backdrop-filter: blur(9px);
-    }
-    .logo {
-        height: 48px;
-        margin: 0px;
-        margin-left: -25px;
-        transform: scale(0.8);
-    }
-
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-
-    .light {
-        display: block;
-    }
-    .dark {
-        display: none;
-    }
-    #page {
-        background: #fff;
-    }
-    #pagebar {
-        background: #fafafa;
-    }
-   .intxt {
-            color:#333;
-            font-size:35px;
-        }
-    @media (prefers-color-scheme: dark) {
-       .btn {
-      background:#212121;
-      color:#fff;
-      padding:6px 18px;
-      border-radius:99em;
-      fomt-soze:35px;
-      text-decoration: none;
-      margin-top:60px;
-      margin-bottom:60px;
-        }
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
-        .light {
-            display: none;
-        }
-        .dark {
-            display: block;
-        }
-        #page {
-            background: #292929;
-        }
-        #pagebar {
-            background: #333;
-        }
-       .intxt {
-            color:#fff;
-            font-size:35px;
-        }
-    }
-    .menudiv {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 48px;
-        left: 0px;
-        background: rgba(0, 0, 0, 0.7);
-        border-radius:0px 0px 15px 15px;
-        overflow: hidden;
-    }
-    .menudivblur {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        background: rgba(0, 0, 0, 0);
-        -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px);
-        display: none;
-    }
-    .menudivinner {
-        width: 100%;
-        height: calc(100% - 0px);
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background: rgba(0, 0, 0, 0);
-        overflow: scroll;
-    }
-
-    .menubtn {
-        height: 44px;
-        transform: scale(0.8);
-        position: absolute;
-        top: 2px;
-        right: 2px;
-    }
-
-    ul {
-        list-style-type: none;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
-    li {
-        background: rgba(0, 0, 0, 0);
-        width: 100vw;
-        height: 50px;
-        font-size: 40px;
-        margin-top: 5px;
-        margin-left: -40px;
-        border-bottom: 1px #e3e3e3 solid;
-        padding-bottom: 8px;
-        font-family: "Secular One", sans-serif;
-    }
-    ul a {
-        color: #fff;
-        text-decoration: none;
-        font-family: "Secular One", sans-serif;
+    color:#333;
     }
 </style>
-<body>
-    <div class="index-image">
-        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/v_jF8kqBj6Y?playlist=v_jF8kqBj6Y&loop=1&autoplay=1&mute=1&controls=0" frameborder="0"  id="indexvvvvvvvvvvvvvvvvvv"></iframe>
+<body id="body">
+
+
+<div class="title"><h1>Password.Gen</h1></div>
+<div class="titlemenu">
+  <a class="titletab" link="https://erichsia7.github.io/password.gen/">密碼產生器</a>
+  <a class="titletab" link="https://erichsia7.github.io/password.gen/about/support_center/">支援</a>
+  <a class="titletab" link="https://www.facebook.com/password.gen">Facebook</a>
+  <a class="titletab" link="https://line.me/R/ti/p/@807gocyy">LINE</a>
+  <a class="titletab" link="https://www.youtube.com/channel/UCoHLkdCF-FcL5ZXR9gREmHg">YouTube</a>
+  <a class="titletab" link="https://github.com/EricHsia7/password.gen">Github</a>
+  <a class="titletab" link="https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/viewform?usp=sf_link">意見回饋</a>
+  <a class="titletab" link="https://erichsia7.github.io/password.gen/about/Privacy-Policy/">隱私政策</a>
+</div>
+  <div class="imagebox">
+    <img src="index_3.jpeg" class="fill">
+</div>
+  <div class="message" link="https://erichsia7.github.io/password.gen/about/Privacy-Policy/">已更新隱私政策</div>
+  <iframe width="1920" height="1080" src="https://www.youtube.com/embed/v_jF8kqBj6Y?playlist=v_jF8kqBj6Y&loop=1&autoplay=1&mute=1&controls=0" frameborder="0"  id="video"></iframe>
+  <div id="txtcc"></div>
+          <center>
+        <img src="t01-mm.jpeg" style="width: auto;height: auto;max-width: 100%;max-height: 90vw;" /><br>
+        <h1>可產生安全密碼</h1><br>
+        <img src="t02-mm.jpeg" style="width: auto;height: auto;max-width: 100%;max-height: 90vw" /><br>
+        <h1>快速且使用方便</h1><br>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+  <style>
+    ul.slides {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+li.slide {
+  margin: 0;
+  padding: 0;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica;
+  font-size: 120px;
+  color: #333;
+  transition: .45s ease-in-out;
+}
+li.slide img {
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:90%;
+    }
+.slide:nth-of-type(1) {
+  background-color: #fff;
+}
+
+.slide:nth-of-type(2) {
+  background-color: #fff;
+  left: 100%;
+}
+
+.slide:nth-of-type(3) {
+  background-color: #fff;
+  left: 200%;
+  color:#fff;
+}
+.slide:nth-of-type(4) {
+  background-color: #fff;
+  left: 300%;
+  color:#fff;
+}
+.slide:nth-of-type(5) {
+  background-color: #fff;
+  left: 400%;
+  color:#fff;
+}
+input[type="radio"] {
+  position: relative;
+  z-index: 100;
+  display: none;
+}
+
+.controls-visible {
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  text-align: center;
+}
+
+.controls-visible label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(241, 241, 241, 0.8);
+  border-radius: 50%;
+  margin: 0 3px;
+  transition:0.3s;
+    -webkit-backdrop-filter: blur(3px);
+backdrop-filter: blur(3px);
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked ~ .controls-visible label:nth-of-type(1) {
+  background-color: rgba(136, 136, 136, 0.8);
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked ~ .controls-visible label:nth-of-type(2) {
+  background-color: rgba(136, 136, 136, 0.8);
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked ~ .controls-visible label:nth-of-type(3) {
+  background-color: rgba(136, 136, 136, 0.8);
+}
+.slides input[type="radio"]:nth-of-type(4):checked ~ .controls-visible label:nth-of-type(4) {
+  background-color: rgba(136, 136, 136, 0.8);
+}
+.slides input[type="radio"]:nth-of-type(5):checked ~ .controls-visible label:nth-of-type(5) {
+  background-color: rgba(136, 136, 136, 0.8);
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked ~ .slide {
+  transform: translatex(0%);
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked ~ .slide {
+  transform: translatex(-100%);
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked ~ .slide {
+  transform: translatex(-200%);
+}
+.slides input[type="radio"]:nth-of-type(4):checked ~ .slide {
+  transform: translatex(-300%);
+}
+
+.slides input[type="radio"]:nth-of-type(5):checked ~ .slide {
+  transform: translatex(-400%);
+}
+
+/* Left/Right Button Classes Below */
+
+.navigator {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 100%;
+  z-index: 100;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  display: none;
+}
+
+.navigator i {
+  font-size: 32px;
+  color #333;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked ~ .navigator:nth-of-type(1) {
+  display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked ~ .navigator:nth-of-type(2) {
+  display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked ~ .navigator:nth-of-type(3) {
+  display: flex;
+}
+.slides input[type="radio"]:nth-of-type(4):checked ~ .navigator:nth-of-type(4) {
+  display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(5):checked ~ .navigator:nth-of-type(5) {
+  display: flex;
+}
+  </style>
+
+<ul class="slides">
+  <input type="radio" id="control-1" name="control" checked>
+  <input type="radio" id="control-2" name="control">
+  <input type="radio" id="control-3" name="control">
+  <input type="radio" id="control-4" name="control">
+  <input type="radio" id="control-5" name="control">
+  
+  <!--  Left/Right Button  -->
+  <div class="navigator slide-1">
+    
+    <label for="control-5">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+    <label for="control-2">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  
+  <div class="navigator slide-2">
+    <label for="control-1">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+    <label for="control-3">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  
+  <div class="navigator slide-3">
+    <label for="control-2">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+    <label for="control-4">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  
+  <div class="navigator slide-4">
+    <label for="control-3">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+    <label for="control-5">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  <div class="navigator slide-5">
+    <label for="control-4">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+    <label for="control-1">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  <!--  /Left/Right Button  -->
+  
+  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-1m.jpeg" ></li>
+  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-2m.jpeg" ></li>
+  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-3m.jpeg" ></li>
+  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-4m.jpeg" ></li>
+  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-5m.jpeg" ></li>
+  
+  <div class="controls-visible">
+    <label for="control-1"></label>
+    <label for="control-2"></label>
+    <label for="control-3"></label>
+    <label for="control-4"></label>
+    <label for="control-5"></label>
+  </div>
+</ul>
+        <h1>可加入至主畫面</h1><br>
+        <a href="https://erichsia7.github.io/password.gen/about/addtohome/" target="_blank" class="btn">詳情</a>
+        <br><br>
+        <img src="t04-mm.jpeg" style="width: auto;height: auto;max-width: 100%;max-height: 90vw" /><br>
+        <h1>可快速複製密碼</h1><br>
+        <a href="https://erichsia7.github.io/password.gen/" class="btn">立即使用</a>
+          <h1>加入我們的社群</h1><br>
+          <iframe width="1920" height="1080" src="https://www.youtube.com/embed/NtWznvBhdgs?playlist=NtWznvBhdgs&loop=1&autoplay=1&mute=1&controls=0" frameborder="0"  id="video" ></iframe>
+        <img src="i01-mm.jpeg" style="width: auto;height: auto;max-width: 100%;max-height: 90vw" />
+        </center>
+
+
+ 
+
+<script>
+$(window).scroll(function(){
+  if($(window).scrollTop() > 60) {
+$('.titlemenu').css({'box-shadow':'0 0 15px 1px rgba(0,0,0,0.05)','height':'45px','background':'rgba(255, 255, 255, 0.5)'});
+    $('.titletab').css({'font-size':'15px','padding':'10px','margin':'3px 10px'});
+}
+  else {
+$('.titlemenu').css({'box-shadow':'0 0 15px 1px rgba(0,0,0,0.0)','height':'60px','background':'rgba(255, 255, 255, 1)'});
+    $('.titletab').css({'font-size':'15px','padding':'10px','margin':'10px'});
+}
+});
+$('.message,.titletab').click(function() {
+  window.open( $(this).attr('link'));
+});
+
+</script>
       <script>
 $(function() {
   if(typeof YOUTUBE_VIDEO_MARGIN == 'undefined') {
@@ -211,77 +439,4 @@ $(function() {
   });
 });
 </script>
-        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 10vmin; color: #fff; font-family: 'Secular One', sans-serif;"></span>
-    </div>
-
-    <div style="height: auto; width: 100%; min-height: 100vh; position: relative; top: auto;" id="page">
-       
-       <span class="intxt">
-        <center>
-        <img src="t01.png" style="width: auto;height: auto;max-width: 100%;max-height: 90vw;" /><br>
-        可產生安全密碼<br>
-        <img src="t02.png" style="width: auto;height: auto;max-width: 100%;max-height: 90vw" /><br>
-        快速且使用方便<br>
-        <img src="https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-1.png" style="width: auto;height: auto;max-width: 100%;max-height: 90vw" /><br>
-        可加入至主畫面<br>
-        <a href="https://erichsia7.github.io/password.gen/about/addtohome/" target="_blank" class="btn">詳情</a>
-        <br>
-        <img src="t04.png" style="width: auto;height: auto;max-width: 100%;max-height: 90vw" /><br>
-        可快速複製密碼<br>
-        <a href="https://erichsia7.github.io/password.gen/" class="btn">立即使用</a>
-          <h1>加入我們的社群</h1><br>
-          <iframe width="1920" height="1080" src="https://www.youtube.com/embed/NtWznvBhdgs?playlist=NtWznvBhdgs&loop=1&autoplay=1&mute=1&controls=0" frameborder="0"  id="indexvvvvvvvvvvvvvvvvvvv" style="transform:scale(0.75);border-radius:25px;"></iframe>
-        <img src="i01.png" style="width: auto;height: auto;max-width: 100%;max-height: 90vw" />
-        </center>
-       </span>
-        <!-- <input type="checkbox" value="1" id="isdark"> -->
-
-        <!-- <img src="i02_light.png" style="width:100vw;" class="light">
-
-<img src="i02_dark.png" style="width:100vw;" class="dark">
-
--->
-    </div>
-    <div class="menudivblur"></div>
-    <div class="topbarvideo">
-        <img src="passwordgen.png" class="logo" />
-        <a href="javascript:menu()"><img src="menuv2.png" class="menubtn" /></a>
-    </div>
-    <div class="menudiv">
-        <div class="menudivinner">
-            <ul id="list">
-                <center>
-                    <a href="https://erichsia7.github.io/password.gen/about/Privacy-Policy/" target="_blank"><li>隱私政策</li></a>
-                  <a href="https://erichsia7.github.io/password.gen/about/support_center/" target="_blank"><li>支援</li></a>
-                    <a href="https://erichsia7.github.io/password.gen/" target="_blank"><li>密碼產生器</li></a>
-                  <a href="https://www.facebook.com/password.gen" target="_blank"><li>Facebook</li></a>
-                  <a href="https://line.me/R/ti/p/@807gocyy" target="_blank"><li>LINE</li></a>
-                    <a href="https://github.com/EricHsia7/password.gen" target="_blank"><li>Github</li></a>
-                  
-                </center>
-            </ul>
-        </div>
-    </div>
-    <script>
-        $(".menudiv").animate({ height: 0 + "%" }, 1);
-        var open = 2;
-        var menuheight = 0 ;
-        function menu() {
-           if (document.getElementById('list').getElementsByTagName('li').length*73 > window.innerHeight*0.5) {
-              menuheight = window.innerHeight*0.5 ;
-           }
-           else {
-              menuheight = (document.getElementById('list').getElementsByTagName('li').length*73)-13 ;
-           }
-            if (open > "1") {
-                $(".menudiv").animate({ height: menuheight + "px" }, 888);
-                $(".menudivblur").fadeIn(888);
-                open -= 2;
-            } else {
-                $(".menudiv").animate({ height: 0 + "px" }, 888);
-                $(".menudivblur").fadeOut(888);
-                open += 2;
-            }
-        }
-    </script>
 </body>
