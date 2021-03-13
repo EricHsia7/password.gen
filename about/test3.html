@@ -110,11 +110,14 @@ position:relative;
 
 <div class="title"><h1>Password.Gen</h1></div>
 <div class="titlemenu">
-  <a class="titletab">密碼產生器</a>
-  <a class="titletab">支援</a>
+  <a class="titletab" link="https://erichsia7.github.io/password.gen/">密碼產生器</a>
+  <a class="titletab" link="https://erichsia7.github.io/password.gen/about/support_center/">支援</a>
   <a class="titletab">Facebook</a>
   <a class="titletab">LINE</a>
   <a class="titletab">YouTube</a>
+  <a class="titletab">Github</a>
+  <a class="titletab">意見回饋</a>
+  <a class="titletab">隱私政策</a>
 </div>
   <div class="imagebox">
     <img src="index_1_min.jpeg" class="fill">
@@ -142,7 +145,7 @@ $('.titlemenu').css({'box-shadow':'0 0 15px 1px rgba(0,0,0,0.0)','height':'60px'
     $('.titletab').css({'font-size':'15px','padding':'10px','margin':'10px'});
 }
 });
-$('.message').click(function() {
+$('.message,.titletab').click(function() {
   window.open( $(this).attr('link'));
 });
 
