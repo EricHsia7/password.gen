@@ -287,5 +287,11 @@ setInterval(draw, 30);
 $(document).ready(function() {
 	window.setTimeout("$('#canvas').css({'background':'url(bg-b.jpeg)','background-repeat': 'no-repeat','background-position': 'center center','background-size':'cover'});", 3000);
 });
+	    
+$('body').scroll(function() {
+  if($('body').scrollTop()<0){
+$('body').scrollTop(0)
+  }
+});
 </script>
 </body>
