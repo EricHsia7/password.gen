@@ -1,0 +1,63 @@
+    <script>
+	    function SetCwinHeight() {
+    var iframeid = document.getElementById("searchoutput"); //iframe id  
+    if (document.getElementById) {
+        if (iframeid && !window.opera) {
+            if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
+                iframeid.height = iframeid.contentDocument.body.offsetHeight;
+            } else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
+                iframeid.height = iframeid.Document.body.scrollHeight;
+            }
+        }
+    }
+}
+window.onload = function () {
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
+var W = document.body.clientWidth*1.8;
+var H = document.body.clientHeight*1.8;
+canvas.height = H;
+canvas.width = W;
+var fontSize = 25;
+var colunms = Math.floor(W / fontSize);
+// xyz
+var coordinate = [];
+for (var i = 0; i < colunms; i++) {
+coordinate.push(0);
+}
+var str = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+?><:{}[]/\ The background by password.gen";
+function draw() {
+SetCwinHeight();
+$('#canvas').css({'top': $( window ).scrollTop()/450*100 , '-webkit-filter' : 'blur(' + ($( window ).scrollTop()/450*3.8) + 'px)' , 'filter' : 'blur(' + ($( window ).scrollTop()/450*3.8) + 'px)'});
+// bcolor
+context.fillStyle = "rgba(0,0,0,0.05)";
+context.fillRect(0, 0, W, H);
+context.font = "800 " + fontSize + "px 微軟正黑體";
+//fontcolor
+context.fillStyle = "#01fef5";
+for (var i = 0; i < colunms; i++) {
+	var index = Math.floor(Math.random() * str.length);
+	var x = i * fontSize;
+	var y = coordinate[i] * fontSize;
+	context.fillText(str[index], x, y);
+	if (y >= canvas.height && Math.random() > 0.88) {
+		coordinate[i] = 0;
+	}
+	coordinate[i]++;
+}
+}
+
+function randColor() {
+var r = Math.floor(Math.random() * 256);
+var g = Math.floor(Math.random() * 256);
+var b = Math.floor(Math.random() * 256);
+return "rgb(" + r + "," + g + "," + b + ")";
+}
+
+draw();
+setInterval(draw, 30);
+};
+	    
+	    
+	    
+</script>
