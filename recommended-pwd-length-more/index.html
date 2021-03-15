@@ -28,6 +28,38 @@
     body {
         background: #fff;
     }
+        .button {
+  border-radius:99em;
+  text-decoration:none;
+  font-size:20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.button::before {
+    content:'';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 99em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transition: transform .3s, opacity 1s;
+    width:100%;
+    height:100%;
+overflow: hidden;
+-webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.button:active::before {
+    transition: 0s;
+    opacity: .6;
+    transform: translate(-50%, -50%) scale(0);
+    overflow: hidden;
+}
     @media (prefers-color-scheme: dark) {
         body {
             background: #333;
@@ -49,11 +81,44 @@
         .txtdiv {
             color: #fff;
         }
+        .button {
+  border-radius:99em;
+  text-decoration:none;
+  font-size:20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.button::before {
+    content:'';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 99em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transition: transform .3s, opacity 1s;
+    width:100%;
+    height:100%;
+overflow: hidden;
+-webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.button:active::before {
+    transition: 0s;
+    opacity: .6;
+    transform: translate(-50%, -50%) scale(0);
+    overflow: hidden;
+}
     }
     * {
         outline: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
+    
 </style>
 
 <body>
@@ -82,6 +147,6 @@
 </body>
 
 <div class="topbar" id="top2">
-    <a href="javascript:history.back()"><img src="https://erichsia7.github.io/password.gen/icon/back2.svg" style="position: absolute; top: 4px; left: 4px; height: 44px; width: 44px; transform: scale(0.5);" /></a>
+    <a href="javascript:history.back()" class="button"><img src="https://erichsia7.github.io/password.gen/icon/back2.svg" style="position: absolute; top: 4px; left: 4px; height: 44px; width: 44px; transform: scale(0.5);" /></a>
     <center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">更多建議密碼長度</center>
 </div>
