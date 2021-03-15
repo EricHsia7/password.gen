@@ -47,14 +47,35 @@ color:#fff;
     }
     }
 </style>
-
+<link rel="stylesheet" href="app_3.min.css?4853d2ce-ce77-ac5e-8416-ceaf4bdb641b" />
 <body>
 
 
-<div style="margin-top:55px;font-size:40px;word-break: break-all;" class="txtdiv" id="txtdiv">
+<div style="margin-top:55px;font-size:40px;word-break: break-all;" class="txtdiv" id="ss">
 
 
 </div>
+    <sceipt>
+       htmlobj = $.ajax({ url: "https://erichsia7.github.io/password.gen/websitepasswordlength_more.json?n", async: false });
+        for (var i = 0; i < JSON.parse(htmlobj.responseText).d.length; i++) {
+            $("#ss").append(
+                '<div class="pwwstbox" id="f' +
+                    JSON.parse(htmlobj.responseText).d[i].name +
+                    '"><div class="content"><h4><img src="' +
+                    JSON.parse(htmlobj.responseText).d[i].icon +
+                    '">' +
+                    JSON.parse(htmlobj.responseText).d[i].name +
+                    '</h4><div class="description">' +
+                    JSON.parse(htmlobj.responseText).d[i].min +
+                    " - " +
+                    JSON.parse(htmlobj.responseText).d[i].max +
+                    "位</div></div></div>"
+            );
+        }
+        $("#ss").append(
+            '<center><br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8wSxoubeZTSWlpX0RjHwloIxxKXV9dYsSsJUXND2lqTYTBA/viewform?usp=sf_link" id="webpwdlength" target="_blank" style="border:1px #888 solid;font-size:15px;padding:10px;border-radius:99em;color:#888;">提供其他建議</a></center>'
+        ); 
+        </script>
 </body>
 
 <div class="topbar" id="top2"><center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">更多建議密碼長度</center></div>
