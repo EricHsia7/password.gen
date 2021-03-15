@@ -200,7 +200,7 @@ right:0px;
 
         <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 10vmin; color: #f2f2f2; font-family: 'Secular One', sans-serif;">
 <center>
-<img src="https://erichsia7.github.io/password.gen/icon/ico_128.png" style="width:120px;border-radius:99em;">
+<img src="https://erichsia7.github.io/password.gen/icon/ico_128.png" style="width:120px;border-radius:99em;" id="raimgico">
 <h1 style="font-size:30px;">請問您有什麼需求？</h1>
 <div id="searchbox">
 <input class="input" placeholder="搜尋問題" id="searchinput">
@@ -286,9 +286,9 @@ function draw() {
   }
 }
 
-setInterval(draw, 10);
+//setInterval(draw, 10);
 $(document).ready(function() {
-	window.setTimeout("$('#canvas').css({'background':'url(bg-b.jpeg)','background-repeat': 'no-repeat','background-position': 'center center','background-size':'cover'});", 3000);
+	window.setTimeout("$('#canvas').css({'background':'url(bg-b.jpeg)','background-repeat': 'no-repeat','background-position': 'center center','background-size':'cover'});$('#raimgico').attr('src','https://erichsia7.github.io/password.gen/icon/icon_512x512.png');", 3000);
 });
 	    
 </script>
