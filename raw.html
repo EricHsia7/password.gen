@@ -12,7 +12,7 @@
     </script>
 </head>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="UTF-8" /><link rel="stylesheet" href="app.min.css?f232500e-72b7-0281-df37-0536a14174f3" /><link rel="stylesheet" href="app_2.min.css?f232500e" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="UTF-8" /><link rel="stylesheet" href="app.min.css?f232500e-72b7-0281-df37-0536a14174f8" /><link rel="stylesheet" href="app_2.min.css?d176510d" />
 <link rel="stylesheet" href="app_3.min.css?4853d2ce-ce77-ac5e-8416-ceaf4bdb641b" /><link href="icon/icon_512x512.png" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="icon" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="bookmark" />
 <link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="shortcut icon" /><title>密碼產生器</title>
@@ -78,7 +78,9 @@
             }
         }
     </style>
-    <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span> <iframe src="" class="supportiframe"></iframe>
+    <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span>
+    <div class="supportiframebg"></div>
+    <iframe src="" class="supportiframe"></iframe>
     <div class="moreiframe">
         <ujj>
             <center>
@@ -127,13 +129,16 @@
     <script src="app.min.js?f84fd1b3-17ee-8c6b-5c35-2fb3642de62d"></script>
     <script>
         function home() {
-            $(".supportiframe").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#sico,#mico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("密碼產生器");$("#ss").fadeIn(1);
+            $(".supportiframe,.supportiframebg").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#sico,#mico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("密碼產生器");
+            $("#ss").fadeIn(1);
         }
         function support() {
-            $(".supportiframe").fadeIn(1), $(".moreiframe").fadeOut(1), $("#sico").css({ opacity: "1" }), $("#hico,#mico").css({ opacity: "0.5" }), $("#top2 center").html("支援");$("#ss").fadeOut(1);
+            $(".supportiframe,.supportiframebg").fadeIn(1), $(".moreiframe").fadeOut(1), $("#sico").css({ opacity: "1" }), $("#hico,#mico").css({ opacity: "0.5" }), $("#top2 center").html("支援");
+            $("#ss").fadeOut(1);
         }
         function more() {
-            $(".supportiframe").fadeOut(1), $(".moreiframe").fadeIn(1), $("#mico").css({ opacity: "1" }), $("#sico,#hico").css({ opacity: "0.5" }), $("#top2 center").html("更多");$("#ss").fadeOut(1);
+            $(".supportiframe,.supportiframebg").fadeOut(1), $(".moreiframe").fadeIn(1), $("#mico").css({ opacity: "1" }), $("#sico,#hico").css({ opacity: "0.5" }), $("#top2 center").html("更多");
+            $("#ss").fadeOut(1);
         }
         $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1);
         home();
