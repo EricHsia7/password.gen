@@ -1,0 +1,38 @@
+    @media (min-width: 600px) {
+    .bottombar {
+        height:calc(100% - 52px);
+        max-height:300px;
+        left:10px;
+        bottom:50%;
+        transform:translate(0%,50%);
+        width:50px;
+        border-radius:10px;
+        overflow:hidden;
+    }
+    .bottom-btn-b {
+        width:100%;
+        height:calc(100% / 3);
+        left:0%;
+        right:auto;
+        bottom:auto;
+        top:auto;
+    }
+    .bottom-btn-b:nth-child(1) {
+        top:0%;
+    }
+        .bottom-btn-b:nth-child(2) {
+        top:calc(100% / 3);
+        transform: none;
+    }
+        .bottom-btn-b:nth-child(3) {
+        bottom:0%;
+    }
+    #modeiconddbtn {
+        bottom:15px;
+        right:auto;
+        left:10px;
+    }
+    .supportiframebg,.supportiframe {
+        height:calc(100% - 52px);
+    }
+    }
