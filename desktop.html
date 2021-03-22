@@ -161,7 +161,7 @@
 </body>
 <style id="iphonehomebar">
     .bottombar {
-        height:100%;
+        height:calc(100% - 52px);
         width:52px;
     }
     .bottom-btn-b {
@@ -169,6 +169,8 @@
         height:calc(100% / 3);
         left:0px;
         right:auto;
+        bottom:auto;
+        top:auto;
     }
     .bottom-btn-b:nth-child(1) {
         top:0%;
@@ -179,6 +181,7 @@
     }
         .bottom-btn-b:nth-child(3) {
         right:0%;
+        bottom:0%;
     }
 </style>
 <link rel="preconnect" href="https://fonts.gstatic.com" />
