@@ -101,13 +101,13 @@
         </ujj>
     </div>
     <div id="bottom" class="bottombar">
-        <div class="bottom-btn-b" style="top: 0%;">
+        <div class="bottom-btn-b" style="left: 0%;">
             <a href="javascript:home()"><img src="https://erichsia7.github.io/password.gen/icon/home.svg" class="btn-cen" id="hico" /></a>
         </div>
-        <div class="bottom-btn-b" style="top: 50%; transform: translate(-50%, 0%);">
+        <div class="bottom-btn-b" style="left: 50%; transform: translate(-50%, 0%);">
             <a href="javascript:support()"><img src="https://erichsia7.github.io/password.gen/icon/support.svg" class="btn-cen" id="sico" /></a>
         </div>
-        <div class="bottom-btn-b" style="bottom: 0%;">
+        <div class="bottom-btn-b" style="right: 0%;">
             <a href="javascript:more()"><img src="https://erichsia7.github.io/password.gen/icon/more2.svg" class="btn-cen" id="mico" /></a>
         </div>
     </div>
@@ -167,6 +167,18 @@
     .bottom-btn-b {
         width:100%;
         height:calc(100% / 3);
+        left:0px;
+        right:auto;
+    }
+    .bottom-btn-b:nth-child(1) {
+        top:0%;
+    }
+        .bottom-btn-b:nth-child(2) {
+        top:50%;
+            transform: translate(-0%, -50%);
+    }
+        .bottom-btn-b:nth-child(3) {
+        right:0%;
     }
 </style>
 <link rel="preconnect" href="https://fonts.gstatic.com" />
