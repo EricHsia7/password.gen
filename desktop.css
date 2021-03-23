@@ -1,38 +1,51 @@
+    :root {
+        --desktop-bottombar-color:#fafafa;
+    }
     @media (min-width: 600px) {
+        .modeiconddbtn {
+            transform:translateY(60px);
+        }
+        .topbar {
+            width:calc(100% - 65px);
+            left:65px;
+            box-shadow:none;
+        }
     .bottombar {
-        height:calc(100% - 52px);
-        max-height:300px;
-        left:10px;
-        bottom:50%;
-        transform:translate(0%,50%);
-        width:50px;
-        border-radius:10px;
+        height:100%;
+        left:0px;
+        bottom:0px;
+        width:65px;
         overflow:hidden;
+        background:var(--desktop-bottombar-color);
+        box-shadow:none;
     }
     .bottom-btn-b {
         width:100%;
-        height:calc(100% / 3);
+        height:65px;
         left:0%;
         right:auto;
         bottom:auto;
         top:auto;
     }
     .bottom-btn-b:nth-child(1) {
-        top:0%;
+        top:0px;
     }
         .bottom-btn-b:nth-child(2) {
-        top:calc(100% / 3);
+        top:65px;
         transform: none;
     }
         .bottom-btn-b:nth-child(3) {
-        bottom:0%;
-    }
-    #modeiconddbtn {
-        bottom:15px;
-        right:auto;
-        left:10px;
-    }
-    .supportiframebg,.supportiframe {
+        top:130px;
+        }
+    .supportiframebg,.supportiframe,.moreiframe {
         height:calc(100% - 52px);
+        width:calc(100% - 65px);
+        left:65px;
     }
+        ujj li {
+            width:calc(100vw - 65px);
+        }
+        .box,.msg,.boxmsg {
+            transform:scale(0.85) translateX(calc(-50%));
+        }
     }
