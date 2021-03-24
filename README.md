@@ -9,13 +9,13 @@ password generator
 <a href="https://erichsia7.github.io/password.gen">Open</a>
 </code>
 # About
-![image](https://erichsia7.github.io/password.gen/image/1dc3LXZ6NN872q7WVmvNim9UHUR6mZqzFkdwjac1DBTkXymA26k3GsTFHrFLTQzi.jpeg)
+![image](https://erichsia7.github.io/password.gen/image/1dc3LXZ6NN872q7WVmvNim9UHUR6mZqzFkdwjac1DBTkXymA26k3GsTFHrFLTQzi.jpeg?1)
 <code>
 This is a about page
 <a href="https://erichsia7.github.io/password.gen/about/">Open</a>
 </code>
 # Support
-![image](https://erichsia7.github.io/password.gen/image/WGOFmWRcWI4Ln9OsDfU36UX66lVjF3mF.jpeg)
+![image](https://erichsia7.github.io/password.gen/image/WGOFmWRcWI4Ln9OsDfU36UX66lVjF3mF.jpeg?1)
 <code>
 This is a support page
 <a href="https://erichsia7.github.io/password.gen/about/support_center/">Open</a>
@@ -23,7 +23,7 @@ This is a support page
 # images
 ||||||
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-1-min.png)  | ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-2-min.png)  | ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-3-min.png) | ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-4-min.png) | ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-5-min.png) |
+| ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-1-min.png?1)  | ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-2-min.png?1)  | ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-3-min.png?1) | ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-4-min.png?1) | ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-5-min.png?1) |
 
 
 
