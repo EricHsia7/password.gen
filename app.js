@@ -65,6 +65,8 @@ copys.select();
 document.execCommand("Copy");
 $('#boxmsg').html('已複製密碼！');
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+$('.historyframe h3').fadeOut(1);
+$('.historyframe').prepend('<div class="pwwstbox historyp" id="fppp"><div class="content"><h4>Date</h4><div class="description"><input type="text" value="' + copys.value + '" class="pwdhistoryinput" readonly="readonly"></div></div></div>');
 }
 getPassword();
 var o = 100 ;
