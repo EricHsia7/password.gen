@@ -127,15 +127,19 @@
     <script src="app.min.js?f84fd1b3-17ee-8c6b-5c35-2fb3642de62d"></script>
     <script>
         function home() {
-            $(".supportiframe,.supportiframebg").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#sico,#mico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("密碼產生器");
+            $(".supportiframe,.supportiframebg").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#tico,#mico,#sico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("密碼產生器");
             $("#ss").fadeIn(1);
         }
         function support() {
-            $(".supportiframe,.supportiframebg").fadeIn(1), $(".moreiframe").fadeOut(1), $("#sico").css({ opacity: "1" }), $("#hico,#mico").css({ opacity: "0.5" }), $("#top2 center").html("支援");
+            $(".supportiframe,.supportiframebg").fadeIn(1), $(".moreiframe").fadeOut(1), $("#sico").css({ opacity: "1" }), $("#hico,#mico,#tico").css({ opacity: "0.5" }), $("#top2 center").html("支援");
+            $("#ss").fadeOut(1);
+        }
+        function history() {
+            $(".supportiframe,.supportiframebg").fadeOut(1), $(".hostoryframe").fadeIn(1), $("#tico").css({ opacity: "1" }), $("#hico,#mico,#sico").css({ opacity: "0.5" }), $("#top2 center").html("歷史紀錄");
             $("#ss").fadeOut(1);
         }
         function more() {
-            $(".supportiframe,.supportiframebg").fadeOut(1), $(".moreiframe").fadeIn(1), $("#mico").css({ opacity: "1" }), $("#sico,#hico").css({ opacity: "0.5" }), $("#top2 center").html("更多");
+            $(".supportiframe,.supportiframebg").fadeOut(1), $(".moreiframe").fadeIn(1), $("#mico").css({ opacity: "1" }), $("#hico,#tico,#sico").css({ opacity: "0.5" }), $("#top2 center").html("更多");
             $("#ss").fadeOut(1);
         }
         $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1);
