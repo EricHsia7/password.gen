@@ -204,7 +204,7 @@ text-overflow: ellipsis;
          }
          $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1);
          $('.pwdhistoryinput').click(function() {
-         var copys = $(this);
+         var copys = $(this).attr('id');
 copys.select();
 document.execCommand("Copy");
          });
