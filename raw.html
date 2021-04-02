@@ -203,6 +203,11 @@ text-overflow: ellipsis;
              $("#ss").fadeOut(1);
          }
          $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1);
+         $('.pwdhistoryinput').click(function() {
+         var copys = $(this);
+copys.select();
+document.execCommand("Copy");
+         });
          home();
      </script>
      <script>
