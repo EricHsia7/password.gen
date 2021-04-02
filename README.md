@@ -26,7 +26,7 @@ This is a support page
 ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-3-min.png?1)
  ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-4-min.png?1)
  ![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-5-min.png?1) 
-![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-6-min.png?1) 
+![image](https://erichsia7.github.io/password.gen/image/iphone_img/iphone_img-6-min2.png?1) 
 
 
 
