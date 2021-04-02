@@ -73,7 +73,7 @@ copys.select();
 document.execCommand("Copy");
 $('#boxmsg').html('已複製密碼！');
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
-$('.historyframe h3').fadeOut(1);
+$('#historytext').html('<br><br>');
 $('.historyframe').prepend('<div class="pwwstbox historyp" id="' + Math.floor(Math.random() * 4096) + '"><div class="content"><h4>' + (today.getMonth()+1) + '/' + today.getDate() + ' ' + checki(today.getHours()) + ':' + checki(today.getMinutes()) + '</h4><div class="description"><input type="text" value="' + copys.value + '" class="pwdhistoryinput" readonly="readonly"></div></div></div>');
 
 }
