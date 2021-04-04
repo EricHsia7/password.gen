@@ -327,7 +327,7 @@ body {
         display: none;
     }
     .icon {
-        width: 180px;
+        width: 150px;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -335,6 +335,6 @@ body {
         display: none;
     }
     .icon {
-        width: 200px;
+        width: 120px;
     }
 }
