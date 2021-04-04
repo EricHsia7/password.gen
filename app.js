@@ -1,4 +1,4 @@
-$('.loadbg').delay(888).fadeOut(450);
+$('.loadbg').delay(1000).fadeOut(333);
 f = 0 ;
 pwdmode = 0 ;
 var passwordLength = 16 ;
