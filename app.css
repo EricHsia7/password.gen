@@ -3,6 +3,7 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     caret-color: transparent;
     -webkit-user-select: none;
+    text-decoration:none;
 }
 .ppgenintext {
     color: #333;
