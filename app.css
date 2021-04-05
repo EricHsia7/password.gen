@@ -4,6 +4,7 @@
     caret-color: transparent;
     -webkit-user-select: none;
     text-decoration:none;
+    -webkit-touch-callout: none;
 }
 .ppgenintext {
     color: #333;
