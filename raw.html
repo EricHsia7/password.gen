@@ -52,7 +52,7 @@
             );
         }
         $("#ss").append(
-            '<center><br><br><a href="https://erichsia7.github.io/password.gen/recommended-pwd-length-more/" id="webpwdlength" style="border:1px #888 solid;font-size:15px;padding:10px;border-radius:99em;color:#888;">查看更多</a></center>'
+            '<center><br><br><a href="https://erichsia7.github.io/password.gen/recommended-pwd-length-more/" id="webpwdlength" style="font-size:15px;padding:10px;border-radius:99em;" class="webpwdlength-more">查看更多</a></center>'
         );
     </script>
     <a href="javascript:changemode()" style="box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05); position: fixed; bottom: 75px; right: 15px; width: 50px; height: 50px; border-radius: 99em;" id="modeiconddbtn" class="modeiconddbtn">
@@ -62,10 +62,18 @@
         .modeiconddbtn {
             background: #fff;
         }
+        .webpwdlength-more {
+           color:#000; 
+            border:1px #000 solid;
+        }
         @media (prefers-color-scheme: dark) {
             .modeiconddbtn {
                 background: #1a1a1a;
             }
+            .webpwdlength-more {
+           color:#fff; 
+            border:1px #fff solid;
+        }
         }
     </style>
     <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span>
