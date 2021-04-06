@@ -78,8 +78,13 @@
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0);
 }
-
+.btn-cc-pp {
+    background:#000;
+}
 @media (prefers-color-scheme: dark) {
+    .btn-cc-pp {
+    background:#fff;
+}
     #ss h1 {
         color: #fff;
     }
