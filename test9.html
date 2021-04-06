@@ -13,7 +13,7 @@
 </head>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="UTF-8" /><link rel="stylesheet" href="app.min.css?aaf878d4" /><link rel="stylesheet" href="app_2.min.css?d176510d" />
-<link rel="stylesheet" href="app_3.min.css?4853d2ce" /><link href="icon/icon_512x512.png" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="app_3-test.min.css?4853d2ce" /><link href="icon/icon_512x512.png" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="icon" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="bookmark" />
 <link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="shortcut icon" /><title>密碼產生器</title>
 <body>
@@ -152,7 +152,7 @@
         $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1);
         home();
       
-      $('a').on( "click", function( eee ) {
+      $('.bottom-btn-b a').on( "click", function( eee ) {
 var ppchars = "0123456789abcdefghijklmnopqrstuvwxyz";
             var ppid = "";
             for (var i = 0; i < 16; i++) {
@@ -163,7 +163,7 @@ var ppchars = "0123456789abcdefghijklmnopqrstuvwxyz";
     var xPos = (eee.pageX - $(this).offset().left)-($(this).width()*2);
     var yPos = (eee.pageY - $(this).offset().top)-($(this).width()*2);
 
-$(this).append('<div style="width:' + $(this).width()*4 + 'px;height:' + $(this).width()*4 + 'px;position:absolute;top:' + yPos + 'px;left:' + xPos + 'px;border-radius:99em;transform:scale(0);transition:transform 1.2s,opacity 0.8s;opacity:0.3;background:rgba(0, 0, 0, 1); overflow:hidden; user-select:none;" id="' + ppid + '"></div>');
+$(this).append('<div style="width:' + $(this).width()*4 + 'px;height:' + $(this).width()*4 + 'px;position:absolute;top:' + yPos + 'px;left:' + xPos + 'px;border-radius:99em;transform:scale(0);transition:transform 1.2s,opacity 0.8s;opacity:0.3; overflow:hidden; user-select:none;" id="' + ppid + '" class="btn-cc-pp"></div>');
 
 setTimeout(function () {
                     $('#' + ppid).css({'transform':'scale(1)','opacity':'0'});
