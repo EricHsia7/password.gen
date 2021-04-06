@@ -80,7 +80,15 @@ overflow: hidden;
     transform: translate(-50%, -50%) scale(0);
     overflow: hidden;
 }
-    @media (prefers-color-scheme: dark) {
+        .webpwdlength-more {
+           color:#000; 
+            border:1px #e3e3e3 solid;
+        }
+        @media (prefers-color-scheme: dark) {
+            .webpwdlength-more {
+           color:#fff; 
+            border:1px #fff solid;
+        }
         body {
             background: #1A1A1A;
         }
@@ -145,7 +153,13 @@ overflow: hidden;
         outline: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
-    
+ 
+  
+  
+  
+  
+          
+
 </style>
 
 <body>
@@ -168,7 +182,7 @@ overflow: hidden;
             );
         }
         $("#ss").append(
-            '<center><br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8wSxoubeZTSWlpX0RjHwloIxxKXV9dYsSsJUXND2lqTYTBA/viewform?usp=sf_link" id="webpwdlength" target="_blank" style="border:1px #888 solid;font-size:15px;padding:10px;border-radius:99em;color:#888;">提供其他建議</a></center>'
+            '<center><br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8wSxoubeZTSWlpX0RjHwloIxxKXV9dYsSsJUXND2lqTYTBA/viewform?usp=sf_link" id="webpwdlength" target="_blank" style="font-size:15px;padding:10px;border-radius:99em;" class="webpwdlength-more">提供其他建議</a></center>'
         );
     </script>
 </body>
