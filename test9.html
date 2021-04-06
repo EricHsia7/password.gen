@@ -161,9 +161,9 @@ var ppchars = "0123456789abcdefghijklmnopqrstuvwxyz";
             }
 
     var xPos = (eee.pageX - $(this).offset().left)-($(this).width()*2);
-    var yPos = (eee.pageY - $(this).offset().top)-($(this).height()*2);
+    var yPos = (eee.pageY - $(this).offset().top)-($(this).width()*2);
 
-$(this).append('<div style="width:' + $(this).width()*4 + 'px;height:' + $(this).height()*4 + 'px;position:absolute;top:' + yPos + 'px;left:' + xPos + 'px;border-radius:99em;transform:scale(0);transition:transform 1.2s,opacity 0.8s;opacity:0.3;background:rgba(0, 0, 0, 1); overflow:hidden; user-select:none;" id="' + ppid + '"></div>');
+$(this).append('<div style="width:' + $(this).width()*4 + 'px;height:' + $(this).width()*4 + 'px;position:absolute;top:' + yPos + 'px;left:' + xPos + 'px;border-radius:99em;transform:scale(0);transition:transform 1.2s,opacity 0.8s;opacity:0.3;background:rgba(0, 0, 0, 1); overflow:hidden; user-select:none;" id="' + ppid + '"></div>');
 
 setTimeout(function () {
                     $('#' + ppid).css({'transform':'scale(1)','opacity':'0'});
