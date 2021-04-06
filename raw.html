@@ -1,373 +1,335 @@
 <head>
-     <!-- Global site tag (gtag.js) - Google Analytics -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-864PXSN4RV"></script>
-     <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag() {
-             dataLayer.push(arguments);
-         }
-         gtag("js", new Date());
-
-         gtag("config", "G-864PXSN4RV");
-     </script>
-     <meta name="description" content="免費產生安全的密碼 密碼產生器|Password Generator" />
- </head>
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="UTF-8" /><link rel="stylesheet" href="app.min.css?aaf878d4" /><link rel="stylesheet" href="app_2.min.css?d176510d" />
- <link rel="stylesheet" href="app_3.min.css?4853d2ce" /><link href="icon/icon_512x512.png" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" />
- <meta name="apple-mobile-web-app-status-bar-style" content="black" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="icon" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="bookmark" />
- <link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="shortcut icon" /><title>密碼產生器</title>
- <body>
-     <div class="box" style="position: absolute;">
-         <input type="text" id="password" readonly="readonly" />
-         <a href="javascript:copy('password')" class="btnbox">
-             <img
-                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iLTQwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMjcxIDUxMmgtMTkxYy00NC4xMTMyODEgMC04MC0zNS44ODY3MTktODAtODB2LTI3MWMwLTQ0LjExMzI4MSAzNS44ODY3MTktODAgODAtODBoMTkxYzQ0LjExMzI4MSAwIDgwIDM1Ljg4NjcxOSA4MCA4MHYyNzFjMCA0NC4xMTMyODEtMzUuODg2NzE5IDgwLTgwIDgwem0tMTkxLTM5MWMtMjIuMDU0Njg4IDAtNDAgMTcuOTQ1MzEyLTQwIDQwdjI3MWMwIDIyLjA1NDY4OCAxNy45NDUzMTIgNDAgNDAgNDBoMTkxYzIyLjA1NDY4OCAwIDQwLTE3Ljk0NTMxMiA0MC00MHYtMjcxYzAtMjIuMDU0Njg4LTE3Ljk0NTMxMi00MC00MC00MHptMzUxIDI2MXYtMzAyYzAtNDQuMTEzMjgxLTM1Ljg4NjcxOS04MC04MC04MGgtMjIyYy0xMS4wNDY4NzUgMC0yMCA4Ljk1MzEyNS0yMCAyMHM4Ljk1MzEyNSAyMCAyMCAyMGgyMjJjMjIuMDU0Njg4IDAgNDAgMTcuOTQ1MzEyIDQwIDQwdjMwMmMwIDExLjA0Njg3NSA4Ljk1MzEyNSAyMCAyMCAyMHMyMC04Ljk1MzEyNSAyMC0yMHptMCAwIiBmaWxsPSIjODA4MDgwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PC9nPjwvc3ZnPg=="
-                 class="btn"
-             />
-         </a>
-     </div>
-     <div id="msg" class="msg" style="position: absolute;"></div>
-     <div class="boxmsg" style="position: absolute;">
-         <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-shadow: rgba(0, 0, 0, 0.3) 1px 0 10px; font-size: 1.1rem;" id="boxmsg">已複製密碼！</span>
-     </div>
-     <span id="ss" style="position: absolute; left: 50%; top: 75%; padding-bottom: 90px; transform: translateX(-50%);">
-         <center><h1 style="margin-top: 0px; font-family: 'Noto Sans TC', sans-serif; font-weight: 400; font-size: 23px;">建議密碼長度</h1></center>
-     </span>
-     <script>
-         htmlobj = $.ajax({ url: "https://erichsia7.github.io/password.gen/websitepasswordlength.json?n", async: false });
-         for (var i = 0; i < JSON.parse(htmlobj.responseText).d.length; i++) {
-             $("#ss").append(
-                 '<div class="pwwstbox" id="f' +
-                     JSON.parse(htmlobj.responseText).d[i].name +
-                     '"><div class="content"><h4><img src="' +
-                     JSON.parse(htmlobj.responseText).d[i].icon +
-                     '">' +
-                     JSON.parse(htmlobj.responseText).d[i].name +
-                     '</h4><div class="description">' +
-                     JSON.parse(htmlobj.responseText).d[i].min +
-                     " - " +
-                     JSON.parse(htmlobj.responseText).d[i].max +
-                     "位</div></div></div>"
-             );
-         }
-         $("#ss").append(
-             '<center><br><br><a href="https://erichsia7.github.io/password.gen/recommended-pwd-length-more/" id="webpwdlength" style="border:1px #888 solid;font-size:15px;padding:10px;border-radius:99em;color:#888;">查看更多</a></center>'
-         );
-     </script>
-     <a href="javascript:changemode()" style="box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05); position: fixed; bottom: 75px; right: 15px; width: 50px; height: 50px; border-radius: 99em;" id="modeiconddbtn" class="modeiconddbtn">
-         <img src="icon/simple.svg" style="height: 50px; width: 50px; transform: scale(0.5);" id="modeicondd" class="modeicondd" />
-     </a>
-     <style>
-         .modeiconddbtn {
-             background: #fff;
-         }
-         .modeicondd {
-             filter: invert(0);
-         }
-         @media (prefers-color-scheme: dark) {
-             .modeiconddbtn {
-                 background: #1A1A1A;
-             }
-             .modeicondd {
-                 filter: invert(1);
-             }
-         }
-     </style>
-     <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span>
-     <div class="supportiframebg"></div>
-     <iframe src="" class="supportiframe"></iframe>
-      <style>
-.historyframe {
-position:fixed;
-top:52px;
-left:0px;
-width:100%;
-height:calc(100% - 104px);
-background:#fff;
-overflow: scroll;
-display:none;
-}
-.historyframe h3 {
-   color:#333;  
-           }
-.pwdhistoryinput {
-border:none;
-width:100%;
-height:35px;
-border-radius:99em;
-background:#f5f5f5;
-font-size:20px;
-color:#333;
-text-overflow: ellipsis;
--webkit-user-select: text;
-}
-.historyp {
-position:relative;
-left:50%;
-transform:translateX(-50%);
-}
-@media (prefers-color-scheme: dark) {
-.historyframe {
-position:fixed;
-top:52px;
-left:0px;
-width:100%;
-display:none;
-height:calc(100% - 104px);
-background:#1A1A1A;
-overflow: scroll;
-
-}
-.historyframe h3 {
-   color:#fff;  
-           }
-.pwdhistoryinput {
-border:none;
-width:100%;
-height:35px;
-border-radius:99em;
-background:#1F1F1F;
-font-size:20px;
-color:#fff;
-text-overflow: ellipsis;
--webkit-user-select: text;
-}
-
-</style>
-      <div class="historyframe">
-           <center id="historytext"><h3 style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);">已複製的密碼將顯示在這裡</h3></center>
-</div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-864PXSN4RV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-864PXSN4RV");
+    </script>
+    <meta name="description" content="免費產生安全的密碼 密碼產生器|Password Generator" />
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="UTF-8" /><link rel="stylesheet" href="app.min.css?aaf878d4" /><link rel="stylesheet" href="app_2.min.css?d176510d" />
+<link rel="stylesheet" href="app_3.min.css?4853d3ce" /><link href="icon/icon_512x512.png" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="icon" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="bookmark" />
+<link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="shortcut icon" /><title>密碼產生器</title>
+<body>
+    <div class="box" style="position: absolute;">
+        <input type="text" id="password" readonly="readonly" />
+        <a href="javascript:copy('password')" class="btnbox">
+            <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iLTQwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMjcxIDUxMmgtMTkxYy00NC4xMTMyODEgMC04MC0zNS44ODY3MTktODAtODB2LTI3MWMwLTQ0LjExMzI4MSAzNS44ODY3MTktODAgODAtODBoMTkxYzQ0LjExMzI4MSAwIDgwIDM1Ljg4NjcxOSA4MCA4MHYyNzFjMCA0NC4xMTMyODEtMzUuODg2NzE5IDgwLTgwIDgwem0tMTkxLTM5MWMtMjIuMDU0Njg4IDAtNDAgMTcuOTQ1MzEyLTQwIDQwdjI3MWMwIDIyLjA1NDY4OCAxNy45NDUzMTIgNDAgNDAgNDBoMTkxYzIyLjA1NDY4OCAwIDQwLTE3Ljk0NTMxMiA0MC00MHYtMjcxYzAtMjIuMDU0Njg4LTE3Ljk0NTMxMi00MC00MC00MHptMzUxIDI2MXYtMzAyYzAtNDQuMTEzMjgxLTM1Ljg4NjcxOS04MC04MC04MGgtMjIyYy0xMS4wNDY4NzUgMC0yMCA4Ljk1MzEyNS0yMCAyMHM4Ljk1MzEyNSAyMCAyMCAyMGgyMjJjMjIuMDU0Njg4IDAgNDAgMTcuOTQ1MzEyIDQwIDQwdjMwMmMwIDExLjA0Njg3NSA4Ljk1MzEyNSAyMCAyMCAyMHMyMC04Ljk1MzEyNSAyMC0yMHptMCAwIiBmaWxsPSIjODA4MDgwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PC9nPjwvc3ZnPg=="
+                class="btn"
+            />
+        </a>
+    </div>
+    <div id="msg" class="msg" style="position: absolute;"></div>
+    <div class="boxmsg" style="position: absolute;">
+        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-shadow: rgba(0, 0, 0, 0.3) 1px 0 10px; font-size: 1.1rem;" id="boxmsg">已複製密碼！</span>
+    </div>
+    <span id="ss" style="position: absolute; left: 50%; top: 75%; padding-bottom: 90px; transform: translateX(-50%);">
+        <center><h1 style="margin-top: 0px; font-family: 'Noto Sans TC', sans-serif; font-weight: 400; font-size: 23px;">建議密碼長度</h1></center>
+    </span>
+    <script>
+        htmlobj = $.ajax({ url: "https://erichsia7.github.io/password.gen/websitepasswordlength.json?n", async: false });
+        for (var i = 0; i < JSON.parse(htmlobj.responseText).d.length; i++) {
+            $("#ss").append(
+                '<div class="pwwstbox" id="f' +
+                    JSON.parse(htmlobj.responseText).d[i].name +
+                    '"><div class="content"><h4><img src="' +
+                    JSON.parse(htmlobj.responseText).d[i].icon +
+                    '">' +
+                    JSON.parse(htmlobj.responseText).d[i].name +
+                    '</h4><div class="description">' +
+                    JSON.parse(htmlobj.responseText).d[i].min +
+                    " - " +
+                    JSON.parse(htmlobj.responseText).d[i].max +
+                    "位</div></div></div>"
+            );
+        }
+        $("#ss").append(
+            '<center><br><br><a href="https://erichsia7.github.io/password.gen/recommended-pwd-length-more/" id="webpwdlength" style="border:1px #888 solid;font-size:15px;padding:10px;border-radius:99em;color:#888;">查看更多</a></center>'
+        );
+    </script>
+    <a href="javascript:changemode()" style="box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05); position: fixed; bottom: 75px; right: 15px; width: 50px; height: 50px; border-radius: 99em;" id="modeiconddbtn" class="modeiconddbtn">
+        <img src="icon/simple.svg" style="height: 50px; width: 50px; transform: scale(0.5);" id="modeicondd" class="modeicondd" />
+    </a>
+    <style>
+        .modeiconddbtn {
+            background: #fff;
+        }
+        .modeicondd {
+            filter: invert(0);
+        }
+        @media (prefers-color-scheme: dark) {
+            .modeiconddbtn {
+                background: #1a1a1a;
+            }
+            .modeicondd {
+                filter: invert(1);
+            }
+        }
+    </style>
+    <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span>
+    <div class="supportiframebg"></div>
+    <iframe src="" class="supportiframe"></iframe>
+    <style>
+        .historyframe {position:fixed;top:52px;left:0px;width:100%;height:calc(100% - 104px);background:#fff;overflow: scroll;display:none;}.historyframe h3 {   color:#333;             }.pwdhistoryinput {border:none;width:100%;height:35px;border-radius:99em;background:#f5f5f5;font-size:20px;color:#333;text-overflow: ellipsis;-webkit-user-select: text;}.historyp {position:relative;left:50%;transform:translateX(-50%);}@media (prefers-color-scheme: dark) {.historyframe {position:fixed;top:52px;left:0px;width:100%;display:none;height:calc(100% - 104px);background:#1A1A1A;overflow: scroll;
+        }.historyframe h3 {   color:#fff;             }.pwdhistoryinput {border:none;width:100%;height:35px;border-radius:99em;background:#1F1F1F;font-size:20px;color:#fff;text-overflow: ellipsis;-webkit-user-select: text;}
+    </style>
+    <div class="historyframe">
+        <center id="historytext"><h3 style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">已複製的密碼將顯示在這裡</h3></center>
+    </div>
+    <div class="moreiframe">
+        <ujj>
+            <center>
+                <a href="javascript: passwordgenint()">
+                    <li><center>這是什麼</center></li>
+                </a>
+                <a href="javascript:window.location.reload()">
+                    <li><center>重新整理</center></li>
+                </a>
+                <a href="https://erichsia7.github.io/password.gen/about/">
+                    <li><center>關於</center></li>
+                </a>
+                <a href="https://erichsia7.github.io/password.gen/about/support_center/" target="_blank"><li>支援</li></a> <a href="https://erichsia7.github.io/password.gen/about/Privacy-Policy/" target="_blank"><li>隱私政策</li></a>
+                <a href="https://www.facebook.com/password.gen" target="_blank"><li>Facebook</li></a> <a href="https://line.me/R/ti/p/@807gocyy" target="_blank"><li>LINE</li></a>
+                <a href="https://github.com/EricHsia7/password.gen" target="_blank"><li>Github</li></a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/viewform?usp=sf_link" target="_blank"><li>意見回饋</li></a><br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </center>
+        </ujj>
+    </div>
+    <div id="bottom" class="bottombar">
+        <div class="bottom-btn-b" style="left: 0%; width: 25%;">
+            <a href="javascript:home()"><img src="https://erichsia7.github.io/password.gen/icon/home.svg" class="btn-cen" id="hico" /></a>
+        </div>
+        <div class="bottom-btn-b" style="left: 25%; width: 25%;">
+            <a href="javascript:history()"><img src="https://erichsia7.github.io/password.gen/icon/history.svg" class="btn-cen" id="tico" /></a>
+        </div>
+        <div class="bottom-btn-b" style="left: 50%; width: 25%;">
+            <a href="javascript:support()"><img src="https://erichsia7.github.io/password.gen/icon/support.svg" class="btn-cen" id="sico" /></a>
+        </div>
+        <div class="bottom-btn-b" style="left: 75%; width: 25%;">
+            <a href="javascript:more()"><img src="https://erichsia7.github.io/password.gen/icon/more2.svg" class="btn-cen" id="mico" /></a>
+        </div>
+    </div>
+    <div class="topbar" id="top2"><center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">首頁</center></div>
+    <div class="fixedbg"></div>
+    <div class="passwordgenintdiv">
+        <span style="margin: 10px; width: calc(100% - 20px); height: calc(100% - 72px); position: absolute; top: 0px; left: 0px;" class="ppgenintext"> 這是密碼產生器，可產生8-128位的安全密碼，點擊框框即可切換長度！ </span>
+        <a href="javascript: passwordgenintclose()" class="ppgeningclosebtn">
+            <center style="font-size: 25px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">知道了</center>
+        </a>
+    </div>
+    <div class="loadbg">
+        <span class="img-dd"><img src="icon/ic_svg.svg" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); filter: blur(0px);" class="icon" id="ddimg" /></span>
+    </div>
+    <script src="app.min.js?dc3c8bc5"></script>
+    <script>
+        function home() {
+            $(".supportiframe,.supportiframebg,.historyframe").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#tico,#mico,#sico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("首頁");
+            $("#ss").fadeIn(1);
+        }
+        function support() {
+            $(".supportiframe,.supportiframebg").fadeIn(1), $(".moreiframe,.historyframe").fadeOut(1), $("#sico").css({ opacity: "1" }), $("#hico,#mico,#tico").css({ opacity: "0.5" }), $("#top2 center").html("支援");
+            $("#ss").fadeOut(1);
+        }
+        function history() {
+            $(".supportiframe,.supportiframebg,.moreiframe").fadeOut(1), $(".historyframe").fadeIn(1), $("#tico").css({ opacity: "1" }), $("#hico,#mico,#sico").css({ opacity: "0.5" }), $("#top2 center").html("歷史紀錄");
+            $("#ss").fadeOut(1);
+        }
+        function more() {
+            $(".supportiframe,.supportiframebg,.historyframe").fadeOut(1), $(".moreiframe").fadeIn(1), $("#mico").css({ opacity: "1" }), $("#hico,#tico,#sico").css({ opacity: "0.5" }), $("#top2 center").html("更多");
+            $("#ss").fadeOut(1);
+        }
+        $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1);
+        home();
       
-     <div class="moreiframe">
-         <ujj>
-             <center>
-                 <a href="javascript: passwordgenint()">
-                     <li><center>這是什麼</center></li>
-                 </a>
-                 <a href="javascript:window.location.reload()">
-                     <li><center>重新整理</center></li>
-                 </a>
-                 <a href="https://erichsia7.github.io/password.gen/about/">
-                     <li><center>關於</center></li>
-                 </a>
-                 <a href="https://erichsia7.github.io/password.gen/about/support_center/" target="_blank"><li>支援</li></a> <a href="https://erichsia7.github.io/password.gen/about/Privacy-Policy/" target="_blank"><li>隱私政策</li></a>
-                 <a href="https://www.facebook.com/password.gen" target="_blank"><li>Facebook</li></a> <a href="https://line.me/R/ti/p/@807gocyy" target="_blank"><li>LINE</li></a>
-                 <a href="https://github.com/EricHsia7/password.gen" target="_blank"><li>Github</li></a>
-                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/viewform?usp=sf_link" target="_blank"><li>意見回饋</li></a><br />
-                 <br />
-                 <br />
-                 <br />
-                 <br />
-             </center>
-         </ujj>
-     </div>
-     <div id="bottom" class="bottombar">
-         <div class="bottom-btn-b" style="left: 0%;width:25%;">
-             <a href="javascript:home()"><img src="https://erichsia7.github.io/password.gen/icon/home.svg" class="btn-cen" id="hico" /></a>
-         </div>
-          <div class="bottom-btn-b" style="left: 25%;width:25%;">
-             <a href="javascript:history()"><img src="https://erichsia7.github.io/password.gen/icon/history.svg" class="btn-cen" id="tico" /></a>
-         </div>
-         <div class="bottom-btn-b" style="left: 50%;width:25%;">
-             <a href="javascript:support()"><img src="https://erichsia7.github.io/password.gen/icon/support.svg" class="btn-cen" id="sico" /></a>
-         </div>
-         <div class="bottom-btn-b" style="left: 75%;width:25%;">
-             <a href="javascript:more()"><img src="https://erichsia7.github.io/password.gen/icon/more2.svg" class="btn-cen" id="mico" /></a>
-         </div>
-     </div>
-     <div class="topbar" id="top2"><center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">首頁</center></div>
-     <div class="fixedbg"></div>
-     <div class="passwordgenintdiv">
-         <span style="margin: 10px; width: calc(100% - 20px); height: calc(100% - 72px); position: absolute; top: 0px; left: 0px;" class="ppgenintext"> 這是密碼產生器，可產生8-128位的安全密碼，點擊框框即可切換長度！ </span>
-         <a href="javascript: passwordgenintclose()" class="ppgeningclosebtn">
-             <center style="font-size: 25px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">知道了</center>
-         </a>
-     </div>
-     <div class="loadbg">
-         <span class="img-dd"><img src="icon/ic_svg.svg" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); filter: blur(0px);" class="icon" id="ddimg" /></span>
-     </div>
-     <script src="app.min.js?dc3c8bc5"></script>
-     <script>
-         function home() {
-             $(".supportiframe,.supportiframebg,.historyframe").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#tico,#mico,#sico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("首頁");
-             $("#ss").fadeIn(1);
-         }
-         function support() {
-             $(".supportiframe,.supportiframebg").fadeIn(1), $(".moreiframe,.historyframe").fadeOut(1), $("#sico").css({ opacity: "1" }), $("#hico,#mico,#tico").css({ opacity: "0.5" }), $("#top2 center").html("支援");
-             $("#ss").fadeOut(1);
-         }
-         function history() {
-             $(".supportiframe,.supportiframebg,.moreiframe").fadeOut(1), $(".historyframe").fadeIn(1), $("#tico").css({ opacity: "1" }), $("#hico,#mico,#sico").css({ opacity: "0.5" }), $("#top2 center").html("歷史紀錄");
-             $("#ss").fadeOut(1);
-         }
-         function more() {
-             $(".supportiframe,.supportiframebg,.historyframe").fadeOut(1), $(".moreiframe").fadeIn(1), $("#mico").css({ opacity: "1" }), $("#hico,#tico,#sico").css({ opacity: "0.5" }), $("#top2 center").html("更多");
-             $("#ss").fadeOut(1);
-         }
-         $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1);
+      $('.bottom-btn-b a').on( "click", function( eee ) {
+var ppchars = "0123456789abcdefghijklmnopqrstuvwxyz";
+            var ppid = "";
+            for (var i = 0; i < 16; i++) {
+                var randomNumber = Math.floor(Math.random() * ppchars.length);
+                ppid += ppchars.substring(randomNumber, randomNumber + 1);
+            }
+    var xPos = (eee.pageX - $(this).offset().left)-($(this).width()*2);
+    var yPos = (eee.pageY - $(this).offset().top)-($(this).width()*2);
 
-         home();
-     </script>
-     <script>
-         window.onload = function () {
-             var e = 0;
-             document.addEventListener("touchstart", function (e) {
-                 e.touches.length > 1 && e.preventDefault();
-             }),
-                 document.addEventListener(
-                     "touchend",
-                     function (t) {
-                         var n = new Date().getTime();
-                         n - e <= 300 && t.preventDefault(), (e = n);
-                     },
-                     !1
-                 ),
-                 document.addEventListener("gesturestart", function (e) {
-                     e.preventDefault();
-                 });
-         };
-     </script>
- </body>
- <style id="iphonehomebar">
-     .bottombar {
-         bottom: 0;
-     }
-     .bottombar::after {
-         content: "";
-         background: #fff;
-         position: fixed;
-         left: 0;
-         bottom: 0;
-         height: 0;
-         width: 100%;
-     }
-     @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
-         .bottombar {
-             bottom: 12pt;
-         }
-         .bottombar::after {
-             content: "";
-             background: #fff;
-             position: fixed;
-             left: 0;
-             bottom: 0;
-             height: 12pt;
-             width: 100%;
-         }
-     }
-     @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-         .bottombar {
-             bottom: 12pt;
-         }
-         .bottombar::after {
-             content: "";
-             background: #fff;
-             position: fixed;
-             left: 0;
-             bottom: 0;
-             height: 12pt;
-             width: 100%;
-         }
-     }
-     @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
-         .bottombar {
-             bottom: 12pt;
-         }
-         .bottombar::after {
-             content: "";
-             background: #fff;
-             position: fixed;
-             left: 0;
-             bottom: 0;
-             height: 12pt;
-             width: 100%;
-         }
-     }
-     @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
-         .bottombar {
-             bottom: 12pt;
-         }
-         .bottombar::after {
-             content: "";
-             background: #fff;
-             position: fixed;
-             left: 0;
-             bottom: 0;
-             height: 12pt;
-             width: 100%;
-         }
-     }
-     @media (prefers-color-scheme: dark) {
-         .bottombar {
-             bottom: 0;
-         }
-         .bottombar::after {
-             content: "";
-             background: #1A1A1A;
-             position: fixed;
-             left: 0;
-             bottom: 0;
-             height: 0;
-             width: 100%;
-         }
-         @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
-             .bottombar {
-                 bottom: 12pt;
-             }
-             .bottombar::after {
-                 content: "";
-                 background: #1A1A1A;
-                 position: fixed;
-                 left: 0;
-                 bottom: 0;
-                 height: 12pt;
-                 width: 100%;
-             }
-         }
-         @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-             .bottombar {
-                 bottom: 12pt;
-             }
-             .bottombar::after {
-                 content: "";
-                 background: #1A1A1A;
-                 position: fixed;
-                 left: 0;
-                 bottom: 0;
-                 height: 12pt;
-                 width: 100%;
-             }
-         }
-         @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
-             .bottombar {
-                 bottom: 12pt;
-             }
-             .bottombar::after {
-                 content: "";
-                 background: #1A1A1A;
-                 position: fixed;
-                 left: 0;
-                 bottom: 0;
-                 height: 12pt;
-                 width: 100%;
-             }
-         }
-         @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
-             .bottombar {
-                 bottom: 12pt;
-             }
-             .bottombar::after {
-                 content: "";
-                 background: #1A1A1A;
-                 position: fixed;
-                 left: 0;
-                 bottom: 0;
-                 height: 12pt;
-                 width: 100%;
-             }
-         }
-     }
- </style>
- <link rel="preconnect" href="https://fonts.gstatic.com" />
- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+$(this).append('<div style="width:' + $(this).width()*4 + 'px;height:' + $(this).width()*4 + 'px;position:absolute;top:' + yPos + 'px;left:' + xPos + 'px;border-radius:99em;transform:scale(0);transition:transform 1.6s,opacity 0.8s;opacity:0.3; overflow:hidden; user-select:none;" id="' + ppid + '" class="btn-cc-pp"></div>');
+
+setTimeout(function () {
+                    $('#' + ppid).css({'transform':'scale(1)','opacity':'0'});
+                }, 1);
+     setTimeout(function () {
+                    $('#' + ppid).remove();
+                }, 800);
+});
+    </script>
+    <script>
+        window.onload = function () {
+            var e = 0;
+            document.addEventListener("touchstart", function (e) {
+                e.touches.length > 1 && e.preventDefault();
+            }),
+                document.addEventListener(
+                    "touchend",
+                    function (t) {
+                        var n = new Date().getTime();
+                        n - e <= 300 && t.preventDefault(), (e = n);
+                    },
+                    !1
+                ),
+                document.addEventListener("gesturestart", function (e) {
+                    e.preventDefault();
+                });
+        };
+    </script>
+</body>
+<style id="iphonehomebar">
+    .bottombar {
+        bottom: 0;
+    }
+    .bottombar::after {
+        content: "";
+        background: #fff;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+    }
+    @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+        .bottombar {
+            bottom: 12pt;
+        }
+        .bottombar::after {
+            content: "";
+            background: #fff;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 12pt;
+            width: 100%;
+        }
+    }
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+        .bottombar {
+            bottom: 12pt;
+        }
+        .bottombar::after {
+            content: "";
+            background: #fff;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 12pt;
+            width: 100%;
+        }
+    }
+    @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+        .bottombar {
+            bottom: 12pt;
+        }
+        .bottombar::after {
+            content: "";
+            background: #fff;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 12pt;
+            width: 100%;
+        }
+    }
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+        .bottombar {
+            bottom: 12pt;
+        }
+        .bottombar::after {
+            content: "";
+            background: #fff;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 12pt;
+            width: 100%;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        .bottombar {
+            bottom: 0;
+        }
+        .bottombar::after {
+            content: "";
+            background: #1a1a1a;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 0;
+            width: 100%;
+        }
+        @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+            .bottombar {
+                bottom: 12pt;
+            }
+            .bottombar::after {
+                content: "";
+                background: #1a1a1a;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                height: 12pt;
+                width: 100%;
+            }
+        }
+        @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+            .bottombar {
+                bottom: 12pt;
+            }
+            .bottombar::after {
+                content: "";
+                background: #1a1a1a;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                height: 12pt;
+                width: 100%;
+            }
+        }
+        @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+            .bottombar {
+                bottom: 12pt;
+            }
+            .bottombar::after {
+                content: "";
+                background: #1a1a1a;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                height: 12pt;
+                width: 100%;
+            }
+        }
+        @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+            .bottombar {
+                bottom: 12pt;
+            }
+            .bottombar::after {
+                content: "";
+                background: #1a1a1a;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                height: 12pt;
+                width: 100%;
+            }
+        }
+    }
+</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" /> <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
