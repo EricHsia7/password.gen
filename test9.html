@@ -159,7 +159,6 @@ var ppchars = "0123456789abcdefghijklmnopqrstuvwxyz";
                 var randomNumber = Math.floor(Math.random() * ppchars.length);
                 ppid += ppchars.substring(randomNumber, randomNumber + 1);
             }
-
     var xPos = (eee.pageX - $(this).offset().left)-($(this).width()*2);
     var yPos = (eee.pageY - $(this).offset().top)-($(this).width()*2);
 
@@ -170,8 +169,7 @@ setTimeout(function () {
                 }, 1);
      setTimeout(function () {
                     $('#' + ppid).remove();
-                }, 800);       
-
+                }, 800);
 });
     </script>
     <script>
