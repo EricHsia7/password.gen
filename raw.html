@@ -77,8 +77,7 @@
         }
     </style>
     <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span>
-    <div class="supportiframebg"></div>
-    <iframe src="" class="supportiframe"></iframe>
+    
     <style>
         .historyframe{position:fixed;top:52px;left:0px;width:100%;height:calc(100% - 104px);background:#fff;overflow:scroll;display:none}.historyframe h3{color:#333}.pwdhistoryinput{border:none;width:100%;height:35px;border-radius:99em;background:#f5f5f5;font-size:20px;color:#333;text-overflow:ellipsis;-webkit-user-select:text}.historyp{position:relative;left:50%;transform:translateX(-50%)}@media (prefers-color-scheme: dark){.historyframe{position:fixed;top:52px;left:0px;width:100%;display:none;height:calc(100% - 104px);background:#1A1A1A;overflow:scroll}.historyframe h3{color:#fff}.pwdhistoryinput{border:none;width:100%;height:35px;border-radius:99em;background:#1F1F1F;font-size:20px;color:#fff;text-overflow:ellipsis;-webkit-user-select:text}
     </style>
@@ -109,16 +108,13 @@
         </ujj>
     </div>
     <div id="bottom" class="bottombar">
-        <div class="bottom-btn-b" style="left: 0%; width: 25%;">
+        <div class="bottom-btn-b" style="left: 0%; width: 33%;">
             <a href="javascript:home()"><img src="https://erichsia7.github.io/password.gen/icon/home.svg" class="btn-cen" id="hico" /></a>
         </div>
-        <div class="bottom-btn-b" style="left: 25%; width: 25%;">
+        <div class="bottom-btn-b" style="left: 33%; width: 34%;">
             <a href="javascript:history()"><img src="https://erichsia7.github.io/password.gen/icon/history.svg" class="btn-cen" id="tico" /></a>
         </div>
-        <div class="bottom-btn-b" style="left: 50%; width: 25%;">
-            <a href="javascript:support()"><img src="https://erichsia7.github.io/password.gen/icon/support.svg" class="btn-cen" id="sico" /></a>
-        </div>
-        <div class="bottom-btn-b" style="left: 75%; width: 25%;">
+        <div class="bottom-btn-b" style="left: 67%; width: 33%;">
             <a href="javascript:more()"><img src="https://erichsia7.github.io/password.gen/icon/more2.svg" class="btn-cen" id="mico" /></a>
         </div>
     </div>
@@ -136,19 +132,15 @@
     <script src="app.min.js?dc3c7bc5"></script>
     <script>
         function home() {
-            $(".supportiframe,.supportiframebg,.historyframe").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#tico,#mico,#sico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("首頁");
+            $(".historyframe").fadeOut(1), $("#hico").css({ opacity: "1" }), $("#tico,#mico").css({ opacity: "0.5" }), $(".moreiframe").fadeOut(1), $("#top2 center").html("首頁");
             $("#ss").fadeIn(1);
         }
-        function support() {
-            $(".supportiframe,.supportiframebg").fadeIn(1), $(".moreiframe,.historyframe").fadeOut(1), $("#sico").css({ opacity: "1" }), $("#hico,#mico,#tico").css({ opacity: "0.5" }), $("#top2 center").html("支援");
-            $("#ss").fadeOut(1);
-        }
         function history() {
-            $(".supportiframe,.supportiframebg,.moreiframe").fadeOut(1), $(".historyframe").fadeIn(1), $("#tico").css({ opacity: "1" }), $("#hico,#mico,#sico").css({ opacity: "0.5" }), $("#top2 center").html("歷史紀錄");
+            $(".moreiframe").fadeOut(1), $(".historyframe").fadeIn(1), $("#tico").css({ opacity: "1" }), $("#hico,#mico").css({ opacity: "0.5" }), $("#top2 center").html("歷史紀錄");
             $("#ss").fadeOut(1);
         }
         function more() {
-            $(".supportiframe,.supportiframebg,.historyframe").fadeOut(1), $(".moreiframe").fadeIn(1), $("#mico").css({ opacity: "1" }), $("#hico,#tico,#sico").css({ opacity: "0.5" }), $("#top2 center").html("更多");
+            $(".historyframe").fadeOut(1), $(".moreiframe").fadeIn(1), $("#mico").css({ opacity: "1" }), $("#hico,#tico").css({ opacity: "0.5" }), $("#top2 center").html("更多");
             $("#ss").fadeOut(1);
         }
         $(".supportiframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/?top=t").fadeOut(1);
