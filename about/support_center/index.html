@@ -559,7 +559,7 @@
             <div class="clearicon" id="clearicon"></div>
             <button class="cancle">取消</button>
         </div>
-        <iframe src="https://erichsia7.github.io/password.gen/about/support_center/not-searched.html"></iframe>
+        <iframe src="https://erichsia7.github.io/password.gen/about/support_center/not-searched.html?1"></iframe>
         <script>
             function search() {
                 $("#top").attr("class", "top searching").css({ top: "0px" });
@@ -570,7 +570,7 @@
                 $("#top").attr("class", "top").css({ top: "50px" });
                 $("#title").css({ top: "0px" });
                 $("iframe").attr("class", "");
-                $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/not-searched.html");
+                $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/not-searched.html?1");
             }
             $("#top input").focus(function () {
                 if ($(this).val() === "") {
@@ -590,7 +590,7 @@
                 if ($(this).val() === "") {
                     $("#top").attr("class", "top searching");
                     $("#clearicon").attr("class", "clearicon");
-                    $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/not-searched.html");
+                    $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/not-searched.html?1");
                 } else {
                     $("#top").attr("class", "top searching typing");
                     $("#clearicon").attr("class", "clearicon-typing");
@@ -604,7 +604,7 @@
             $("#clearicon").click(function () {
                 $("#top input").val("").focus();
                 $("#clearicon").attr("class", "clearicon");
-                $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/not-searched.html");
+                $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/not-searched.html?1");
             });
             $("#top input").keydown(function (eventa) {
                 if (eventa.which == 13) {
