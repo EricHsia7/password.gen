@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Support</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <style>
+            .title {
+                width: 100%;
+                height: 50px;
+                color: #1d95cd;
+                opacity: 1;
+                position: fixed;
+                left: 0;
+                top: 0px;
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+                background: #fff;
+                z-index: 2;
+                font-family: "Noto Sans TC", sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+                transition: 0.5s;
+            }
+            .title-searching {
+                width: 100%;
+                height: 50px;
+                color: #000;
+                opacity: 1;
+                position: fixed;
+                left: 0;
+                top: -50px;
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+                background: #fff;
+                z-index: 2;
+                font-family: "Noto Sans TC", sans-serif;
+                font-weight: 700;
+                font-size: 18px;
+            }
+            .top {
+                width: 100%;
+                height: 52px;
+                color: #000;
+                opacity: 1;
+                position: fixed;
+                left: 0;
+                top: 50px;
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+                background: #fff;
+                box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+                transition: 0.5s;
+            }
+
+            .top::after {
+                content: "";
+                font-family: "Noto Sans TC", sans-serif;
+                font-weight: 400;
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                transform: translate(-0%, -50%);
+                font-size: 18px;
+                width: calc(100% - 10px);
+                height: 40px;
+                background: #f5f5f5;
+                border-radius: 11px;
+                transition: 0.6s;
+                min-width: 200px;
+            }
+            .searching::after {
+                content: "";
+                font-family: "Noto Sans TC", sans-serif;
+                font-weight: 400;
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                transform: translate(-0%, -50%);
+                font-size: 18px;
+                width: calc(100% - 65px);
+                height: 40px;
+                background: #f5f5f5;
+                border-radius: 11px;
+                transition: 0.6s;
+                min-width: 180px;
+            }
+            .top::before {
+                content: "搜尋";
+                z-index: 5;
+                font-size: 18px;
+                font-family: "Noto Sans TC", sans-serif;
+                font-weight: 400;
+                position: absolute;
+                top: 50%;
+                left: 40px;
+                transform: translate(-0%, -50%);
+                color: #888;
+                transition: 0.6s;
+            }
+            .searching::before {
+                content: "搜尋";
+                z-index: 5;
+                font-size: 18px;
+                font-family: "Noto Sans TC", sans-serif;
+                font-weight: 400;
+                position: absolute;
+                top: 50%;
+                left: 40px;
+                transform: translate(-0%, -50%);
+                color: #888;
+                transition: 0s;
+            }
+
+            .typing::before {
+                content: "搜尋";
+                z-index: 5;
+                font-size: 18px;
+                font-family: "Noto Sans TC", sans-serif;
+                font-weight: 400;
+                position: absolute;
+                top: 50%;
+                left: 40px;
+                transform: translate(-0%, -50%);
+                color: #888;
+                transition: 0s;
+                opacity: 0;
+            }
+
+            .top input {
+                position: absolute;
+                top: 50%;
+                left: 31px;
+                transform: translate(-0%, -50%);
+                z-index: 6;
+                background: rgba(0, 0, 0, 0);
+                border: none;
+                height: 29px;
+                width: calc(100% - 55px);
+                transition: 0.6s;
+                outline: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                font-size: 18px;
+                color: #333;
+                min-width: 100px;
+                max-width: 100%;
+                caret-color: #1d95cd;
+            }
+            .searching input {
+                position: absolute;
+                top: 50%;
+                left: 31px;
+                transform: translate(-0%, -50%);
+                z-index: 6;
+                background: rgba(0, 0, 0, 0);
+                border: none;
+                height: 29px;
+                width: calc(100% - 130px);
+                transition: 0.6s;
+                outline: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                font-size: 18px;
+                color: #333;
+                min-width: 100px;
+                max-width: 100%;
+                caret-color: #1d95cd;
+            }
+            .top button.cancle {
+                -webkit-appearance: none;
+                outline: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                position: absolute;
+                top: 50%;
+                right: -80px;
+                width: 50px;
+                height: 40px;
+                font-size: 18px;
+                border: none;
+                transform: translate(-0%, -50%);
+                padding: 0px;
+                opacity: 0;
+                transition: opacity 0.6s;
+                color: #1d95cd;
+            }
+
+            .searching button.cancle {
+                -webkit-appearance: none;
+                outline: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                width: 50px;
+                height: 40px;
+                font-size: 18px;
+                border: none;
+                transform: translate(-0%, -50%);
+                padding: 0px;
+                opacity: 1;
+                transition: opacity 0.6s;
+                color: #1d95cd;
+            }
+
+            .searchicon {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTM2cHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iLTEgMCAxMzYgMTM2LjIxODUyIiB3aWR0aD0iMTM2cHQiPgo8ZyBpZD0ic3VyZmFjZTEiPgo8cGF0aCBkPSJNIDkzLjE0ODQzOCA4MC44MzIwMzEgQyAxMDkuNSA1Ny43NDIxODggMTA0LjAzMTI1IDI1Ljc2OTUzMSA4MC45NDE0MDYgOS40MjE4NzUgQyA1Ny44NTE1NjIgLTYuOTI1NzgxIDI1Ljg3ODkwNiAtMS40NjA5MzggOS41MzEyNSAyMS42MzI4MTIgQyAtNi44MTY0MDYgNDQuNzIyNjU2IC0xLjM1MTU2MiA3Ni42OTE0MDYgMjEuNzQyMTg4IDkzLjAzOTA2MiBDIDM4LjIyMjY1NiAxMDQuNzA3MDMxIDYwLjAxMTcxOSAxMDUuNjA1NDY5IDc3LjM5NDUzMSA5NS4zMzk4NDQgTCAxMTUuMTY0MDYyIDEzMi44ODI4MTIgQyAxMTkuMjQyMTg4IDEzNy4xNzU3ODEgMTI2LjAyNzM0NCAxMzcuMzQ3NjU2IDEzMC4zMjAzMTIgMTMzLjI2OTUzMSBDIDEzNC42MTMyODEgMTI5LjE5NTMxMiAxMzQuNzg1MTU2IDEyMi40MTAxNTYgMTMwLjcxMDkzOCAxMTguMTE3MTg4IEMgMTMwLjU4MjAzMSAxMTcuOTgwNDY5IDEzMC40NTcwMzEgMTE3Ljg1NTQ2OSAxMzAuMzIwMzEyIDExNy43MjY1NjIgWiBNIDUxLjMwODU5NCA4NC4zMzIwMzEgQyAzMy4wNjI1IDg0LjMzNTkzOCAxOC4yNjk1MzEgNjkuNTU0Njg4IDE4LjI1NzgxMiA1MS4zMDg1OTQgQyAxOC4yNTM5MDYgMzMuMDYyNSAzMy4wMzUxNTYgMTguMjY5NTMxIDUxLjI4NTE1NiAxOC4yNjE3MTkgQyA2OS41MDc4MTIgMTguMjUzOTA2IDg0LjI5Mjk2OSAzMy4wMTE3MTkgODQuMzI4MTI1IDUxLjIzNDM3NSBDIDg0LjM1OTM3NSA2OS40ODQzNzUgNjkuNTg1OTM4IDg0LjMwMDc4MSA1MS4zMzIwMzEgODQuMzMyMDMxIEMgNTEuMzI0MjE5IDg0LjMzMjAzMSA1MS4zMjAzMTIgODQuMzMyMDMxIDUxLjMwODU5NCA4NC4zMzIwMzEgWiBNIDUxLjMwODU5NCA4NC4zMzIwMzEgIiBzdHlsZT0iIHN0cm9rZTpub25lO2ZpbGwtcnVsZTpub256ZXJvO2ZpbGw6cmdiKDAlLDAlLDAlKTtmaWxsLW9wYWNpdHk6MTsiIC8+CjwvZz4KPC9zdmc+);
+                background-size: cover;
+                transform: scale(0.4);
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                z-index: 7;
+                opacity: 0.47;
+            }
+
+            .clearicon {
+                background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTExLjc2IDUxMS43NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTExLjc2IDUxMS43NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00MzYuODk2LDc0Ljg2OWMtOTkuODQtOTkuODE5LTI2Mi4yMDgtOTkuODE5LTM2Mi4wNDgsMGMtOTkuNzk3LDk5LjgxOS05OS43OTcsMjYyLjIyOSwwLDM2Mi4wNDgNCgkJCWM0OS45Miw0OS44OTksMTE1LjQ3Nyw3NC44MzcsMTgxLjAzNSw3NC44MzdzMTMxLjA5My0yNC45MzksMTgxLjAxMy03NC44MzdDNTM2LjcxNSwzMzcuMDk5LDUzNi43MTUsMTc0LjY4OCw0MzYuODk2LDc0Ljg2OXoNCgkJCSBNMzYxLjQ2MSwzMzEuMzE3YzguMzQxLDguMzQxLDguMzQxLDIxLjgyNCwwLDMwLjE2NWMtNC4xNiw0LjE2LTkuNjIxLDYuMjUxLTE1LjA4Myw2LjI1MWMtNS40NjEsMC0xMC45MjMtMi4wOTEtMTUuMDgzLTYuMjUxDQoJCQlsLTc1LjQxMy03NS40MzVsLTc1LjM5Miw3NS40MTNjLTQuMTgxLDQuMTYtOS42NDMsNi4yNTEtMTUuMDgzLDYuMjUxYy01LjQ2MSwwLTEwLjkyMy0yLjA5MS0xNS4wODMtNi4yNTENCgkJCWMtOC4zNDEtOC4zNDEtOC4zNDEtMjEuODQ1LDAtMzAuMTY1bDc1LjM5Mi03NS40MTNsLTc1LjQxMy03NS40MTNjLTguMzQxLTguMzQxLTguMzQxLTIxLjg0NSwwLTMwLjE2NQ0KCQkJYzguMzItOC4zNDEsMjEuODI0LTguMzQxLDMwLjE2NSwwbDc1LjQxMyw3NS40MTNsNzUuNDEzLTc1LjQxM2M4LjM0MS04LjM0MSwyMS44MjQtOC4zNDEsMzAuMTY1LDANCgkJCWM4LjM0MSw4LjMyLDguMzQxLDIxLjgyNCwwLDMwLjE2NWwtNzUuNDEzLDc1LjQxM0wzNjEuNDYxLDMzMS4zMTd6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
+                background-size: 18px;
+                background-repeat: no-repeat;
+                background-position: center;
+                transform: scale(0.75);
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 5px;
+                right: -60px;
+                z-index: 7;
+                opacity: 0;
+                transition: opacity 0.2s, transform 0.2s;
+                outline: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            }
+            .clearicon-typing {
+                background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTExLjc2IDUxMS43NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTExLjc2IDUxMS43NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00MzYuODk2LDc0Ljg2OWMtOTkuODQtOTkuODE5LTI2Mi4yMDgtOTkuODE5LTM2Mi4wNDgsMGMtOTkuNzk3LDk5LjgxOS05OS43OTcsMjYyLjIyOSwwLDM2Mi4wNDgNCgkJCWM0OS45Miw0OS44OTksMTE1LjQ3Nyw3NC44MzcsMTgxLjAzNSw3NC44MzdzMTMxLjA5My0yNC45MzksMTgxLjAxMy03NC44MzdDNTM2LjcxNSwzMzcuMDk5LDUzNi43MTUsMTc0LjY4OCw0MzYuODk2LDc0Ljg2OXoNCgkJCSBNMzYxLjQ2MSwzMzEuMzE3YzguMzQxLDguMzQxLDguMzQxLDIxLjgyNCwwLDMwLjE2NWMtNC4xNiw0LjE2LTkuNjIxLDYuMjUxLTE1LjA4Myw2LjI1MWMtNS40NjEsMC0xMC45MjMtMi4wOTEtMTUuMDgzLTYuMjUxDQoJCQlsLTc1LjQxMy03NS40MzVsLTc1LjM5Miw3NS40MTNjLTQuMTgxLDQuMTYtOS42NDMsNi4yNTEtMTUuMDgzLDYuMjUxYy01LjQ2MSwwLTEwLjkyMy0yLjA5MS0xNS4wODMtNi4yNTENCgkJCWMtOC4zNDEtOC4zNDEtOC4zNDEtMjEuODQ1LDAtMzAuMTY1bDc1LjM5Mi03NS40MTNsLTc1LjQxMy03NS40MTNjLTguMzQxLTguMzQxLTguMzQxLTIxLjg0NSwwLTMwLjE2NQ0KCQkJYzguMzItOC4zNDEsMjEuODI0LTguMzQxLDMwLjE2NSwwbDc1LjQxMyw3NS40MTNsNzUuNDEzLTc1LjQxM2M4LjM0MS04LjM0MSwyMS44MjQtOC4zNDEsMzAuMTY1LDANCgkJCWM4LjM0MSw4LjMyLDguMzQxLDIxLjgyNCwwLDMwLjE2NWwtNzUuNDEzLDc1LjQxM0wzNjEuNDYxLDMzMS4zMTd6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
+                background-size: 18px;
+                background-repeat: no-repeat;
+                background-position: center;
+                transform: scale(1);
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 5px;
+                right: 60px;
+                z-index: 7;
+                opacity: 0.47;
+                transition: opacity 0.2s, transform 0.2s;
+                outline: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            }
+            iframe {
+                width: 100%;
+                height: calc(100% - 102px);
+                top: 102px;
+                left: 0px;
+                position: fixed;
+                z-index: -1;
+                border: none;
+                transition: 0.5s;
+            }
+
+            iframe.searching {
+                width: 100%;
+                height: calc(100% - 52px);
+                top: 52px;
+                left: 0px;
+                position: fixed;
+                z-index: -1;
+                border: none;
+                transition: 0.5s;
+            }
+        </style>
+
+        <div class="title" id="title"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">支援</span></div>
+        <div class="top" id="top">
+            <input type="text" />
+            <div class="searchicon"></div>
+            <div class="clearicon" id="clearicon"></div>
+            <button class="cancle">取消</button>
+        </div>
+        <iframe src="https://erichsia7.github.io/password.gen/about/support_center/not-searched.html"></iframe>
+
+        <script>
+            function search() {
+                $("#top").attr("class", "top searching").css({ top: "0px" });
+                $("#title").css({ top: "-50px" });
+                $("iframe").attr("class", "searching");
+            }
+
+            function searched() {
+                $("#top").attr("class", "top").css({ top: "50px" });
+                $("#title").css({ top: "0px" });
+                $("iframe").attr("class", "");
+                $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/not-searched.html");
+            }
+            $("#top input").focus(function () {
+                if ($(this).val() === "") {
+                    search();
+                    $("#clearicon").attr("class", "clearicon");
+                } else {
+                    $("#top").attr("class", "top searching typing");
+                }
+            });
+            $("#top input").blur(function () {
+                if ($(this).val() === "") {
+                    searched();
+                    $("#clearicon").attr("class", "clearicon");
+                }
+            });
+
+            $("#top input").on("input", function () {
+                if ($(this).val() === "") {
+                    $("#top").attr("class", "top searching");
+                    $("#clearicon").attr("class", "clearicon");
+                    $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/not-searched.html");
+                } else {
+                    $("#top").attr("class", "top searching typing");
+                    $("#clearicon").attr("class", "clearicon-typing");
+                }
+            });
+
+            $("#top button").click(function () {
+                searched();
+                $("#top input").val("");
+                $("#clearicon").attr("class", "clearicon");
+            });
+
+            $("#clearicon").click(function () {
+                $("#top input").val("").focus();
+                $("#clearicon").attr("class", "clearicon");
+
+                $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/not-searched.html");
+            });
+
+            $("#top input").keydown(function (eventa) {
+                if (eventa.which == 13) {
+                    $("iframe").attr("src", "https://erichsia7.github.io/password.gen/about/support_center/searchresults.html?q=" + $("#top input").val());
+                }
+            });
+
+            function ripple(select, color, opacity, time) {
+                $(select).on("click", function (eee) {
+                    var ogstyle = $(this).attr("style");
+
+                    var ppchars = "0123456789abcdefghijklmnopqrstuvwxyz";
+                    var ppid = "";
+                    for (var i = 0; i < 16; i++) {
+                        var randomNumber = Math.floor(Math.random() * ppchars.length);
+                        ppid += ppchars.substring(randomNumber, randomNumber + 1);
+                    }
+
+                    var ppcharsa = "0123456789abcdefghijklmnopqrstuvwxyz";
+                    var ppida = "";
+                    for (var ia = 0; ia < 16; ia++) {
+                        var randomNumbera = Math.floor(Math.random() * ppcharsa.length);
+                        ppida += ppcharsa.substring(randomNumbera, randomNumbera + 1);
+                    }
+                    $(this).attr("rippleid", ppida);
+
+                    $(this).css({ width: $(this).width() + "px", height: $(this).height() + "px", position: "absolute", top: $(this).offset().top, left: $(this).offset().left, overflow: "hidden" });
+
+                    if ($(this).width() > $(this).height()) {
+                        ggww = $(this).width() * 4;
+                    } else {
+                        ggww = $(this).height() * 4;
+                    }
+
+                    var xPos = eee.pageX - $(this).offset().left - ggww / 2;
+                    var yPos = eee.pageY - $(this).offset().top - ggww / 2;
+
+                    $(this).append(
+                        '<div style="width:' +
+                            ggww +
+                            "px;height:" +
+                            ggww +
+                            "px;position: absolute;top:" +
+                            yPos +
+                            "px;left:" +
+                            xPos +
+                            "px;border-radius:99em;transform:scale(0);transition:transform " +
+                            time / 1000 +
+                            "s,opacity 0.8s;opacity:" +
+                            opacity +
+                            ";background:" +
+                            color +
+                            '; overflow:hidden; user-select:none;" id="' +
+                            ppid +
+                            '"></div>'
+                    );
+
+                    setTimeout(function () {
+                        $("#" + ppid).css({ transform: "scale(1)", opacity: "0" });
+                    }, 1);
+                    setTimeout(function () {
+                        $("#" + ppid).remove();
+                        $('*[rippleid="' + ppida + '"]').attr("style", ogstyle);
+                    }, time);
+                });
+            }
+            ripple("a", "#000", "0.3", 1200);
+        </script>
+    </body>
+</html>
