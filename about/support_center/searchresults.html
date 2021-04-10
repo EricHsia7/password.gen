@@ -1,7 +1,27 @@
-     <style>
-* {
-outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
-}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+*{outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);}
 </style>
 <script async src="https://cse.google.com/cse.js?cx=a6de35cc0f33a968d"></script>
 <div class="gcse-searchresults-only"></div>
+<style>
+     *[title="Google 提供的廣告"] {
+  -webkit-filter:invert(0);
+}
+  :root {
+    --google-search-color-a:#fff;
+    --google-search-color-b:#000;
+  }
+@media (prefers-color-scheme: dark) {
+*[title="Google 提供的廣告"] {
+  -webkit-filter:invert(0.896);
+}
+  :root {
+    --google-search-color-a:#1a1a1a;
+    --google-search-color-b:#fff;
+  }
+}
+</style>
+<script>
+     window.setInterval("$('*').css({'background':'var(--google-search-color-a)','border':'none','color':'var(--google-search-color-b)'})",1);
+</script>
