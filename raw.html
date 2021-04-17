@@ -176,6 +176,8 @@
                 $("#" + ppid).remove();
             }, 800);
         });
+        
+        window.matchMedia('(display-mode: standalone)').matches ? alert('true') : alert('false');
     </script>
     <script>
         window.onload = function () {
