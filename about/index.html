@@ -293,8 +293,8 @@
   <a class="titletab" link="https://erichsia7.github.io/password.gen/">密碼產生器</a>
   <a class="titletab" link="https://erichsia7.github.io/password.gen/about/support_center/">支援</a>
   <a class="titletab" link="https://www.facebook.com/password.gen">Facebook</a>
-   <a class="titletab" link="https://line.me/R/ti/p/@807gocyy">LINE</a>
   <a class="titletab" link="https://www.youtube.com/channel/UCoHLkdCF-FcL5ZXR9gREmHg">YouTube</a>
+   <a class="titletab" link="https://line.me/R/ti/p/@807gocyy">LINE</a>
   <a class="titletab" link="https://github.com/EricHsia7/password.gen">Github</a>
   <a class="titletab" link="https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/viewform?usp=sf_link">意見回饋</a>
   <a class="titletab" link="https://erichsia7.github.io/password.gen/about/Privacy-Policy/">隱私政策</a>
@@ -381,9 +381,9 @@
             <center>          
             <h1 class="Sociamediah1">加入我們的社群</h1>
 <div class="Sociamedia">
-<img src="https://erichsia7.github.io/password.gen/about/Facebook.svg">
-<img src="https://erichsia7.github.io/password.gen/about/YouTube.svg">
-<img src="https://erichsia7.github.io/password.gen/about/LINE.svg">
+<img src="https://erichsia7.github.io/password.gen/about/Facebook.svg" link="https://www.facebook.com/password.gen">
+<img src="https://erichsia7.github.io/password.gen/about/YouTube.svg" link="https://www.youtube.com/channel/UCoHLkdCF-FcL5ZXR9gREmHg">
+<img src="https://erichsia7.github.io/password.gen/about/LINE.svg" link="https://line.me/R/ti/p/@807gocyy">
 </div>
             </center>
             <style>
@@ -432,6 +432,9 @@ $('.titlemenu').css({'box-shadow':'0 0 15px 1px rgba(0,0,0,0.0)','height':'60px'
 }
 });
 $('.message,.titletab').click(function() {
+  window.open( $(this).attr('link'));
+});
+  $('.Sociamedia img').click(function() {
   window.open( $(this).attr('link'));
 });
 </script>
