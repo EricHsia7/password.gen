@@ -177,7 +177,12 @@
             }, 800);
         });
         
-        window.matchMedia('(display-mode: standalone)').matches ? alert('true') : alert('false');
+        if(window.matchMedia('(display-mode: standalone)').matches) {
+            alert('true');
+        }
+        else {
+            alert('false');
+        }
     </script>
     <script>
         window.onload = function () {
