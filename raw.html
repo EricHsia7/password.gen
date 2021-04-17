@@ -179,10 +179,10 @@
         });
         
         if(window.matchMedia('(display-mode: standalone)').matches) {
-            alert('true');
+            gtag('event', 'add_to_home', { 'method': 'add_to_home' });
         }
         else {
-            alert('false');
+            
         }
     </script>
     <script>
