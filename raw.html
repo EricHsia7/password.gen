@@ -178,12 +178,12 @@
             }, 800);
         });
         
-        if(window.matchMedia('(display-mode: standalone)').matches) {
-            gtag('event', 'add_to_home', { 'method': 'add_to_home' });
-        }
-        else {
-            
-        }
+        let displayMode = 'browser';
+  const mqStandAlone = '(display-mode: standalone)';
+  if (navigator.standalone || window.matchMedia(mqStandAlone).matches) {
+    displayMode = 'standalone';
+  }
+ga('set', 'dimension1', displayMode);
     </script>
     <script>
         window.onload = function () {
