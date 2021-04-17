@@ -17,9 +17,6 @@
 <link rel="stylesheet" href="app_3.min.css?4853d3ce" /><link href="icon/icon_512x512.png" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="defualt" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="icon" /><link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="bookmark" />
 <link type="image/x-icon" href="icon/icon_ico_512x512.ico" rel="shortcut icon" /><title>密碼產生器</title>
-
-<link rel="manifest" href="manifest.json">
-
 <body>
     <div class="box" style="position: absolute;">
         <input type="text" id="password" readonly="readonly" />
@@ -66,21 +63,20 @@
             background: #fff;
         }
         .webpwdlength-more {
-           color:#000; 
-            border:1px #e3e3e3 solid;
+            color: #000;
+            border: 1px #e3e3e3 solid;
         }
         @media (prefers-color-scheme: dark) {
             .modeiconddbtn {
                 background: #1a1a1a;
             }
             .webpwdlength-more {
-           color:#fff; 
-            border:1px #fff solid;
-        }
+                color: #fff;
+                border: 1px #fff solid;
+            }
         }
     </style>
     <span style="color: var(--font-color); font-size: 15px; position: fixed; bottom: 3px; left: 3px;" id="password-gen">https://bit.ly/password-gen</span>
-    
     <style>
         .historyframe{position:fixed;top:52px;left:0px;width:100%;height:calc(100% - 104px);background:#fff;overflow:scroll;display:none}.historyframe h3{color:#333}.pwdhistoryinput{border:none;width:100%;height:35px;border-radius:99em;background:#f5f5f5;font-size:20px;color:#333;text-overflow:ellipsis;-webkit-user-select:text}.historyp{position:relative;left:50%;transform:translateX(-50%)}@media (prefers-color-scheme: dark){.historyframe{position:fixed;top:52px;left:0px;width:100%;display:none;height:calc(100% - 104px);background:#1A1A1A;overflow:scroll}.historyframe h3{color:#fff}.pwdhistoryinput{border:none;width:100%;height:35px;border-radius:99em;background:#1F1F1F;font-size:20px;color:#fff;text-overflow:ellipsis;-webkit-user-select:text}
     </style>
@@ -122,7 +118,6 @@
         </div>
     </div>
     <div class="topbar" id="top2"><center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">首頁</center></div>
-    
     <div class="fixedbg"></div>
     <div class="passwordgenintdiv">
         <span style="margin: 10px; width: calc(100% - 20px); height: calc(100% - 72px); position: absolute; top: 0px; left: 0px;" class="ppgenintext"> 這是密碼產生器，可產生8-128位的安全密碼，點擊框框即可切換長度！ </span>
@@ -177,13 +172,6 @@
                 $("#" + ppid).remove();
             }, 800);
         });
-        
-        let displayMode = 'browser';
-  const mqStandAlone = '(display-mode: standalone)';
-  if (navigator.standalone || window.matchMedia(mqStandAlone).matches) {
-    displayMode = 'standalone';
-  }
-ga('set', 'dimension1', displayMode);
     </script>
     <script>
         window.onload = function () {
@@ -345,5 +333,4 @@ ga('set', 'dimension1', displayMode);
         }
     }
 </style>
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com" /><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
