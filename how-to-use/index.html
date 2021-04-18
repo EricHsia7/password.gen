@@ -153,10 +153,72 @@ overflow: hidden;
         outline: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
+  
+  
+  
+  
+  .step-image {
+  position:fixed;
+  left:0px;
+  top:52px;
+  width:100%;
+  height:calc(100% - 120px);
+}
+.step-image img.step {
+  max-width:100%;
+  max-height:calc(100% - 12px);
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  border-radius:12px;
+}
+.next-step {
+  -webkit-appearance:none;
+outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+  background: rgb(0,170,200);
+background: linear-gradient(126deg, rgba(0,170,200,1) 0%, rgba(196,21,230,1) 100%);
+  color:#fff;
+  border:none;
+  height:45px;
+  width:90%;
+  max-width:180px;
+  border-radius:99em;
+  position:fixed;
+  bottom:11.5px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:15px;
+  font-weight:bold;
+}
 </style>
 
 <body>
-    <div style="margin-top: 20px; font-size: 40px; word-break: break-all; position: absolute; left: 50%; top: 80px; padding-bottom: 90px; transform: translateX(-50%);" class="txtdiv" id="ss"></div>
+
+  
+  <div class="step-image">
+  <img src="https://erichsia7.github.io/password.gen/how-to-use/s-v2/s1.jpg" class="step" step="1">
+</div>
+<button class="next-step">下一步</button>
+  
+  <script>
+    var step = 1 ;
+var ggg = 1 ;
+$('.next-step').click(function() {
+  step +=1 ;
+  ggg += 1 ;
+  if(step > 2) {
+    $('.next-step').html('完成');
+    step = 3 ;
+  }
+  if(ggg > 3) {
+    history.back();
+  }
+  $('.step').attr('src','https://erichsia7.github.io/password.gen/how-to-use/s-v2/s' + step + '.jpg');
+  console.log(step)
+})
+  </script>
+  
 </body>
 
 <div class="topbar" id="top2">
