@@ -123,14 +123,3 @@ niees +=2 ;
 }
 }
 
-
-function passwordgenint() {
-$('.fixedbg').fadeIn(555);
-$('.passwordgenintdiv').animate({'bottom':50 + '%'}, 555 );
-}
-
-function passwordgenintclose() {
-$('.fixedbg').fadeOut(555);
-$('.passwordgenintdiv').animate({'bottom':-100 + '%'}, 555 );
-
-}
