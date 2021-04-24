@@ -196,28 +196,7 @@ background: linear-gradient(126deg, rgba(0,170,200,1) 0%, rgba(196,21,230,1) 100
 <body>
 
   
-  <div class="step-image">
-  <img src="https://erichsia7.github.io/password.gen/how-to-use/s-v2/s1.jpg" class="step" step="1">
-</div>
-<button class="next-step">下一步</button>
-  
-  <script>
-    var step = 1 ;
-var ggg = 1 ;
-$('.next-step').click(function() {
-  step +=1 ;
-  ggg += 1 ;
-  if(step > 2) {
-    $('.next-step').html('完成');
-    step = 3 ;
-  }
-  if(ggg > 3) {
-    history.back();
-  }
-  $('.step').attr('src','https://erichsia7.github.io/password.gen/how-to-use/s-v2/s' + step + '.jpg');
-  console.log(step)
-})
-  </script>
+
   <script>
         window.onload = function () {
             var e = 0;
