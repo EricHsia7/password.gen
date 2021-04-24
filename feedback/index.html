@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://erichsia7.github.io/password.gen/app_3.min.css?4853d2ce-ce77-ac5e-8416-ceaf4bdb641b" />
 <link rel="preconnect" href="https://fonts.gstatic.com" /><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
 <style>
-  * {-webkit-user-select: none;text-decoration:none;}
+  
     .topbar {
         width: 100%;
         height: 52px;
@@ -93,7 +93,67 @@ overflow: hidden;
                 height:200px;
             }     
   
-  
+  .form {
+  margin-top:55px;
+}
+.form .text {
+  border:none;
+  background: #f5f5f5;
+  width:80%;
+  max-width:300px;
+  min-height:30px;
+  height:30px;
+  font-size:20px;
+  line-height:29px;
+  padding:8px;
+  border-radius:8px;
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-bottom:15px;
+  outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+  position:relative;
+}
+.form .text:focus {
+background: linear-gradient(360deg, #333 3px,#f5f5f5 3px);
+}
+
+#textprw {
+  word-break: break-all;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+#txtprwbox {
+  border:none;
+  background:#f5f5f5;
+  width:80%;
+  max-width:300px;
+  font-size:20px;
+  line-height:29px;
+  padding:8px;
+  font-family: 'Noto Sans TC', sans-serif;
+  display:none;
+}
+.submit {
+  background:#f5f5f5;
+  padding:10px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#000;
+  font-size:16px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:bold;
+  outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.submit[d="0"] {
+  opacity:0.4;
+}
+.length10 {
+  line-height:20px;
+  font-size:15px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:bold;
+  color:#888;
+  margin-left:10px;
+  display:none;
+}
   
         @media (prefers-color-scheme: dark) {
          
@@ -156,11 +216,67 @@ overflow: hidden;
     transform: translate(-50%, -50%) scale(0);
     overflow: hidden;
 }
-          
-          
-          
+.form {
+  margin-top:55px;
+}
+.form .text {
+  border:none;
+  background: #f5f5f5;
+  width:80%;
+  max-width:300px;
+  min-height:30px;
+  height:30px;
+  font-size:20px;
+  line-height:29px;
+  padding:8px;
+  border-radius:8px;
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-bottom:15px;
+  outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+  position:relative;
+}
+.form .text:focus {
+background: linear-gradient(360deg, #333 3px,#f5f5f5 3px);
+}
 
-  
+#textprw {
+  word-break: break-all;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+#txtprwbox {
+  border:none;
+  background:#f5f5f5;
+  width:80%;
+  max-width:300px;
+  font-size:20px;
+  line-height:29px;
+  padding:8px;
+  font-family: 'Noto Sans TC', sans-serif;
+  display:none;
+}
+.submit {
+  background:#f5f5f5;
+  padding:10px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#000;
+  font-size:16px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:bold;
+  outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.submit[d="0"] {
+  opacity:0.4;
+}
+.length10 {
+  line-height:20px;
+  font-size:15px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:bold;
+  color:#888;
+  margin-left:10px;
+  display:none;
+}
     }
     * {
         outline: none;
@@ -170,17 +286,25 @@ overflow: hidden;
 
 <body>
 
-  <textarea placeholder="輸入文字" id="tttxt"></textarea>
-  <a href="javascript:submit()" class="submit">送出</a>
 
+  <div class="form">
+  <center>
+  <textarea class="text" placeholder="輸入文字"></textarea>
+  <p class="length10">請詳細描述，謝謝！</p>
+  <br>
+  <a href="javascript:submit()" class="submit" d="0">送出</a>
+  </center>
+</div>
 
 <div id="txtprwbox">
 <span id="textprw"></span>
 </div>
+  
+  
   <script>
-  function ReplaceAll(strrge,strFind,strReplace)
+  function ReplaceAll(strOrg,strFind,strReplace)
 {
-    return strrge.replace(new RegExp(strFind,"g"),strReplace);
+    return strOrg.replace(new RegExp(strFind,"g"),strReplace);
 }
 function checklength() {
   if($('.text').val().length < 11 && $('.text').val().length != 0) {
@@ -196,25 +320,28 @@ function checklength() {
         $('.submit').attr('d','1');
   }
 }
-$('.text').bind('input propertychange', function() { 
-  $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
-  if($('.text').val() > 0) {
-$('.text').height($('#txtprwbox').height());
-  }
+$('.text').bind('input propertychange', function() { $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
+                                                   
+$('.text').height($('#txtprwbox').height())
 checklength()
 });
 $(window).resize(function(){
-  if($('.text').val() > 0) {
-$('.text').height($('#txtprwbox').height());
-  }
+  
+  $('.text').height($('#txtprwbox').height())
+  
 });
+
 $('.text').blur(function() {
-  checklength();
-});
+  checklength()
+})
+
 function submit() {
-  if($('#tttxt').val().length > 10) {
-$.ajax({url:"https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/formResponse?usp=pp_url&entry.1268521931=" + ReplaceAll($('#tttxt').val(),"\n","%0A") ,async:false});
-$('#tttxt').val('');
+  if($('.text').val().length > 10) {   $.ajax({url:"https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/formResponse?usp=pp_url&entry.1268521931=" + ReplaceAll($('.text').val(),"\n","%0A") ,async:false});
+                                    $('.text').val('')
+                                    $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
+                                                   
+$('.text').height($('#txtprwbox').height())
+                                    $('.submit').attr('d','0');
   }
 }
   </script>
