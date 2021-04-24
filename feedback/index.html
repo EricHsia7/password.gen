@@ -233,6 +233,7 @@ background: linear-gradient(360deg, #333 3px,#f5f5f5 3px);
 #textprw {
   word-break: break-all;
   font-family: 'Noto Sans TC', sans-serif;
+  min-height:45px;
 }
 #txtprwbox {
   border:none;
@@ -310,15 +311,15 @@ function checklength() {
   else {
         $('.submit').attr('d','1');
   }
+  
 }
 $('.text').bind('input propertychange', function() { $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
                                                    
 $('.text').height($('#txtprwbox').height())
 checklength()
 });
-$(window).resize(function(){
-  
-  $('.text').height($('#txtprwbox').height())
+$(window).resize(function(){ 
+      $('.text').height($('#txtprwbox').height())
   
 });
 
@@ -331,7 +332,8 @@ function submit() {
                                     $('.text').val('')
                                     $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
                                                    
-$('.text').height($('#txtprwbox').height())
+
+      $('.text').height($('#txtprwbox').height())
                                     $('.submit').attr('d','0');
   }
 }
