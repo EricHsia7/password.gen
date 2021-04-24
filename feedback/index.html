@@ -316,11 +316,12 @@ function checklength() {
 }
 $('.text').bind('input propertychange', function() { $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
                                                    
-$('.text').height($('#txtprwbox').height())
+      $('.text').height($('#txtprwbox').height()+30)
+  
 checklength()
 });
 $(window).resize(function(){ 
-      $('.text').height($('#txtprwbox').height())
+      $('.text').height($('#txtprwbox').height()+30)
   
 });
 
