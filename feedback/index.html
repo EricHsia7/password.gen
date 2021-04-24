@@ -80,7 +80,18 @@ overflow: hidden;
     transform: translate(-50%, -50%) scale(0);
     overflow: hidden;
 }
-        
+   textarea {
+                background: #f5f5f5;
+                border-radius: 12px;
+                padding: 6px;
+                border: none;
+                font-size: 25px;
+                width: 90%;
+                max-width: 320px;
+                font-family: "Noto Sans TC", sans-serif;
+                font-weight: 500;
+                height:200px;
+            }     
   
   
   
@@ -159,14 +170,9 @@ overflow: hidden;
 
 <body>
 
-  <div class="form">
-  <center>
-  <textarea class="text" placeholder="輸入文字"></textarea>
-  <p class="length10">請詳細描述，謝謝！</p>
-  <br>
-  <a href="javascript:submit()" class="submit" d="0">送出</a>
-  </center>
-</div>
+  <textarea placeholder="輸入文字" id="tttxt"></textarea>
+  <a href="javascript:submit()" class="submit">送出</a>
+
 
 <div id="txtprwbox">
 <span id="textprw"></span>
@@ -206,14 +212,9 @@ $('.text').blur(function() {
   checklength();
 });
 function submit() {
-  if($('.text').val().length > 10) {
-$.ajax({url:"https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/formResponse?usp=pp_url&entry.1268521931=" + ReplaceAll($('.text').val(),"\n","%0A") ,async:false});
-$('.text').val('');
-$('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
-if($('.text').val() > 0) {
-$('.text').height($('#txtprwbox').height());
-  }
-$('.submit').attr('d','0');
+  if($('#tttxt').val().length > 10) {
+$.ajax({url:"https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/formResponse?usp=pp_url&entry.1268521931=" + ReplaceAll($('#tttxt').val(),"\n","%0A") ,async:false});
+$('#tttxt').val('');
   }
 }
   </script>
