@@ -80,15 +80,76 @@ overflow: hidden;
     transform: translate(-50%, -50%) scale(0);
     overflow: hidden;
 }
-        .webpwdlength-more {
-           color:#000; 
-            border:1px #e3e3e3 solid;
-        }
+        
+  
+  
+  
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+.form {
+  margin-top:55px;
+}
+.form .text {
+  border:none;
+  background: #f5f5f5;
+  width:80%;
+  max-width:300px;
+  min-height:30px;
+  height:30px;
+  font-size:20px;
+  line-height:29px;
+  padding:8px;
+  border-radius:8px;
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-bottom:15px;
+  outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+  position:relative;
+}
+.form .text:focus {
+background: linear-gradient(360deg, #333 3px,#f5f5f5 3px);
+}
+
+#textprw {
+  word-break: break-all;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+#txtprwbox {
+  border:none;
+  background:#f5f5f5;
+  width:80%;
+  max-width:300px;
+  font-size:20px;
+  line-height:29px;
+  padding:8px;
+  font-family: 'Noto Sans TC', sans-serif;
+  display:none;
+}
+.submit {
+  background:#f5f5f5;
+  padding:10px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#000;
+  font-size:16px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:bold;
+  outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.submit[d="0"] {
+  opacity:0.4;
+}
+.length10 {
+  line-height:20px;
+  font-size:15px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:bold;
+  color:#888;
+  margin-left:10px;
+  display:none;
+}
         @media (prefers-color-scheme: dark) {
-            .webpwdlength-more {
-           color:#fff; 
-            border:1px #fff solid;
-        }
+         
         body {
             background: #1A1A1A;
         }
@@ -148,55 +209,136 @@ overflow: hidden;
     transform: translate(-50%, -50%) scale(0);
     overflow: hidden;
 }
+          
+          
+          
+          @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+.form {
+  margin-top:55px;
+}
+.form .text {
+  border:none;
+  background: #f5f5f5;
+  width:80%;
+  max-width:300px;
+  min-height:30px;
+  height:30px;
+  font-size:20px;
+  line-height:29px;
+  padding:8px;
+  border-radius:8px;
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-bottom:15px;
+  outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+  position:relative;
+}
+.form .text:focus {
+background: linear-gradient(360deg, #333 3px,#f5f5f5 3px);
+}
+
+#textprw {
+  word-break: break-all;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+#txtprwbox {
+  border:none;
+  background:#f5f5f5;
+  width:80%;
+  max-width:300px;
+  font-size:20px;
+  line-height:29px;
+  padding:8px;
+  font-family: 'Noto Sans TC', sans-serif;
+  display:none;
+}
+.submit {
+  background:#f5f5f5;
+  padding:10px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#000;
+  font-size:16px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:bold;
+  outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.submit[d="0"] {
+  opacity:0.4;
+}
+.length10 {
+  line-height:20px;
+  font-size:15px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight:bold;
+  color:#888;
+  margin-left:10px;
+  display:none;
+}
     }
     * {
         outline: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
-  
-  
-  
-  
-  .step-image {
-  position:fixed;
-  left:0px;
-  top:52px;
-  width:100%;
-  height:calc(100% - 120px);
-}
-.step-image img.step {
-  max-width:100%;
-  max-height:calc(100% - 12px);
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  border-radius:12px;
-}
-.next-step {
-  -webkit-appearance:none;
-outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
-  background: rgb(0,170,200);
-background: linear-gradient(126deg, rgba(0,170,200,1) 0%, rgba(196,21,230,1) 100%);
-  color:#fff;
-  border:none;
-  height:45px;
-  width:90%;
-  max-width:180px;
-  border-radius:99em;
-  position:fixed;
-  bottom:11.5px;
-  left:50%;
-  transform:translateX(-50%);
-  font-size:15px;
-  font-weight:bold;
-}
 </style>
 
 <body>
 
-  <p>目前沒有內容</p>
+  <div class="form">
+  <center>
+  <textarea class="text" placeholder="輸入文字"></textarea>
+  <p class="length10">請詳細描述，謝謝！</p>
+  <br>
+  <a href="javascript:submit()" class="submit" d="0">送出</a>
+  </center>
+</div>
 
+<div id="txtprwbox">
+<span id="textprw"></span>
+</div>
+  <script>
+  function ReplaceAll(strOrg,strFind,strReplace)
+{
+    return strOrg.replace(new RegExp(strFind,"g"),strReplace);
+}
+function checklength() {
+  if($('.text').val().length < 11 && $('.text').val().length != 0) {
+    $('.length10').fadeIn(1);
+  }
+  else {
+    $('.length10').fadeOut(1);
+  }
+  if($('.text').val().length < 11) {
+    $('.submit').attr('d','0');
+  }
+  else {
+        $('.submit').attr('d','1');
+  }
+}
+$('.text').bind('input propertychange', function() { $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
+                                                   
+$('.text').height($('#txtprwbox').height())
+checklength()
+});
+$(window).resize(function(){
+  
+  $('.text').height($('#txtprwbox').height())
+  
+});
+
+$('.text').blur(function() {
+  checklength()
+})
+
+function submit() {
+  if($('.text').val().length > 10) {   $.ajax({url:"https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/formResponse?usp=pp_url&entry.1268521931=" + ReplaceAll($('.text').val(),"\n","%0A") ,async:false});
+                                    $('.text').val('')
+                                    $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
+                                                   
+$('.text').height($('#txtprwbox').height())
+                                    $('.submit').attr('d','0');
+  }
+}
+  </script>
   <script>
         window.onload = function () {
             var e = 0;
