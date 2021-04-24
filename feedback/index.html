@@ -295,9 +295,9 @@ background: linear-gradient(360deg, #333 3px,#f5f5f5 3px);
 <span id="textprw"></span>
 </div>
   <script>
-  function ReplaceAll(strOrg,strFind,strReplace)
+  function ReplaceAll(strrge,strFind,strReplace)
 {
-    return strOrg.replace(new RegExp(strFind,"g"),strReplace);
+    return strrge.replace(new RegExp(strFind,"g"),strReplace);
 }
 function checklength() {
   if($('.text').val().length < 11 && $('.text').val().length != 0) {
@@ -314,27 +314,22 @@ function checklength() {
   }
 }
 $('.text').bind('input propertychange', function() { $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
-                                                   
-$('.text').height($('#txtprwbox').height())
+$('.text').height($('#txtprwbox').height());
 checklength()
 });
 $(window).resize(function(){
-  
-  $('.text').height($('#txtprwbox').height())
-  
+  $('.text').height($('#txtprwbox').height());
 });
-
 $('.text').blur(function() {
-  checklength()
-})
-
+  checklength();
+});
 function submit() {
-  if($('.text').val().length > 10) {   $.ajax({url:"https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/formResponse?usp=pp_url&entry.1268521931=" + ReplaceAll($('.text').val(),"\n","%0A") ,async:false});
-                                    $('.text').val('')
-                                    $('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
-                                                   
-$('.text').height($('#txtprwbox').height())
-                                    $('.submit').attr('d','0');
+  if($('.text').val().length > 10) {
+$.ajax({url:"https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/formResponse?usp=pp_url&entry.1268521931=" + ReplaceAll($('.text').val(),"\n","%0A") ,async:false});
+$('.text').val('');
+$('#textprw').html(ReplaceAll(ReplaceAll($('.text').val(),"\n","<br/>&nbsp")," ","&nbsp"));
+$('.text').height($('#txtprwbox').height());
+$('.submit').attr('d','0');
   }
 }
   </script>
