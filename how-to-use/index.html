@@ -207,11 +207,11 @@ var ggg = 1 ;
 $('.next-step').click(function() {
   step +=1 ;
   ggg += 1 ;
-  if(step > 2) {
+  if(step > 3) {
     $('.next-step').html('完成');
-    step = 3 ;
+    step = 4 ;
   }
-  if(ggg > 3) {
+  if(ggg > 4) {
     history.back();
   }
   $('.step').attr('src','https://erichsia7.github.io/password.gen/how-to-use/s-v2/s' + step + '.jpg');
