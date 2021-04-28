@@ -12,6 +12,7 @@
 </script>
 </head>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aes-js/3.1.2/index.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://erichsia7.github.io/password.gen/icon/icon_512x512.png" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" /><link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="icon" />
@@ -157,22 +158,14 @@ overflow: hidden;
   
   
   
-  .step-image {
+  .de {
   position:fixed;
   left:0px;
   top:52px;
   width:100%;
   height:calc(100% - 120px);
 }
-.step-image img.step {
-  max-width:100%;
-  max-height:calc(100% - 12px);
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  border-radius:12px;
-}
+
 .open {
   -webkit-appearance:none;
 outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
@@ -196,27 +189,33 @@ background: linear-gradient(126deg, rgba(0,170,200,1) 0%, rgba(196,21,230,1) 100
 <body>
 
   
-  <div class="step-image">
-  <img src="https://erichsia7.github.io/password.gen/how-to-use/s-v4/s1.jpg" class="step" step="1">
+  <div class="de">
+  <p></p>
 </div>
 <button class="open">打開密碼產生器</button>
   
   <script>
-    var step = 1 ;
-var ggg = 1 ;
-$('.next-step').click(function() {
-  step +=1 ;
-  ggg += 1 ;
-  if(step > 3) {
-    $('.next-step').html('完成');
-    step = 4 ;
-  }
-  if(ggg > 4) {
-    history.back();
-  }
-  $('.step').attr('src','https://erichsia7.github.io/password.gen/how-to-use/s-v4/s' + step + '.jpg');
-  console.log(step)
-})
+    var getUrlString = location.href;
+var url = new URL(getUrlString);
+    
+    function dec() {
+                var keye = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+                var gbu = url.searchParams.get('a');
+                var kiu = url.searchParams.get('b');
+                var encryptedBytese = aesjs.utils.hex.toBytes(gbu);
+
+                // The counter mode of operation maintains internal state, so to
+                // decrypt a new instance must be instantiated.
+                var aesCtre = new aesjs.ModeOfOperation.ctr(keye, new aesjs.Counter(parseInt(kiu)));
+                var decryptedBytese = aesCtre.decrypt(encryptedBytese);
+
+                // Convert our bytes back into text
+                var decryptedTexte = aesjs.utils.utf8.fromBytes(decryptedBytese);
+               
+                document.querySelector(".de > p").innerHTML = decryptedTexte;
+                
+                
+            }
   </script>
   <script>
         window.onload = function () {
