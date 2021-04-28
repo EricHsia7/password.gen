@@ -1,0 +1,245 @@
+<meta charset="UTF-8" />
+<title>密碼產生器</title>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-864PXSN4RV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', 'G-864PXSN4RV');
+</script>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://erichsia7.github.io/password.gen/icon/icon_512x512.png" sizes="512x512" rel="apple-touch-icon-precomposed" /><meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /><link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="icon" />
+<link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="bookmark" />
+<link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="https://erichsia7.github.io/password.gen/app_3.min.css?4853d2ce-ce77-ac5e-8416-ceaf4bdb641b" />
+<link rel="preconnect" href="https://fonts.gstatic.com" /><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * {-webkit-user-select: none;text-decoration:none;}
+    .topbar {
+        width: 100%;
+        height: 52px;
+        color: #212121;
+        font-size: 25px;
+        opacity: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        background: #fff;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+      font-family: 'Noto Sans TC', sans-serif;
+    font-weight:700;
+    }
+    .txtdiv {
+        color: #000;
+    }
+    body {
+        background: #fff;
+    }
+        .button {
+  border-radius:99em;
+  text-decoration:none;
+  font-size:20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  width:44px;
+            display: flex;
+  justify-content: center;
+  align-items: center;
+  height:44px;
+}
+
+.button::before {
+    content:'';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 99em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transition: transform .3s, opacity 1s;
+    width:100%;
+    height:100%;
+overflow: hidden;
+-webkit-filter: blur(0px);
+  filter: blur(0px);
+}
+
+.button:active::before {
+    transition: 0s;
+    opacity: .4;
+    transform: translate(-50%, -50%) scale(0);
+    overflow: hidden;
+}
+        .webpwdlength-more {
+           color:#000; 
+            border:1px #e3e3e3 solid;
+        }
+        @media (prefers-color-scheme: dark) {
+            .webpwdlength-more {
+           color:#fff; 
+            border:1px #fff solid;
+        }
+        body {
+            background: #1A1A1A;
+        }
+        .topbar {
+            width: 100%;
+            height: 52px;
+            color: #fff;
+            font-size: 25px;
+            opacity: 1;
+            position: fixed;
+            left: 0;
+            top: 0;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            background: #1A1A1A;
+            box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+          font-family: 'Noto Sans TC', sans-serif;
+    font-weight:700;
+        }
+        .txtdiv {
+            color: #fff;
+        }
+        .button {
+  border-radius:99em;
+  text-decoration:none;
+  font-size:20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  width:44px;
+            display: flex;
+  justify-content: center;
+  align-items: center;
+  height:44px;
+}
+
+.button::before {
+    content:'';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 99em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transition: transform .3s, opacity 1s;
+    width:100%;
+    height:100%;
+overflow: hidden;
+-webkit-filter: blur(0px);
+  filter: blur(0px);
+}
+
+.button:active::before {
+    transition: 0s;
+    opacity: .4;
+    transform: translate(-50%, -50%) scale(0);
+    overflow: hidden;
+}
+    }
+    * {
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  
+  
+  
+  
+  .step-image {
+  position:fixed;
+  left:0px;
+  top:52px;
+  width:100%;
+  height:calc(100% - 120px);
+}
+.step-image img.step {
+  max-width:100%;
+  max-height:calc(100% - 12px);
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  border-radius:12px;
+}
+.next-step {
+  -webkit-appearance:none;
+outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
+  background: rgb(0,170,200);
+background: linear-gradient(126deg, rgba(0,170,200,1) 0%, rgba(196,21,230,1) 100%);
+  color:#fff;
+  border:none;
+  height:45px;
+  width:90%;
+  max-width:180px;
+  border-radius:99em;
+  position:fixed;
+  bottom:11.5px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:15px;
+  font-weight:bold;
+}
+</style>
+
+<body>
+
+  
+  <div class="step-image">
+  <img src="https://erichsia7.github.io/password.gen/how-to-use/s-v4/s1.jpg" class="step" step="1">
+</div>
+<button class="next-step">下一步</button>
+  
+  <script>
+    var step = 1 ;
+var ggg = 1 ;
+$('.next-step').click(function() {
+  step +=1 ;
+  ggg += 1 ;
+  if(step > 3) {
+    $('.next-step').html('完成');
+    step = 4 ;
+  }
+  if(ggg > 4) {
+    history.back();
+  }
+  $('.step').attr('src','https://erichsia7.github.io/password.gen/how-to-use/s-v4/s' + step + '.jpg');
+  console.log(step)
+})
+  </script>
+  <script>
+        window.onload = function () {
+            var e = 0;
+            document.addEventListener("touchstart", function (e) {
+                e.touches.length > 1 && e.preventDefault();
+            }),
+                document.addEventListener(
+                    "touchend",
+                    function (t) {
+                        var n = new Date().getTime();
+                        n - e <= 300 && t.preventDefault(), (e = n);
+                    },
+                    !1
+                ),
+                document.addEventListener("gesturestart", function (e) {
+                    e.preventDefault();
+                });
+        };
+    </script>
+</body>
+
+<div class="topbar" id="top2">
+    <a href="javascript:setTimeout('history.back()',300)" class="button" style="position: absolute; top: 4px; left: 4px;"><img src="https://erichsia7.github.io/password.gen/icon/back3.svg" style="height: 22px; width: 22px;" /></a>
+    <center style="font-size: 20px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'M PLUS Rounded 1c', sans-serif;">已分享的密碼</center>
+</div>
