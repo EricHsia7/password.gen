@@ -220,6 +220,7 @@ var url = new URL(getUrlString);
                
                 document.querySelector("#shinput").value = decryptedTexte;
                 
+                document.querySelector(".content > h4").value = atob(url.searchParams.get('c'));
                 
             }
     dec();
