@@ -219,8 +219,8 @@ var url = new URL(getUrlString);
                 var decryptedTexte = aesjs.utils.utf8.fromBytes(decryptedBytese);
                
                 document.querySelector("#shinput").value = decryptedTexte;
-                
-                document.querySelector(".content > h4").value = atob(url.searchParams.get('c'));
+               
+                document.querySelector(".content > h4").innerHTML = atob(url.searchParams.get('c'));
                 
             }
     dec();
