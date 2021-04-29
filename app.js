@@ -75,7 +75,7 @@ $('#boxmsg').html('已複製密碼！');
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
 $('#historytext').html('<br><br>');
    var fgvid = (today.getMonth()+1) + '' + today.getDate() + '' + today.getHours() + '' + today.getMinutes() + '' + today.getSeconds() + '-' + Math.floor(Math.random() * 4096) ;
-$('.historyframe').prepend('<div class="pwwstbox historyp" id="' + fgvid + '"><div class="content"><h4>' + (today.getMonth()+1) + '/' + today.getDate() + ' ' + checki(today.getHours()) + ':' + checki(today.getMinutes()) + '<div class="pwwhshare" sh="' + fgvid + '"></div>' + '</h4><div class="description"><input type="text" value="' + copys.value + '" class="pwdhistoryinput" readonly="readonly" id="input-' + fgvid + '"></div></div></div>');
+$('.historyframe').prepend('<div class="pwwstbox historyp" id="' + fgvid + '"><div class="content"><h4 id="htit-' + fgvid + '">' + (today.getMonth()+1) + '/' + today.getDate() + ' ' + checki(today.getHours()) + ':' + checki(today.getMinutes()) + '<div class="pwwhshare" sh="' + fgvid + '"></div>' + '</h4><div class="description"><input type="text" value="' + copys.value + '" class="pwdhistoryinput" readonly="readonly" id="input-' + fgvid + '"></div></div></div>');
 $('.pwdhistoryinput').click(function() {
    var copys2 = $(this);
 copys2.select();
@@ -108,7 +108,7 @@ var ivq = parseInt(
 
                 var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
 
-window.open('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#t-' + $(this).attr('sh')).html()));
+window.open('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).html()));
 
 });
 }
