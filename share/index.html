@@ -192,7 +192,11 @@ background: linear-gradient(126deg, rgba(0,170,200,1) 0%, rgba(196,21,230,1) 100
 
   
   <div class="de">
-  <p></p>
+<div class="pwwstbox historyp" id="fppp">
+<div class="content"><h4>
+Time
+</h4>
+<div class="description"><input type="text" value="" class="pwdhistoryinput" readonly="readonly" id="shinput"></div></div></div>
 </div>
 <button class="open">打開密碼產生器</button>
   
@@ -214,7 +218,7 @@ var url = new URL(getUrlString);
                 // Convert our bytes back into text
                 var decryptedTexte = aesjs.utils.utf8.fromBytes(decryptedBytese);
                
-                document.querySelector(".de > p").innerHTML = decryptedTexte;
+                document.querySelector("#shinput").value = decryptedTexte;
                 
                 
             }
