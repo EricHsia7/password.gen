@@ -75,11 +75,41 @@ $('#boxmsg').html('已複製密碼！');
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
 $('#historytext').html('<br><br>');
    var fgvid = (today.getMonth()+1) + '' + today.getDate() + '' + today.getHours() + '' + today.getMinutes() + '' + today.getSeconds() + '-' + Math.floor(Math.random() * 4096) ;
-$('.historyframe').prepend('<div class="pwwstbox historyp" id="' + fgvid + '"><div class="content"><h4>' + (today.getMonth()+1) + '/' + today.getDate() + ' ' + checki(today.getHours()) + ':' + checki(today.getMinutes()) + '</h4><div class="description"><input type="text" value="' + copys.value + '" class="pwdhistoryinput" readonly="readonly" id="input-' + fgvid + '"></div></div></div>');
+$('.historyframe').prepend('<div class="pwwstbox historyp" id="' + fgvid + '"><div class="content"><h4>' + (today.getMonth()+1) + '/' + today.getDate() + ' ' + checki(today.getHours()) + ':' + checki(today.getMinutes()) + '<div class="pwwhshare" sh="' + fgvid + '"></div>' + '</h4><div class="description"><input type="text" value="' + copys.value + '" class="pwdhistoryinput" readonly="readonly" id="input-' + fgvid + '"></div></div></div>');
 $('.pwdhistoryinput').click(function() {
    var copys2 = $(this);
 copys2.select();
 document.execCommand("Copy");
+});
+   $('.pwwhshare').click(function() {
+
+var pwdhistoryinputvvvalue = $('#input-' + $(this).attr('sh')).val() ;
+
+var ivq = parseInt(
+                    Math.floor(Math.random() * 8 + 1) +
+                        "" +
+                        Math.floor(Math.random() * 8 + 1) +
+                        "" +
+                        Math.floor(Math.random() * 8 + 1) +
+                        "" +
+                        Math.floor(Math.random() * 8 + 1) +
+                        "" +
+                        Math.floor(Math.random() * 8 + 1) +
+                        "" +
+                        Math.floor(Math.random() * 8 + 1)
+                );
+               
+                var key = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+                var text = pwdhistoryinputvvvalue;
+                var textBytes = aesjs.utils.utf8.toBytes(text);
+
+                var aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(ivq));
+                var encryptedBytes = aesCtr.encrypt(textBytes);
+
+                var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+
+window.open('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#t-' + $(this).attr('sh')).html()));
+
 });
 }
 getPassword();
