@@ -223,6 +223,12 @@ var url = new URL(getUrlString);
                 
             }
     dec();
+    
+    $('.pwdhistoryinput').click(function() {
+   var copys2 = $(this);
+copys2.select();
+document.execCommand("Copy");
+});
   </script>
   <script>
         window.onload = function () {
