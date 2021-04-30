@@ -170,7 +170,7 @@ niees +=2 ;
 
 
 
-$('.sharelink .sharelinktitle .sharelinkclose,.sharelinkbg').click(function() {
+$('.sharelink .sharelinktitle .sharelinkclose').click(function() {
  $('.sharelink').css({"bottom":"-350px"});
  $('.sharelinkbg').css({"background":"rgba(0, 0, 0, 0)"});
   setTimeout(function () {  $('.sharelink,.sharelinkbg').css({"display":"none"});
