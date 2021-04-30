@@ -143,6 +143,7 @@ float:right;
   -webkit-user-select: none;
   outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
   transition:0.5s;
+  overflow:hidden;
 }
 .sharelink * {
   -webkit-user-select: none;
@@ -151,7 +152,7 @@ float:right;
 .sharelink {
   background:#fff;
   transition:0.5s;
-  position:fixed;
+  position:absolute;
   left:50%;
   bottom:-350px;
   width:100%;
@@ -224,6 +225,7 @@ position:absolute;
   -webkit-user-select: none;
   outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);
   transition:0.5s;
+  overflow:hidden;
 }
 .sharelink * {
   -webkit-user-select: none;
@@ -232,7 +234,7 @@ position:absolute;
 .sharelink {
   background:#1A1A1A;
   transition:0.5s;
-  position:fixed;
+  position:absolute;
   left:50%;
   bottom:-350px;
   width:100%;
@@ -297,7 +299,7 @@ position:absolute;
 }
         }
     </style>
-    <div class="sharelinkbg"></div>
+    <div class="sharelinkbg">
 <div class="sharelink">
   <div class="sharelinktitle">
     複製連結
@@ -308,7 +310,7 @@ position:absolute;
 <input type="text" id="shareurlbbinput" readonly="readonly">
   <a href="javascript:copysharelink()" id="sharelinkcopybtn">複製連結</a>
 </div>
-    
+    </div>
     
     
     
