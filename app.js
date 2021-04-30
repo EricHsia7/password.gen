@@ -67,7 +67,7 @@ return tei ;
 }
 }
 function sharepwdlink() {
-  $('.sharelink').css({"bottom":"75px"});
+  $('.sharelink').css({"bottom":"75px","display":"block"});
   $('.sharelinkbg').css({"display":"block","background":"rgba(0, 0, 0, 0.6)"});
    $('#sharelinkcopybtn').html('複製連結');
 }
