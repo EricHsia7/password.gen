@@ -66,6 +66,17 @@ else {
 return tei ;	
 }
 }
+function sharepwdlink() {
+  $('.sharelink').css({"bottom":"75px"});
+  $('.sharelinkbg').css({"display":"block","background":"rgba(0, 0, 0, 0.6)"});
+   $('#sharelinkcopybtn').html('複製連結');
+}
+function copysharelink() {
+var copys = document.getElementById('shareurlbbinput');
+copys.select();
+document.execCommand("Copy");
+  $('#sharelinkcopybtn').html('已複製')
+}
 function copy(id) {
 var today=new Date();
 var copys = document.getElementById(id);
@@ -108,8 +119,9 @@ var ivq = parseInt(
 
                 var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
 
-window.open('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).html()));
-
+//window.open('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).html()));
+sharepwdlink();
+$('#shareurlbbinput').val('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).html()))
 });
 }
 getPassword();
@@ -144,8 +156,6 @@ $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
 });
 
 
-
-
 var niees = 2 ;
 function moredivopen() {
 if(niees > "1") {
@@ -157,4 +167,13 @@ $('.morediv').animate({'height': 200 + 'px',width: 130 + 'px' ,opacity:0}, 555 )
 niees +=2 ;
 }
 }
+
+
+
+$('.sharelink .sharelinktitle .sharelinkclose,.sharelinkbg').click(function() {
+ $('.sharelink').css({"bottom":"-350px"});
+ $('.sharelinkbg').css({"background":"rgba(0, 0, 0, 0)"});
+  setTimeout(function () {  $('.sharelink,.sharelinkbg').css({"display":"none"});
+},500);
+});
 
