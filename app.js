@@ -67,7 +67,7 @@ return tei ;
 }
 }
 function sharepwdlink() {
-  $('.sharelink').css({"bottom":"75px","display":"block"});
+  $('.sharelink').css({"bottom":"75px","display":"block","transform":"translate(-50%,-50%) scale(1)"});
   $('.sharelinkbg').css({"display":"block","background":"rgba(0, 0, 0, 0.6)"});
    $('#sharelinkcopybtn').html('複製連結');
 }
@@ -171,7 +171,7 @@ niees +=2 ;
 
 
 $('.sharelink .sharelinktitle .sharelinkclose').click(function() {
- $('.sharelink').css({"bottom":"-350px"});
+ $('.sharelink').css({"transform":"translate(-50%,-50%) scale(0.8)"});
  $('.sharelinkbg').css({"background":"rgba(0, 0, 0, 0)"});
   setTimeout(function () {  $('.sharelink,.sharelinkbg').css({"display":"none"});
 },500);
