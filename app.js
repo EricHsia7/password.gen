@@ -123,9 +123,9 @@ var ivq = parseInt(
 
                 var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
 
-//window.open('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).html()));
+//window.open('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text()));
 sharepwdlink();
-$('#shareurlbbinput').val('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).html()))
+$('#shareurlbbinput').val('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text()))
 });
 }
 getPassword();
