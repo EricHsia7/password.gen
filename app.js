@@ -67,8 +67,12 @@ return tei ;
 }
 }
 function sharepwdlink() {
-  $('.sharelink').css({"bottom":"75px","display":"block","transform":"translate(-50%,-50%) scale(1)"});
-  $('.sharelinkbg').css({"display":"block","background":"rgba(0, 0, 0, 0.6)"});
+   $('.sharelink').css({"display":"block"});
+  $('.sharelinkbg').css({"display":"block"});
+   setTimeout(function () {  
+      $('.sharelink').css({"transform":"translate(-50%,-50%) scale(1)","opacity":"1"});
+  $('.sharelinkbg').css({"background":"rgba(0, 0, 0, 0.6)"});
+},10); 
    $('#sharelinkcopybtn').html('複製連結');
 }
 function copysharelink() {
@@ -171,7 +175,7 @@ niees +=2 ;
 
 
 $('.sharelink .sharelinktitle .sharelinkclose').click(function() {
- $('.sharelink').css({"transform":"translate(-50%,-50%) scale(0.8)"});
+ $('.sharelink').css({"transform":"translate(-50%,-50%) scale(0.8)","opacity":"0"});
  $('.sharelinkbg').css({"background":"rgba(0, 0, 0, 0)"});
   setTimeout(function () {  $('.sharelink,.sharelinkbg').css({"display":"none"});
 },500);
