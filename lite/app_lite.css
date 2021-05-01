@@ -1,0 +1,196 @@
+* {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    caret-color: transparent;
+    -webkit-user-select: none;
+    text-decoration: none;
+    -webkit-touch-callout: none;
+}
+.passwordgenintdivtopbar {
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.topbar {
+    width: 100%;
+    height: 52px;
+    color: #000;
+    font-size: 25px;
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background: #fff;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight:700;
+}
+:root {
+    --font-color: #ccc;
+    --bar-color-a: rgba(242, 242, 242, 1);
+    --bar-color-b: rgba(250, 250, 250, 1);
+    --pd-color: #888;
+}
+.btn {
+    height: calc(60px - 10px);
+    position: relative;
+    top: 5px;
+    right: 5px;
+    transform: translate(8px, 0) scale(0.8);
+}
+.btnbox {
+    height: calc(60px - 10px);
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translate(8px, 0);
+    -webkit-appearance: none;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+.box {
+    width: 85vw;
+    height: 60px;
+    border: 1px #e3e3e3 solid;
+    padding: 0;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #e3e3e3 0, #e3e3e3 100%, #fcfcfc 100%);
+    transform: translate(-50%, -50%);
+    position: fixed;
+    left: 50%;
+    top: calc(50%);
+}
+body {
+    font-family: Nunito, sans-serif;
+    background: #fff;
+    caret-color: transparent;
+}
+#password {
+    -webkit-appearance: none;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 12px;
+    height: 60px;
+    width: calc(85vw - 60px);
+    font-size: 35px;
+    padding: 5px;
+    border: none;
+    transform: translate(0, -8px);
+    text-overflow: ellipsis;
+    color: var(--pd-color);
+    caret-color: transparent;
+    -webkit-user-select: text;
+}
+.msg {
+    z-index: 99999999999998;
+    background: rgba(26, 26, 26, 0.8);
+    width: auto;
+    height: auto;
+    padding: 5px 15px;
+    position: fixed;
+    top: -80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 25px;
+    color: #fff;
+}
+.loadbg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+.boxmsg {
+    width: 85vw;
+    height: 60px;
+    border: 1px transparent solid;
+    padding: 0;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%);
+    position: fixed;
+    left: 50%;
+    top: calc(50%);
+    display: none;
+    color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+    .topbar {
+        width: 100%;
+        height: 52px;
+        color: #fff;
+        font-size: 25px;
+        opacity: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        background: #1A1A1A;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight:700;
+    }
+    .loadbg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #1A1A1A;
+    }
+    body {
+        font-family: Nunito, sans-serif;
+        background: #1A1A1A;
+        caret-color: transparent;
+    }
+    :root {
+        --font-color: #808080;
+        --bar-color-a: rgba(40, 40, 40, 1);
+        --bar-color-b: rgba(26, 26, 26, 1);
+        --pd-color: #fff;
+    }
+    .boxmsg {
+        width: 85vw;
+        height: 60px;
+        border: 1px transparent solid;
+        padding: 0;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.45);
+        transform: translate(-50%, -50%);
+        position: fixed;
+        left: 50%;
+        top: calc(50%);
+        display: none;
+        color: #1A1A1A;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #password-gen {
+        display: none;
+    }
+    .icon {
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #password-gen {
+        display: none;
+    }
+    .icon {
+        width: 120px;
+    }
+}
