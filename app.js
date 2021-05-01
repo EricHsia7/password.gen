@@ -174,7 +174,7 @@ niees +=2 ;
 
 
 
-$('.sharelink .sharelinktitle .sharelinkclose').click(function() {
+$('.sharelink .sharelinktitle .sharelinkclose,.sharelinkbg').click(function() {
  $('.sharelink').css({"transform":"translate(-50%,-50%) scale(0.8)","opacity":"0"});
  $('.sharelinkbg').css({"background":"rgba(0, 0, 0, 0)"});
   setTimeout(function () {  $('.sharelink,.sharelinkbg').css({"display":"none"});
