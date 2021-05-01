@@ -42,7 +42,7 @@ function changemode() {
    o = 99 ;
             if(pwdmode < 0.5) {
                pwdmode = 1 ;
-               $('#modeicondd').attr('src','icon/random3.svg');
+               $('#modeicondd').attr('src','https://erichsia7.github.io/password.gen/icon/random3.svg');
                $('#boxmsg').html('已切換為好記模式！');
 $('.boxmsg').fadeIn(1).delay(555).fadeOut(1);
                getPassword();
@@ -50,7 +50,7 @@ $('.boxmsg').fadeIn(1).delay(555).fadeOut(1);
 }
             else {
               pwdmode = 0 ;
-               $('#modeicondd').attr('src','icon/simple3.svg');
+               $('#modeicondd').attr('src','https://erichsia7.github.io/password.gen/icon/simple3.svg');
                               $('#boxmsg').html('已切換為隨機模式！');
 $('.boxmsg').fadeIn(1).delay(555).fadeOut(1);
                getPassword();
