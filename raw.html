@@ -461,8 +461,21 @@ position:absolute;
     
 <input type="text" id="shareurlbbinput" readonly="readonly">
   <a href="javascript:copysharelink()" id="sharelinkcopybtn">複製連結</a>
-</div>
     
+    
+ 
+</div>
+    <script>
+    $('#sc-link').click(function() {
+    $('#sc-qrcode').attr('select','0')
+    $('#sc-link').attr('select','1')
+})
+$('#sc-qrcode').click(function() {
+  $('#pwwhistorytabstyle').html('  .pww[copied="1"] {display:none;}')
+    $('#sc-qrcode').attr('select','1')
+    $('#sc-link').attr('select','0')
+})
+    </script>
     
     
     
