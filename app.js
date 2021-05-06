@@ -74,6 +74,7 @@ function sharepwdlink() {
   $('.sharelinkbg').css({"background":"rgba(0, 0, 0, 0.6)"});
 },10); 
    $('#sharelinkcopybtn').html('複製連結');
+   $('#sc-link').click();
 }
 function copysharelink() {
 var copys = document.getElementById('shareurlbbinput');
@@ -125,7 +126,8 @@ var ivq = parseInt(
 
 //window.open('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text()));
 sharepwdlink();
-$('#shareurlbbinput').val('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text()))
+$('#shareurlbbinput').val('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text()));
+$('.pwwshareqrcodeimg').attr('src','https://chart.apis.google.com/chart?cht=qr&chl=' + encodeURIComponent('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text())) '&chs=512x512');
 });
 }
 getPassword();
