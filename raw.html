@@ -264,12 +264,11 @@ float:right;
   position:fixed;
   left:50%;
   top:50%;
-  width:85%;
-  max-width:450px;
+  width:100%;
   transform:translate(-50%,-50%) scale(0.8);
-  height:220px;
+  height:100%;
   -webkit-user-select: none;
-  border-radius:20px;
+  border-radius:0px;
   overflow:hidden;
   display:none;
   opacity:0;
@@ -367,12 +366,11 @@ position:absolute;
   position:fixed;
   left:50%;
   top:50%;
-  width:85%;
-  max-width:450px;
+  width:100%;
   transform:translate(-50%,-50%) scale(0.8);
-  height:220px;
+  height:100%;
   -webkit-user-select: none;
-  border-radius:20px;
+  border-radius:0px;
   overflow:hidden;
   display:none;
   opacity:0;
@@ -439,6 +437,12 @@ position:absolute;
       關閉
     </div>
   </div>
+    
+    <div class="pwwhistorytab">
+  <span select="1" id="sc-link">連結</span>
+  <span select="0" id="sc-qrcode">二維條碼</span>
+</div>
+    
 <input type="text" id="shareurlbbinput" readonly="readonly">
   <a href="javascript:copysharelink()" id="sharelinkcopybtn">複製連結</a>
 </div>
