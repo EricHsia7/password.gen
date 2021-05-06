@@ -477,18 +477,17 @@ position:absolute;
 </div>
     <script>
     $('#sc-link').click(function() {
-    $('#sc-qrcode').attr('select','0')
-    $('#sc-link').attr('select','1')
+    $('#sc-qrcode').attr('select','0');
+    $('#sc-link').attr('select','1');
     $('.pwwshareqrcodeimg').fadeOut(1);
     $('#shareurlbbinput,#sharelinkcopybtn').fadeIn(1);
-})
+});
 $('#sc-qrcode').click(function() {
-  $('#pwwhistorytabstyle').html('  .pww[copied="1"] {display:none;}')
-    $('#sc-qrcode').attr('select','1')
-    $('#sc-link').attr('select','0')
+    $('#sc-qrcode').attr('select','1');
+    $('#sc-link').attr('select','0');
     $('.pwwshareqrcodeimg').fadeIn(1);
     $('#shareurlbbinput,#sharelinkcopybtn').fadeOut(1);
-})
+});
     </script>
     
     
