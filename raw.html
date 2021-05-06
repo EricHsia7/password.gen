@@ -214,6 +214,33 @@ float:right;
 
 
     <style>
+        .pwwhistorytab {
+  width:100%;
+  min-width:255px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom:5px;
+  padding-top:5px;
+}
+.pwwhistorytab span[select="0"] {
+  background:rgba(0,0, 0, 0);
+  padding:8px;
+  border-radius:99em;
+  color:#000;
+  margin-left:2px;
+  margin-right:2px;
+  transition:0.1s
+}
+.pwwhistorytab span[select="1"] {
+  background:#1a1a1a;
+  padding:8px;
+  border-radius:99em;
+  color:#fff;
+  margin-left:2px;
+  margin-right:2px;
+  transition:0.1s
+}
     .sharelinkbg {
   position:fixed;
   top:0px;
@@ -299,6 +326,24 @@ position:absolute;
   color:#000;
 }
         @media (prefers-color-scheme: dark) {
+            .pwwhistorytab span[select="0"] {
+  background:rgba(0, 0, 0,0);
+  padding:8px;
+  border-radius:99em;
+  color:#fff;
+  margin-left:2px;
+  margin-right:2px;
+  transition:0.1s
+}
+.pwwhistorytab span[select="1"] {
+  background:#fff;
+  padding:8px;
+  border-radius:99em;
+  color:#1a1a1a;
+  margin-left:2px;
+  margin-right:2px;
+  transition:0.1s
+}
                 .sharelinkbg {
   position:fixed;
   top:0px;
