@@ -334,7 +334,7 @@ position:absolute;
   text-decoration:none;
   color:#000;
 }
-        .pwwshareqrcodeimg {
+        #pwwshareqrcodeiii {
   width:90%;
   max-width:250px;
   border-radius:12px;
@@ -472,20 +472,20 @@ position:absolute;
 <input type="text" id="shareurlbbinput" readonly="readonly">
   <a href="javascript:copysharelink()" id="sharelinkcopybtn">複製連結</a>
     
-    <img src="https://chart.apis.google.com/chart?cht=qr&chl=&chs=512x512" class="pwwshareqrcodeimg">
- 
+    
+ <div id="pwwshareqrcodeiii"></div>
 </div>
     <script>
     $('#sc-link').click(function() {
     $('#sc-qrcode').attr('select','0');
     $('#sc-link').attr('select','1');
-    $('.pwwshareqrcodeimg').fadeOut(1);
+    $('#pwwshareqrcodeiii').fadeOut(1);
     $('#shareurlbbinput,#sharelinkcopybtn').fadeIn(1);
 });
 $('#sc-qrcode').click(function() {
     $('#sc-qrcode').attr('select','1');
     $('#sc-link').attr('select','0');
-    $('.pwwshareqrcodeimg').fadeIn(1);
+    $('#pwwshareqrcodeiii').fadeIn(1);
     $('#shareurlbbinput,#sharelinkcopybtn').fadeOut(1);
 });
     </script>
