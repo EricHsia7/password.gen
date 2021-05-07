@@ -127,7 +127,16 @@ var ivq = parseInt(
 //window.open('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text()));
 sharepwdlink();
 $('#shareurlbbinput').val('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text()));
-$('.pwwshareqrcodeimg').attr('src','https://chart.apis.google.com/chart?cht=qr&chl=' + encodeURIComponent('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text())) + '&chs=512x512');
+//$('.pwwshareqrcodeimg').attr('src','https://chart.apis.google.com/chart?cht=qr&chl=' + encodeURIComponent('https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text())) + '&chs=512x512');
+document.querySelector('#pwwshareqrcodeiii').innerHTML = '' ;
+var qrcode = new QRCode(document.querySelector('#pwwshareqrcodeiii') , {
+    text: 'https://erichsia7.github.io/password.gen/share/?a=' + encryptedHex + '&b=' + ivq + '&c=' + btoa($('#htit-' + $(this).attr('sh')).text()),
+    width: 1024,
+    height: 1024,
+    colorDark : "#000",
+    colorLight : "#fff",
+    correctLevel : QRCode.CorrectLevel.H
+});
 });
 }
 getPassword();
