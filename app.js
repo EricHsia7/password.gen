@@ -4,9 +4,8 @@ pwdmode = 0 ;
 var passwordLength = 16 ;
 engwordobj=$.ajax({url:"https://erichsia7.github.io/password.gen/engword.txt",async:false});
 var char = "0123456789abcdefghijklmnopqrstuvw,xyzABCDE.FGHIJKLMN/\OPQRSTUVWXYZ!@#$%^&*()_+?><:-{}[]";
-var pinchar = "0123456789";
 function getPassword() {
-if(pwdmode = 1) {
+if(pwdmode < 0.5) {
 var chars = char ;
 var password = "" ;
 for (var i=0; i<passwordLength; i++){
@@ -23,7 +22,7 @@ f = 1 ;
 }
 f += 1 ;
 }
-if(pwdmode = 2) {
+if(pwdmode > 0.5) {
    var chars2 = engwordobj.responseText.split(",") ;
 var password2 = "" ;
 password2 = chars2[Math.floor(Math.random() * chars2.length)] + Math.floor(Math.random() * chars2.length) + "-" + chars2[Math.floor(Math.random() * chars2.length)] + Math.floor(Math.random() * chars2.length) + "-" + chars2[Math.floor(Math.random() * chars2.length)] + Math.floor(Math.random() * chars2.length) ;
@@ -37,52 +36,27 @@ f = 1 ;
 }
 f += 1 ;
 }
-   
-   if(pwdmode = 3) {
-     var pchars = pinchar ;
-var pinp = "" ;
-for (var i=0; i<6; i++){
-var prandomNumber = Math.floor(Math.random() * pchars.length);
-pinp += pchars.substring(prandomNumber, prandomNumber+1);
-}
-document.getElementById("password").value = pinp ;
-if (f > 0.5) {
-$('#boxmsg').html('已產生新PIN！');
-$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
-}
-if (f > 10) {
-f = 1 ;
-}
-f += 1 ;
-      
-   }
-   
 }
 function changemode() {
    f = 0 ;
    o = 99 ;
-   pwdmode += 1 ;
-            if(pwdmode > 3) {
+            if(pwdmode < 0.5) {
                pwdmode = 1 ;
-}    
-   if(pwdmode = 1) {
-      $('#modeicondd').attr('src','icon/random3.svg');
-               $('#boxmsg').html('已切換為隨機模式！');
-$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
-               getPassword();
-   }
-      if(pwdmode = 2) {
-      $('#modeicondd').attr('src','icon/simple.svg');
+               $('#modeicondd').attr('src','icon/random3.svg');
                $('#boxmsg').html('已切換為好記模式！');
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
                getPassword();
-   }
-      if(pwdmode = 3) {
-      $('#modeicondd').attr('src','icon/random3.svg');
-               $('#boxmsg').html('已切換為PIN模式！');
+               
+}
+            
+            else {
+              pwdmode = 0 ;
+               $('#modeicondd').attr('src','icon/simple3.svg');
+                              $('#boxmsg').html('已切換為隨機模式！');
 $('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
                getPassword();
-   }
+            }
+   
         }
 function checki(tei) {
 if (tei < 10) {
@@ -217,4 +191,3 @@ $('.sharelink .sharelinktitle .sharelinkclose,.sharelinkbg').click(function() {
   setTimeout(function () {  $('.sharelink,.sharelinkbg').css({"display":"none"});
 },500);
 });
-
