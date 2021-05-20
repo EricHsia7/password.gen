@@ -6,7 +6,7 @@
 <a href="https://erichsia7.github.io/password.gen">Open</a>
 </code>
 # About
-![image](https://erichsia7.github.io/password.gen/image/readme-image/58775ba5-187d-774b-54f5-46255ef68e8e.jpeg)
+![image](https://erichsia7.github.io/password.gen/image/9EO7BoE88iFR7sQ95mynRL4MVeZG9iSC.jpeg)
 <code>
 This is a about page
 <a href="https://erichsia7.github.io/password.gen/about/">Open</a>
