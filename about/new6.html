@@ -123,6 +123,8 @@ backdrop-filter: blur(15px);
 backdrop-filter: blur(15px);
   display:none;
   z-index:10;
+  justify-content: center;
+  align-items: center;
 }
 .menudiv li {
   list-style:none;
@@ -280,10 +282,10 @@ border:2px transparent solid;
  
   <script>
   $('#menu').click(function() {
-  $('.menudiv').fadeIn(333)
+  $('.menudiv').fadeIn(333).css({'display':'flex'});
 });
 $('#closemenu').click(function() {
-  $('.menudiv').fadeOut(333)
+  $('.menudiv').fadeOut(333);
 });
 $('.Sociamedia img').click(function() {
   window.open( $(this).attr('link'));
