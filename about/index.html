@@ -9,398 +9,210 @@
 
   gtag('config', 'G-864PXSN4RV');
 </script>
-</head>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <meta charset="UTF-8">
+  <title>關於 - 密碼產生器</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://erichsia7.github.io/password.gen/icon/icon_512x512.png" rel="apple-touch-icon" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="icon" />
 <link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="bookmark" />
 <link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="shortcut icon" />
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
-<meta charset="UTF-8" />
-  <title>關於 - 密碼產生器</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;900&display=swap');
- .co {
-   height:5000px;
- }
- body {
-   margin:0px;
-   padding:0px
- }
- .title {
-   margin:0px;
-   width:100%;
-   height:60px;
-   background:#fff;
-   z-index:1000;
- }
- .title h1 {
-   margin:0px;
-   font-size:2rem;
-   color:#333;
-   line-height:50px;
-   margin-left:10px;
-   font-family: 'Noto Sans TC', sans-serif;
-   font-weight:900;
-   z-index:1000;
- }
- .titlemenu {
-   margin:0px;
-   width:100%;
-   box-shadow:0 0 15px 1px rgba(0,0,0,0.0);
-   height:60px;
-   background:#fff;
-   position:sticky;
-   top:0px;
-   left:0px;
-   transition:0.3s;
-   padding:0px;
-   display:flex;
-   flex-direction:row;
-   -webkit-backdrop-filter: blur(15px);
- backdrop-filter: blur(15px);
-   z-index:1000;
-   overflow: scroll;
- }
- .titletab {
- margin:10px;
- padding:9px;
- background:#f5f5f5;
- border-radius:30px;
- font-size:15px;
- font-family: 'Noto Sans TC', sans-serif;
- font-weight:500;
- transition:0.3s;
-   z-index:1000;
-   display:inline-block;
-   white-space:nowrap;
- }
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+* {font-family: 'Noto Sans TC', sans-serif;}
+body {
+  margin:0px;
+  padding:0px;
+  background:#c5b5f5;
+}
+.block1 {
+  width:100%;
+  height:300px;
+ background:url(https://erichsia7.github.io/password.gen/about/238A89E5-7ED9-4576-8C34-0292A9AAB1DA.jpg);
+  background-size:cover;
+  baclground-position:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom:1px #f5f5f5 solid;
+  position:relative;
+  -webkit-user-select: none;
+}
+.block1 h1 {
+  margin:0px;
+  padding:0px;
+  opacity:1;
+  font-weight:400;
+  color:#fff;
+  -webkit-user-select: none;
+  z-index:3;
+}
+.block1 .blur {
+  -webkit-backdrop-filter: blur(3px);
+backdrop-filter: blur(3px);
+  width:100%;
+  height:300px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background:rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+}
+.head {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:40px;
+  background:rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+  border-bottom:1px rgba(255, 255, 255, 0.1) solid;
+    z-index:10;
+}
+.head #menu {
+  color:#fff;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:40px;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:18px;
+}
+.block2 {
+  position:relative;
+  background:#fff;
+  width:100%;
+  height:auto;
+  padding-top:10px;
+  margin:0px;
+}
+.block2 h2 ,.block2 h1,.block3 h1{
+  margin:0px;
+  padding:0px;
+  text-align:center;
+  font-weight:300;
+}
+.block2 h2 m {
+  background:linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 5px, rgba(158, 131, 238, 0.6) 5px, rgba(158, 131, 238, 0.6) 15px, rgba(0,0,0,0) 15px, rgba(0,0,0,0) 100%);
+}
+.img {
+  width:100%;
+  max-width:300px;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  margin-top:10px;
+  background:#e3e3e3;
+}
+.menudiv {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0,0.5);
+    -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+  display:none;
+  z-index:10;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+.menudiv li {
+  list-style:none;
+  color:#fff;
+  font-weight:500;
+  font-size:23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+.menudiv li a {
+  color:#fff;
+  text-decoration:none;
+}
+#closemenu {
+  color:#fff;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:40px;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:23px;
+}
+.block-space {
+  width:100%;
+  height:30px;
+  background:#fff;
+}
+.block-bottom {
+  width:100%;
+  height:60px;
+  background:#c5b5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-bottom p {
+  color:#fff;
+}
+#use {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 99em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-clip:padding-box,border-box;
+background-origin:padding-box,border-box;
+background-image:linear-gradient(135deg,#fff,#fff),linear-gradient(126deg, rgba(0,170,200,1) 0%, rgba(196,21,230,1) 100%);
+border:2px transparent solid;
+  text-decoration:none;
+  margin-top:20px;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+}
 
+.block3 {
+  width:100%;
+  height:auto;
+  background:#fff;
+  margin:0px;
+}
 
- .imagebox {
- width:100%;
- height:250px;
- background:#f5f5f5;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
- .imagebox img.fill {
- width:100%;
- height:100%;
- object-fit:cover;
- }
- .imagebox img.auto {
- max-width:100%;
- max-height:100%;
- width:auto;
- height:auto;
- }
- .message {
- width:100%;
- height:60px;
- border-radius:12px;
- background:#fff;
- box-shadow:0 0 15px 1px rgba(0,0,0,0.05);
- transform:scale(0.9);
- margin-top:20px;
- margin-bottom:20px;
- color:#333;
- font-size:30px;
- line-height:60px;
- position:relative;
- }
-   #video {
-   transform:scale(0.95);
-   border-radius:8px;
-   }
-   .btn {
-     padding:9px;
- background:#f5f5f5;
- border-radius:30px;
- font-size:15px;
- font-family: 'Noto Sans TC', sans-serif;
- font-weight:500;
-       text-decoration: none;
-       margin-top:60px;
-       margin-bottom:60px;
-     color:#333;
-     }
-
-   ul.slides {
-   position: relative;
-   width: 100%;
-   height: 300px;
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   background-color: #eee;
-   overflow: hidden;
- }
-
- li.slide {
-   margin: 0;
-   padding: 0;
-   width: inherit;
-   height: inherit;
-   position: absolute;
-   top: 0;
-   left: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-family: Helvetica;
-   font-size: 120px;
-   color: #333;
-   transition: .45s ease-in-out;
- }
- li.slide img {
-   width:auto;
-   height:auto;
-   max-width:100%;
-   max-height:90%;
-     }
- .slide:nth-of-type(1) {
-   background-color: #fff;
- }
-
- .slide:nth-of-type(2) {
-   background-color: #fff;
-   left: 100%;
- }
-
- .slide:nth-of-type(3) {
-   background-color: #fff;
-   left: 200%;
-   color:#fff;
- }
- .slide:nth-of-type(4) {
-   background-color: #fff;
-   left: 300%;
-   color:#fff;
- }
- .slide:nth-of-type(5) {
-   background-color: #fff;
-   left: 400%;
-   color:#fff;
- }
- input[type="radio"] {
-   position: relative;
-   z-index: 100;
-   display: none;
- }
-
- .controls-visible {
-   position: absolute;
-   width: 100%;
-   bottom: 5px;
-   text-align: center;
- }
-
- .controls-visible label {
-   display: inline-block;
-   width: 10px;
-   height: 10px;
-   background-color: rgba(241, 241, 241, 0.8);
-   border-radius: 50%;
-   margin: 0 3px;
-   transition:0.3s;
-     -webkit-backdrop-filter: blur(3px);
- backdrop-filter: blur(3px);
- }
-
- .slides input[type="radio"]:nth-of-type(1):checked ~ .controls-visible label:nth-of-type(1) {
-   background-color: rgba(136, 136, 136, 0.8);
- }
-
- .slides input[type="radio"]:nth-of-type(2):checked ~ .controls-visible label:nth-of-type(2) {
-   background-color: rgba(136, 136, 136, 0.8);
- }
-
- .slides input[type="radio"]:nth-of-type(3):checked ~ .controls-visible label:nth-of-type(3) {
-   background-color: rgba(136, 136, 136, 0.8);
- }
- .slides input[type="radio"]:nth-of-type(4):checked ~ .controls-visible label:nth-of-type(4) {
-   background-color: rgba(136, 136, 136, 0.8);
- }
- .slides input[type="radio"]:nth-of-type(5):checked ~ .controls-visible label:nth-of-type(5) {
-   background-color: rgba(136, 136, 136, 0.8);
- }
-
- .slides input[type="radio"]:nth-of-type(1):checked ~ .slide {
-   transform: translatex(0%);
- }
-
- .slides input[type="radio"]:nth-of-type(2):checked ~ .slide {
-   transform: translatex(-100%);
- }
-
- .slides input[type="radio"]:nth-of-type(3):checked ~ .slide {
-   transform: translatex(-200%);
- }
- .slides input[type="radio"]:nth-of-type(4):checked ~ .slide {
-   transform: translatex(-300%);
- }
-
- .slides input[type="radio"]:nth-of-type(5):checked ~ .slide {
-   transform: translatex(-400%);
- }
-
- /* Left/Right Button Classes Below */
-
- .navigator {
-   position: absolute;
-   top: 50%;
-   transform: translatey(-50%);
-   width: 100%;
-   z-index: 100;
-   padding: 0 20px;
-   display: flex;
-   justify-content: space-between;
-   box-sizing: border-box;
-   display: none;
- }
-
- .navigator i {
-   font-size: 32px;
-   color #333;
- }
-
- .slides input[type="radio"]:nth-of-type(1):checked ~ .navigator:nth-of-type(1) {
-   display: flex;
- }
-
- .slides input[type="radio"]:nth-of-type(2):checked ~ .navigator:nth-of-type(2) {
-   display: flex;
- }
-
- .slides input[type="radio"]:nth-of-type(3):checked ~ .navigator:nth-of-type(3) {
-   display: flex;
- }
- .slides input[type="radio"]:nth-of-type(4):checked ~ .navigator:nth-of-type(4) {
-   display: flex;
- }
-
- .slides input[type="radio"]:nth-of-type(5):checked ~ .navigator:nth-of-type(5) {
-   display: flex;
- }
-</style>
-<body id="body">
-<div class="title"><h1>Password.Gen</h1></div>
-<div class="titlemenu">
-  <a class="titletab" link="https://erichsia7.github.io/password.gen/">密碼產生器</a>
-  <a class="titletab" link="https://erichsia7.github.io/password.gen/about/support_center/">支援</a>
-  <a class="titletab" link="https://www.facebook.com/password.gen">Facebook</a>
-  <a class="titletab" link="https://www.youtube.com/channel/UCoHLkdCF-FcL5ZXR9gREmHg">YouTube</a>
-   <a class="titletab" link="https://line.me/R/ti/p/@807gocyy">LINE</a>
-  <a class="titletab" link="https://github.com/EricHsia7/password.gen">Github</a>
-  <a class="titletab" link="https://docs.google.com/forms/d/e/1FAIpQLScYOQ85JfscbyGNbcEX6sme7fFqgre-8MyutqWfSj8aVSmD_A/viewform?usp=sf_link">意見回饋</a>
-  <a class="titletab" link="https://erichsia7.github.io/password.gen/about/Privacy-Policy/">隱私政策</a>
-</div>
-  <div class="imagebox">
-    <img src="index_4.jpg" class="fill">
-</div>
-  <div class="message" link="https://erichsia7.github.io/password.gen/about/Privacy-Policy/">已更新隱私政策</div>
-  <iframe width="1920" height="1080" src="https://www.youtube.com/embed/v_jF8kqBj6Y?playlist=v_jF8kqBj6Y&loop=1&autoplay=1&mute=1&controls=0" frameborder="0"  id="video"></iframe><br>
-
-    <div id="txtcc"></div>
-          <center>
-        <img src="t01-mm.jpeg" style="width: 90%;height: auto;max-width: 350px;max-height: 90vw;" /><br>
-        <h1>可產生安全密碼</h1><br>
-        <img src="t02-mm.jpeg" style="width: 90%;height: auto;max-width: 350px;max-height: 90vw" /><br>
-        <h1>快速且使用方便</h1><br>
-<ul class="slides">
-  <input type="radio" id="control-1" name="control" checked>
-  <input type="radio" id="control-2" name="control">
-  <input type="radio" id="control-3" name="control">
-  <input type="radio" id="control-4" name="control">
-  <input type="radio" id="control-5" name="control">
-  <div class="navigator slide-1">
-    <label for="control-5">
-      <i class="fas fa-chevron-left"></i>
-    </label>
-    <label for="control-2">
-      <i class="fas fa-chevron-right"></i>
-    </label>
-  </div>
-  <div class="navigator slide-2">
-    <label for="control-1">
-      <i class="fas fa-chevron-left"></i>
-    </label>
-    <label for="control-3">
-      <i class="fas fa-chevron-right"></i>
-    </label>
-  </div> 
-  <div class="navigator slide-3">
-    <label for="control-2">
-      <i class="fas fa-chevron-left"></i>
-    </label>
-    <label for="control-4">
-      <i class="fas fa-chevron-right"></i>
-    </label>
-  </div>  
-  <div class="navigator slide-4">
-    <label for="control-3">
-      <i class="fas fa-chevron-left"></i>
-    </label>
-    <label for="control-5">
-      <i class="fas fa-chevron-right"></i>
-    </label>
-  </div>
-  <div class="navigator slide-5">
-    <label for="control-4">
-      <i class="fas fa-chevron-left"></i>
-    </label>
-    <label for="control-1">
-      <i class="fas fa-chevron-right"></i>
-    </label>
-  </div> 
-  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img_5/1.jpg" ></li>
-  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img_5/2.jpg" ></li>
-  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img_5/3.jpg" ></li>
-  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img_5/4.jpg" ></li>
-  <li class="slide"><img src="https://erichsia7.github.io/password.gen/image/iphone_img_5/5.jpg" ></li>
-  
-  <div class="controls-visible">
-    <label for="control-1"></label>
-    <label for="control-2"></label>
-    <label for="control-3"></label>
-    <label for="control-4"></label>
-    <label for="control-5"></label>
-  </div>
-</ul>
-        <h1>可加入至主畫面</h1><br>
-        <a href="https://erichsia7.github.io/password.gen/about/addtohome/" target="_blank" class="btn">詳情</a>
-        <br><br>
-        <img src="t04-mm.jpeg" style="width: 90%;height: auto;max-width: 350px;max-height: 90vw" /><br>
-        <h1>可快速複製密碼</h1><br>
-        <a href="https://erichsia7.github.io/password.gen/" class="btn">立即使用</a>
-       <br>
-            <center>          
-            <h1 class="Sociamediah1">加入我們的社群</h1>
-<div class="Sociamedia">
-<img src="https://erichsia7.github.io/password.gen/about/Facebook.svg" link="https://www.facebook.com/password.gen">
-<img src="https://erichsia7.github.io/password.gen/about/YouTube.svg" link="https://www.youtube.com/channel/UCoHLkdCF-FcL5ZXR9gREmHg">
-<img src="https://erichsia7.github.io/password.gen/about/LINE.svg" link="https://line.me/R/ti/p/@807gocyy">
-<img src="https://erichsia7.github.io/password.gen/about/Github.svg" link="https://github.com/EricHsia7/password.gen">
-</div>
-            </center>
-            <style>
               
-              .Sociamedia {
+.Sociamedia {
   width:100%;
   max-width:300px;
   background:rgba(0, 0, 0, 0);
   display: flex;
   flex-direction:column;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
 }
 .Sociamedia img {
   max-width:100%;
-  max-height:80px;
-  margin-top:30px;
+  max-height:50px;
+  margin-top:25px;
   float:top;
 }
 @media only screen and (min-width: 600px) {
@@ -411,58 +223,83 @@
   width:100%;
   max-width:500px;
   background:rgba(0, 0, 0, 0);
-    flex-direction:row;
-    justify-content: space-between ;
+  flex-direction:row;
+  justify-content: space-between ;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%)
 }
 }
-            </style>
-            
-            
-            
-        <img src="i03.jpeg" style="width: auto;height: auto;max-width: 300px;max-height:300px" />
-        </center>
+  </style>
+
+
+<body>
+<div class="block1">
+  <div class="blur"></div>
+  <h1 id="block1h1">密碼產生器</h1>
+</div>
+<div class="block2" id="b-int">
+  <h1>介紹</h1>
+  <img src="https://erichsia7.github.io/password.gen/about/t01-mm.jpeg" class="img">
+  <h2>產生<m>安全</m>的密碼</h2>
+  
+  <img src="https://erichsia7.github.io/password.gen/about/t02-mm.jpeg" class="img">
+  <h2><m>快速</m>且使用方便</h2>
+  
+    <img src="https://erichsia7.github.io/password.gen/about/t04-mm.jpeg" class="img">
+  <h2>可快速<m>複製密碼</m></h2>
+  
+  <button id="use">立即使用</button>
+</div>
+<div class="block-space"></div>
+
+<div class="block3" id="b-sociamedia">
+  <h1>社群</h1>
+  <div class="Sociamedia">
+<img src="https://erichsia7.github.io/password.gen/about/Facebook.svg" link="https://www.facebook.com/password.gen">
+<img src="https://erichsia7.github.io/password.gen/about/YouTube.svg" link="https://www.youtube.com/channel/UCoHLkdCF-FcL5ZXR9gREmHg">
+<img src="https://erichsia7.github.io/password.gen/about/LINE.svg" link="https://line.me/R/ti/p/@807gocyy">
+<img src="https://erichsia7.github.io/password.gen/about/Github.svg" link="https://github.com/EricHsia7/password.gen">
+</div>
+</div>
+<div class="block-space"></div>
+<div class="block-bottom">
+  <p>github.com/EricHsia7</p>
+</div>
+
+<div class="head">
+  <a id="menu">
+    <i class="fas fa-bars"></i>
+  </a>
+</div>
+<div class="menudiv">
+  <a id="closemenu">
+  <i class="fas fa-times"></i>
+  </a>
+  <li><a href="javascript:block('int')">介紹</a></li>
+  <li><a href="javascript:block('sociamedia')">社群</a></li>
+  <li><a href="https://erichsia7.github.io/password.gen/about/support_center/">支援</a></li>
+</div>
+ 
   <script>
-$(window).scroll(function(){
-  if($(window).scrollTop() > 60) {
-$('.titlemenu').css({'box-shadow':'0 0 15px 1px rgba(0,0,0,0.05)','height':'45px','background':'rgba(255, 255, 255, 0.5)'});
-    $('.titletab').css({'font-size':'15px','padding':'10px','margin':'3px 10px','background':'rgba(0, 0, 0, 0)'});
-}
-  else {
-$('.titlemenu').css({'box-shadow':'0 0 15px 1px rgba(0,0,0,0.0)','height':'60px','background':'rgba(255, 255, 255, 1)'});
-    $('.titletab').css({'font-size':'15px','padding':'10px','margin':'10px','background':'#f5f5f5'});
-}
+  $('#menu').click(function() {
+  $('.menudiv').fadeIn(333).css({'display':'flex'});
 });
-$('.message,.titletab').click(function() {
+$('#closemenu').click(function() {
+  $('.menudiv').fadeOut(333);
+});
+$('.Sociamedia img').click(function() {
   window.open( $(this).attr('link'));
 });
-  $('.Sociamedia img').click(function() {
-  window.open( $(this).attr('link'));
+$('#use').click(function() {
+ window.open('https://erichsia7.github.io/password.gen/');
 });
-</script>
-      <script>
-$(function() {
-  if(typeof YOUTUBE_VIDEO_MARGIN == 'undefined') {
-    YOUTUBE_VIDEO_MARGIN=0;
-  }
-  $('iframe').each(function(index,item) {
-    if($(item).attr('src').match(/http(s)?:\/\/www\.youtube\.com/)) {
-      var w=$(item).attr('width');
-      var h=$(item).attr('height');
-      var ar = h/w*100;
-      ar=ar.toFixed(2);
-      //Style iframe   
-      $(item).css('position','absolute');
-      $(item).css('top','0');
-      $(item).css('left','0');   
-      $(item).css('width','100%');
-      $(item).css('height','100%');
-      $(item).css('max-width',w+'px');
-      $(item).css('max-height', h+'px');       
-      $(item).wrap('<div style="max-width:'+w+'px;margin:0 auto; padding:'+YOUTUBE_VIDEO_MARGIN+'px;" />');
-      $(item).wrap('<div style="position: relative;padding-bottom: '+ar+'%; height: 0; overflow: hidden;" />');
-    }
-  });
-});
-</script>
+
+function block(blockid) {
+  $('body,html').animate({scrollTop:$('#b-' + blockid).offset().top-40}, 333);
+  $('.menudiv').fadeOut(333);
+}
+  </script>
+
 </body>
 </html>
