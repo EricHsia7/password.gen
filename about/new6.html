@@ -49,6 +49,7 @@ body {
   font-weight:400;
   color:#fff;
   -webkit-user-select: none;
+  z-index:3;
 }
 .block1 .blur {
   -webkit-backdrop-filter: blur(3px);
@@ -277,7 +278,6 @@ border:2px transparent solid;
   <a id="menu">
     <i class="fas fa-bars"></i>
   </a>
-  <h3 id="headh3">密碼產生器</h3>
 </div>
 <div class="menudiv">
   <a id="closemenu">
@@ -306,17 +306,6 @@ function block(blockid) {
   $('body,html').animate({scrollTop:$('#b-' + blockid).offset().top-40}, 333);
   $('.menudiv').fadeOut(333);
 }
-
-setInterval(function() {
-  if($('#block1h1').offset().top < 0) {
-    $('#block1h1').css({'opacity':'0'});
-    $('#headh3').css({'opacity':'1'});
-  }
-  else {
-    $('#block1h1').css({'opacity':'1'});
-    $('#headh3').css({'opacity':'0'});
-  }
-},1);
   </script>
 
 </body>
