@@ -9,6 +9,7 @@
 
   gtag('config', 'G-864PXSN4RV');
 </script>
+  </head>
   <meta charset="UTF-8">
   <title>關於 - 密碼產生器</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
@@ -242,7 +243,7 @@ border:2px transparent solid;
 }
   </style>
 
-</head>
+
 <body>
 <!-- partial:index.partial.html -->
 <div class="block1">
@@ -322,13 +323,13 @@ setInterval(function() {
     $('#headh3').css({'opacity':'0'});
   }
   if($('body,html').scrollTop() < 135) {
-  var size = 2-($('body,html').scrollTop()/132)/1 ;
-  $('#block1h1').css({'--size-scale':size});
+  var sizedd = 2-($('body,html').scrollTop()/132)/1 ;
+  $('#block1h1').css({'--size-scale':sizedd});
   }
   else {
 $('#block1h1').css({'--size-scale':'0'});
 }
-},1)
+},1);
   </script>
 
 </body>
