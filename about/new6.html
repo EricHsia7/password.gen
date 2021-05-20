@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>關於 - 密碼產生器</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+* {font-family: 'Noto Sans TC', sans-serif;}
+body {
+  margin:0px;
+  padding:0px;
+  background:#c5b5f5;
+}
+.block1 {
+  width:100%;
+  height:300px;
+ background:url(https://erichsia7.github.io/password.gen/about/238A89E5-7ED9-4576-8C34-0292A9AAB1DA.jpg);
+  background-size:cover;
+  baclground-position:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom:1px #f5f5f5 solid;
+  position:relative;
+  -webkit-user-select: none;
+}
+.block1 h1 {
+  margin:0px;
+  padding:0px;
+  opacity:1;
+  font-weight:400;
+  color:#fff;
+  -webkit-user-select: none;
+  position:sticky;
+  top:6px;
+  font-size:1.17em;
+  z-index:3;
+  transform:scale(var(--size-scale))
+}
+.block1 .blur {
+  -webkit-backdrop-filter: blur(3px);
+backdrop-filter: blur(3px);
+  width:100%;
+  height:300px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background:rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+}
+.head {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:40px;
+  background:rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+  border-bottom:1px rgba(255, 255, 255, 0.1) solid;
+}
+.head #menu {
+  color:#fff;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:40px;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:18px;
+}
+.head h3 {
+  font-weight:400;
+  color:#fff;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  margin:0px;
+  padding:0px;
+  opacity:0;
+}
+.block2 {
+  position:relative;
+  background:#fff;
+  width:100%;
+  height:auto;
+  padding-top:10px;
+  margin:0px;
+}
+.block2 h2 ,.block2 h1,.block3 h1{
+  margin:0px;
+  padding:0px;
+  text-align:center;
+  font-weight:300;
+}
+.block2 h2 m {
+  background:linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 5px, #9e83ee 5px, #9e83ee 15px, rgba(0,0,0,0) 15px, rgba(0,0,0,0) 100%);
+}
+.img {
+  width:100%;
+  max-width:300px;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  margin-top:10px;
+  background:#e3e3e3;
+}
+.menudiv {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0,0.5);
+    -webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+  display:none;
+  z-index:10;
+}
+.menudiv li {
+  list-style:none;
+  color:#fff;
+  font-weight:500;
+  font-size:23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+.menudiv li a {
+  color:#fff;
+  text-decoration:none;
+}
+#closemenu {
+  color:#fff;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:40px;
+  height:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:23px;
+}
+.block-space {
+  width:100%;
+  height:30px;
+  background:#fff;
+}
+.block-bottom {
+  width:100%;
+  height:60px;
+  background:#c5b5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-bottom p {
+  color:#fff;
+}
+#use {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 99em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-clip:padding-box,border-box;
+background-origin:padding-box,border-box;
+background-image:linear-gradient(135deg,#fff,#fff),linear-gradient(126deg, rgba(0,170,200,1) 0%, rgba(196,21,230,1) 100%);
+border:2px transparent solid;
+  text-decoration:none;
+  margin-top:20px;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.block3 {
+  width:100%;
+  height:auto;
+  background:#fff;
+  margin:0px;
+}
+
+              
+.Sociamedia {
+  width:100%;
+  max-width:300px;
+  background:rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction:column;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%)
+}
+.Sociamedia img {
+  max-width:100%;
+  max-height:80px;
+  margin-top:30px;
+  float:top;
+}
+@media only screen and (min-width: 600px) {
+  .Sociamedia img {
+    max-width:23%;
+  }
+  .Sociamedia {
+  width:100%;
+  max-width:500px;
+  background:rgba(0, 0, 0, 0);
+  flex-direction:row;
+  justify-content: space-between ;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%)
+}
+}
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="block1">
+  <div class="blur"></div>
+  <h1 id="block1h1" style="--size-scale:2">密碼產生器</h1>
+</div>
+<div class="block2" id="b-int">
+  <h1>介紹</h1>
+  <img src="https://erichsia7.github.io/password.gen/about/t01-mm.jpeg" class="img">
+  <h2>產生<m>安全</m>的密碼</h2>
+  
+  <img src="https://erichsia7.github.io/password.gen/about/t02-mm.jpeg" class="img">
+  <h2><m>快速</m>且使用方便</h2>
+  
+    <img src="https://erichsia7.github.io/password.gen/about/t04-mm.jpeg" class="img">
+  <h2>可快速<m>複製密碼</m></h2>
+  
+  <button id="use">立即使用</button>
+</div>
+<div class="block-space"></div>
+
+<div class="block3" id="b-sociamedia">
+  <h1>社群</h1>
+  <div class="Sociamedia">
+<img src="https://erichsia7.github.io/password.gen/about/Facebook.svg" link="https://www.facebook.com/password.gen">
+<img src="https://erichsia7.github.io/password.gen/about/YouTube.svg" link="https://www.youtube.com/channel/UCoHLkdCF-FcL5ZXR9gREmHg">
+<img src="https://erichsia7.github.io/password.gen/about/LINE.svg" link="https://line.me/R/ti/p/@807gocyy">
+<img src="https://erichsia7.github.io/password.gen/about/Github.svg" link="https://github.com/EricHsia7/password.gen">
+</div>
+</div>
+<div class="block-space"></div>
+<div class="block-bottom">
+  <p>github.com/EricHsia7</p>
+</div>
+
+<div class="head">
+  <a id="menu">
+    <i class="fas fa-bars"></i>
+  </a>
+  <h3 id="headh3">密碼產生器</h3>
+</div>
+<div class="menudiv">
+  <a id="closemenu">
+  <i class="fas fa-times"></i>
+  </a>
+  <li><a href="javascript:block('int')">介紹</a></li>
+  <li><a href="javascript:block('sociamedia')">社群</a></li>
+  <li><a>支援</a></li>
+</div>
+ 
+  <script>
+  $('#menu').click(function() {
+  $('.menudiv').fadeIn(333)
+});
+$('#closemenu').click(function() {
+  $('.menudiv').fadeOut(333)
+});
+$('.Sociamedia img').click(function() {
+  window.open( $(this).attr('link'));
+});
+$('#use').click(function() {
+ window.open('https://erichsia7.github.io/password.gen/');
+});
+
+function block(blockid) {
+  $('body,html').animate({scrollTop:$('#b-' + blockid).offset().top-40}, 333);
+  $('.menudiv').fadeOut(333);
+}
+
+setInterval(function() {
+  if($('body,html').scrollTop() > 132) {
+    $('#block1h1').css({'opacity':'0'});
+    $('#headh3').css({'opacity':'1'});
+  }
+  else {
+    $('#block1h1').css({'opacity':'1'});
+    $('#headh3').css({'opacity':'0'});
+  }
+  if($('body,html').scrollTop() < 135) {
+  var size = 2-($('body,html').scrollTop()/132)/1 ;
+  $('#block1h1').css({'--size-scale':size});
+  }
+  else {
+$('#block1h1').css({'--size-scale':'0'});
+}
+},1)
+  </script>
+
+</body>
+</html>
