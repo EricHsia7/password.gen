@@ -53,7 +53,6 @@ body {
   top:6px;
   font-size:1.17em;
   z-index:3;
-  transform:scale(var(--size-scale))
 }
 .block1 .blur {
   -webkit-backdrop-filter: blur(3px);
@@ -247,7 +246,7 @@ border:2px transparent solid;
 <body>
 <div class="block1">
   <div class="blur"></div>
-  <h1 id="block1h1" style="--size-scale:2">密碼產生器</h1>
+  <h1 id="block1h1">密碼產生器</h1>
 </div>
 <div class="block2" id="b-int">
   <h1>介紹</h1>
@@ -321,14 +320,7 @@ setInterval(function() {
     $('#block1h1').css({'opacity':'1'});
     $('#headh3').css({'opacity':'0'});
   }
-  if($('body,html').scrollTop() < 135) {
-  var sizedd = 2-($('body,html').scrollTop()/132)/1 ;
-  $('#block1h1').css({'--size-scale':sizedd});
-  }
-  else {
-$('#block1h1').css({'--size-scale':'0'});
-}
-},1);
+  
   </script>
 
 </body>
