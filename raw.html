@@ -344,8 +344,12 @@ position:absolute;
             left:50%;
             transform:translateX(-50%);
             display:none;
+            filter: invert(0%);
 }
         @media (prefers-color-scheme: dark) {
+                    #pwwshareqrcodeiii img {
+                        filter: invert(100%);
+            }
             .pwwhistorytab span[select="0"] {
   background:rgba(0, 0, 0,0);
   padding:8px;
