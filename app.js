@@ -4,6 +4,21 @@ pwdmode = 0 ;
 var passwordLength = 16 ;
 engwordobj=$.ajax({url:"https://erichsia7.github.io/password.gen/engword.txt",async:false});
 var char = "0123456789abcdefghijklmnopqrstuvw,xyzABCDE.FGHIJKLMN/\OPQRSTUVWXYZ!@#$%^&*()_+?><:-{}[]";
+function genid() {
+var genidchars4 = "abcdef012345678";
+    var geniduu = [8,4,4,4,12];
+            var genid4 = "";
+            var genid5 = "";
+    for (var ia = 0; ia < geniduu.length; ia++) {
+      var genid4 = "";
+            for (var i = 0; i < geniduu[ia]; i++) {
+                var genrandomNumber4 = Math.floor(Math.random() * genidchars4.length);
+                genid4 += genidchars4.substring(genrandomNumber4, genrandomNumber4 + 1);
+            }
+genid5 += '-' + genid4 ;
+    }
+    return genid5.substring(1,genid5.length)
+}
 function getPassword() {
 if(pwdmode < 0.5) {
 var chars = char ;
@@ -18,17 +33,18 @@ if (f > 0.5) {
 //$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
    //ms
 $('.message').remove();
+   var uhyhtg = genid() ;
    setTimeout(function () {  
-$('body').append('<div class="message" type="copied" style="--text-length:6">已產生新密碼</div>');
+$('body').append('<div class="message" type="copied" style="--text-length:6" id="' + uhyhtg + '">已產生新密碼</div>');
    },1);
   setTimeout(function () {  
-$('.message').animate({'top':'65px'},333);
+$('#' + uhyhtg).animate({'top':'65px'},333);
    },2); 
    setTimeout(function () {  
-$('.message').animate({'top':'-60px'},333);
+$('#' + uhyhtg).animate({'top':'-60px'},333);
    },900); 
    setTimeout(function () {  
-$('.message').remove();
+$('#' + uhyhtg).remove();
    },1243); 
    //ms-end
 }
@@ -48,17 +64,18 @@ if (f > 0.5) {
    
    //ms
 $('.message').remove();
+   var uhyhtgyy = genid() ;
    setTimeout(function () {  
-$('body').append('<div class="message" type="copied" style="--text-length:6">已產生新密碼</div>');
+$('body').append('<div class="message" type="copied" style="--text-length:6" id="' + uhyhtgyy + '">已產生新密碼</div>');
    },1);
   setTimeout(function () {  
-$('.message').animate({'top':'65px'},333);
+$('#' + uhyhtgyy).animate({'top':'65px'},333);
    },2); 
    setTimeout(function () {  
-$('.message').animate({'top':'-60px'},333);
+$('#' + uhyhtgyy).animate({'top':'-60px'},333);
    },900); 
    setTimeout(function () {  
-$('.message').remove();
+$('#' + uhyhtgyy).remove();
    },1243); 
    //ms-end
    
@@ -80,17 +97,18 @@ function changemode() {
                
                //ms
 $('.message').remove();
+               var uhyhtgyuy = genid() ;
    setTimeout(function () {  
-$('body').append('<div class="message" type="copied" style="--text-length:8">已切換為好記模式</div>');
+$('body').append('<div class="message" type="copied" style="--text-length:8" id="' + uhyhtgyuy + '">已切換為好記模式</div>');
    },1);
   setTimeout(function () {  
-$('.message').animate({'top':'65px'},333);
+$('#' + uhyhtgyuy).animate({'top':'65px'},333);
    },2); 
    setTimeout(function () {  
-$('.message').animate({'top':'-60px'},333);
+$('#' + uhyhtgyuy).animate({'top':'-60px'},333);
    },900); 
    setTimeout(function () {  
-$('.message').remove();
+$('#' + uhyhtgyuy).remove();
    },1243); 
    //ms-end
                
@@ -106,17 +124,18 @@ $('.message').remove();
                
                //ms
 $('.message').remove();
+               var uhyhtgyiuy = genid() ;
    setTimeout(function () {  
-$('body').append('<div class="message" type="copied" style="--text-length:8">已切換為隨機模式</div>');
+$('body').append('<div class="message" type="copied" style="--text-length:8" id="' + uhyhtgyiuy + '">已切換為隨機模式</div>');
    },1);
   setTimeout(function () {  
-$('.message').animate({'top':'65px'},333);
+$('#' + uhyhtgyiuy).animate({'top':'65px'},333);
    },2); 
    setTimeout(function () {  
-$('.message').animate({'top':'-60px'},333);
+$('#' + uhyhtgyiuy).animate({'top':'-60px'},333);
    },900); 
    setTimeout(function () {  
-$('.message').remove();
+$('#' + uhyhtgyiuy).remove();
    },1243); 
    //ms-end
                
@@ -158,17 +177,18 @@ document.execCommand("Copy");
    
    //ms
 $('.message').remove();
+               var uhyhtgypiuy = genid() ;
    setTimeout(function () {  
-$('body').append('<div class="message" type="copied" style="--text-length:5">已複製密碼</div>');
+$('body').append('<div class="message" type="copied" style="--text-length:5" id="' + uhyhtgypiuy + '">已複製密碼</div>');
    },1);
   setTimeout(function () {  
-$('.message').animate({'top':'65px'},333);
+$('#' + uhyhtgypiuy).animate({'top':'65px'},333);
    },2); 
    setTimeout(function () {  
-$('.message').animate({'top':'-60px'},333);
+$('#' + uhyhtgypiuy).animate({'top':'-60px'},333);
    },900); 
    setTimeout(function () {  
-$('.message').remove();
+$('#' + uhyhtgypiuy).remove();
    },1243); 
    //ms-end
    
