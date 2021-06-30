@@ -19,7 +19,7 @@ if (f > 0.5) {
    //ms
 $('.message').remove();
    setTimeout(function () {  
-$('body').append('<div class="message" type="copied" style="--text-length:3">已產生新密碼</div>');
+$('body').append('<div class="message" type="copied" style="--text-length:6">已產生新密碼</div>');
    },1);
   setTimeout(function () {  
 $('.message').animate({'top':'60px'},333);
@@ -29,7 +29,7 @@ $('.message').animate({'top':'-60px'},333);
    },900); 
    setTimeout(function () {  
 $('.message').remove();
-   },910); 
+   },1243); 
    //ms-end
 }
 if (f > 10) {
