@@ -38,14 +38,14 @@ $('.message').remove();
 $('body').append('<div class="message" type="copied" style="--text-length:6" id="' + uhyhtg + '">已產生新密碼</div>');
    },1);
   setTimeout(function () {  
-$('#' + uhyhtg).animate({'top':'65px'},333);
+$('#' + uhyhtg).animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
-$('#' + uhyhtg).animate({'top':'-60px'},333);
-   },900); 
+$('#' + uhyhtg).animate({'top':'-60px'},111);
+   },555); 
    setTimeout(function () {  
 $('#' + uhyhtg).remove();
-   },1243); 
+   },780); 
    //ms-end
 }
 if (f > 10) {
@@ -69,14 +69,14 @@ $('.message').remove();
 $('body').append('<div class="message" type="copied" style="--text-length:6" id="' + uhyhtgyy + '">已產生新密碼</div>');
    },1);
   setTimeout(function () {  
-$('#' + uhyhtgyy).animate({'top':'65px'},333);
-   },2); 
+$('#' + uhyhtgyy).animate({'top':'65px'},111);
+   },2);
    setTimeout(function () {  
-$('#' + uhyhtgyy).animate({'top':'-60px'},333);
-   },900); 
+$('#' + uhyhtgyy).animate({'top':'-60px'},111);
+   },555); 
    setTimeout(function () {  
 $('#' + uhyhtgyy).remove();
-   },1243); 
+   },780); 
    //ms-end
    
 }
@@ -102,14 +102,14 @@ $('.message').remove();
 $('body').append('<div class="message" type="copied" style="--text-length:8" id="' + uhyhtgyuy + '">已切換為好記模式</div>');
    },1);
   setTimeout(function () {  
-$('#' + uhyhtgyuy).animate({'top':'65px'},333);
+$('#' + uhyhtgyuy).animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
-$('#' + uhyhtgyuy).animate({'top':'-60px'},333);
-   },900); 
+$('#' + uhyhtgyuy).animate({'top':'-60px'},111);
+   },555); 
    setTimeout(function () {  
 $('#' + uhyhtgyuy).remove();
-   },1243); 
+   },780); 
    //ms-end
                
                getPassword();
@@ -129,14 +129,14 @@ $('.message').remove();
 $('body').append('<div class="message" type="copied" style="--text-length:8" id="' + uhyhtgyiuy + '">已切換為隨機模式</div>');
    },1);
   setTimeout(function () {  
-$('#' + uhyhtgyiuy).animate({'top':'65px'},333);
+$('#' + uhyhtgyiuy).animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
-$('#' + uhyhtgyiuy).animate({'top':'-60px'},333);
-   },900); 
+$('#' + uhyhtgyiuy).animate({'top':'-60px'},111);
+   },555); 
    setTimeout(function () {  
 $('#' + uhyhtgyiuy).remove();
-   },1243); 
+   },780); 
    //ms-end
                
                getPassword();
@@ -182,14 +182,14 @@ $('.message').remove();
 $('body').append('<div class="message" type="copied" style="--text-length:5" id="' + uhyhtgypiuy + '">已複製密碼</div>');
    },1);
   setTimeout(function () {  
-$('#' + uhyhtgypiuy).animate({'top':'65px'},333);
+$('#' + uhyhtgypiuy).animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
-$('#' + uhyhtgypiuy).animate({'top':'-60px'},333);
-   },900); 
+$('#' + uhyhtgypiuy).animate({'top':'-60px'},111);
+   },555); 
    setTimeout(function () {  
 $('#' + uhyhtgypiuy).remove();
-   },1243); 
+   },780); 
    //ms-end
    
    
@@ -270,7 +270,7 @@ passwordLength= passwordLength * 2 ;
 }
 
 //$('#boxmsg').html('密碼長度為' + passwordLength + '！');
-//$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
       var myhstxtlen = '密碼長度為' + passwordLength ;
       //ms
 $('.message').remove();
@@ -278,14 +278,14 @@ $('.message').remove();
 $('body').append('<div class="message" type="copied" style="--text-length:' + myhstxtlen.length + '">密碼長度為' + passwordLength + '</div>');
    },1);
   setTimeout(function () {  
-$('.message').animate({'top':'65px'},333);
+$('.message').animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
-$('.message').animate({'top':'-60px'},333);
-   },900); 
+$('.message').animate({'top':'-60px'},111);
+   },555); 
    setTimeout(function () {  
 $('.message').remove();
-   },1243); 
+   },780); 
    //ms-end
       
       
