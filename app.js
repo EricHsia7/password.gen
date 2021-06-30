@@ -30,7 +30,7 @@ password += chars.substring(randomNumber, randomNumber+1);
 document.getElementById("password").value = password ;
 if (f > 0.5) {
 //$('#boxmsg').html('已產生新密碼！');
-//$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
    //ms
 $('.message').remove();
    var uhyhtg = genid() ;
@@ -60,7 +60,7 @@ password2 = chars2[Math.floor(Math.random() * chars2.length)] + Math.floor(Math.
 document.getElementById("password").value = password2 ;
 if (f > 0.5) {
 //$('#boxmsg').html('已產生新密碼！');
-//$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
    
    //ms
 $('.message').remove();
@@ -93,7 +93,7 @@ function changemode() {
                pwdmode = 1 ;
                $('#modeicondd').attr('src','icon/random3.svg');
                //$('#boxmsg').html('已切換為好記模式！');
-//$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
                
                //ms
 $('.message').remove();
@@ -120,7 +120,7 @@ $('#' + uhyhtgyuy).remove();
               pwdmode = 0 ;
                $('#modeicondd').attr('src','icon/simple3.svg');
                               //$('#boxmsg').html('已切換為隨機模式！');
-//$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
                
                //ms
 $('.message').remove();
@@ -173,7 +173,7 @@ var copys = document.getElementById(id);
 copys.select();
 document.execCommand("Copy");
 //$('#boxmsg').html('已複製密碼！');
-//$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
    
    //ms
 $('.message').remove();
