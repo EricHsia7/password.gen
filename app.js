@@ -251,11 +251,11 @@ passwordLength= passwordLength * 2 ;
 
 //$('#boxmsg').html('密碼長度為' + passwordLength + '！');
 //$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
-      
+      var myhstxtlen = '密碼長度為' + passwordLength ;
       //ms
 $('.message').remove();
    setTimeout(function () {  
-$('body').append('<div class="message" type="copied" style="--text-length:5">密碼長度為' + passwordLength + '</div>');
+$('body').append('<div class="message" type="copied" style="--text-length:' + myhstxtlen.length + '">密碼長度為' + passwordLength + '</div>');
    },1);
   setTimeout(function () {  
 $('.message').animate({'top':'65px'},333);
