@@ -14,8 +14,23 @@ password += chars.substring(randomNumber, randomNumber+1);
 }
 document.getElementById("password").value = password ;
 if (f > 0.5) {
-$('#boxmsg').html('已產生新密碼！');
-$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+//$('#boxmsg').html('已產生新密碼！');
+//$('.boxmsg').fadeIn(111).delay(555).fadeOut(111);
+   //ms
+$('.message').remove();
+   setTimeout(function () {  
+$('body').append('<div class="message" type="copied" style="--text-length:3">已產生新密碼</div>');
+   },1);
+  setTimeout(function () {  
+$('.message').animate({'top':'60px'},333);
+   },2); 
+   setTimeout(function () {  
+$('.message').animate({'top':'-60px'},333);
+   },900); 
+   setTimeout(function () {  
+$('.message').remove();
+   },910); 
+   //ms-end
 }
 if (f > 10) {
 f = 1 ;
