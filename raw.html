@@ -93,7 +93,41 @@
     overflow: scroll;
     display: none;
         }
+        .message {
+  width:90%;
+  max-width:250px;
+  width:calc(12px + var(--text-length) * 18px);
+  height:45px;
+  background:#fff;
+  color:#000;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+  border-radius:99em;
+  position:fixed;
+  top:-60px;
+  left:50%;
+  transform:translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (prefers-color-scheme: dark) {
+    .message {
+  width:90%;
+  max-width:250px;
+  width:calc(12px + var(--text-length) * 18px);
+  height:45px;
+  background:#1a1a1a;
+  color:#fff;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.05);
+  border-radius:99em;
+  position:fixed;
+  top:-60px;
+  left:50%;
+  transform:translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
     .historyframe {
         position: fixed;
         top: 52px;
