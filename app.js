@@ -42,10 +42,10 @@ $('#' + uhyhtg).animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
 $('#' + uhyhtg).animate({'top':'-60px'},111);
-   },555); 
+   },888); 
    setTimeout(function () {  
 $('#' + uhyhtg).remove();
-   },780); 
+   },1113); 
    //ms-end
 }
 if (f > 10) {
@@ -73,10 +73,10 @@ $('#' + uhyhtgyy).animate({'top':'65px'},111);
    },2);
    setTimeout(function () {  
 $('#' + uhyhtgyy).animate({'top':'-60px'},111);
-   },555); 
+   },888); 
    setTimeout(function () {  
 $('#' + uhyhtgyy).remove();
-   },780); 
+   },1113); 
    //ms-end
    
 }
@@ -106,10 +106,10 @@ $('#' + uhyhtgyuy).animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
 $('#' + uhyhtgyuy).animate({'top':'-60px'},111);
-   },555); 
+   },888); 
    setTimeout(function () {  
 $('#' + uhyhtgyuy).remove();
-   },780); 
+   },1113); 
    //ms-end
                
                getPassword();
@@ -133,10 +133,10 @@ $('#' + uhyhtgyiuy).animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
 $('#' + uhyhtgyiuy).animate({'top':'-60px'},111);
-   },555); 
+   },888); 
    setTimeout(function () {  
 $('#' + uhyhtgyiuy).remove();
-   },780); 
+   },1113); 
    //ms-end
                
                getPassword();
@@ -186,10 +186,10 @@ $('#' + uhyhtgypiuy).animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
 $('#' + uhyhtgypiuy).animate({'top':'-60px'},111);
-   },555); 
+   },888); 
    setTimeout(function () {  
 $('#' + uhyhtgypiuy).remove();
-   },780); 
+   },1113); 
    //ms-end
    
    
@@ -282,10 +282,10 @@ $('.message').animate({'top':'65px'},111);
    },2); 
    setTimeout(function () {  
 $('.message').animate({'top':'-60px'},111);
-   },555); 
+   },888); 
    setTimeout(function () {  
 $('.message').remove();
-   },780); 
+   },1113); 
    //ms-end
       
       
