@@ -21,6 +21,8 @@
 <link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="bookmark" />
 <link type="image/x-icon" href="https://erichsia7.github.io/password.gen/icon/icon_ico_512x512.ico" rel="shortcut icon" />
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 * {font-family: 'Noto Sans TC', sans-serif;outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);}
@@ -236,7 +238,7 @@ border:2px transparent solid;
 <body>
 <div class="block1">
   <div class="blur"></div>
-  <h1 id="block1h1">密碼產生器</h1>
+  <h1 id="block1h1" data-aos="fade-up" data-aos-anchor-placement="center-center">密碼產生器</h1>
 </div>
 <div class="block2" id="b-int">
   <h1>介紹</h1>
@@ -300,6 +302,9 @@ function block(blockid) {
   $('.menudiv').fadeOut(333);
 }
   </script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
 </body>
 </html>
